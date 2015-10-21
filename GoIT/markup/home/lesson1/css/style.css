@@ -29,9 +29,14 @@ body {
 	}
 
 	a{
+
 		display: block;
 	}
 
 	span{
 		display: block;
+	}
+	
+	div{
+		border-bottom: 1px solid gray;
 	}
