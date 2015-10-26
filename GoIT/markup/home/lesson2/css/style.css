@@ -1,0 +1,152 @@
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		@font-face{
+		font-family:OpenSans;
+		src:url(OpenSans-Regular.ttf);
+		}
+		
+		body{
+			font-family: OpenSans,Tahoma, Arial;
+			background-color: #f9f9f9;
+		}
+		.page{
+			background-color: white;
+			margin: 0 auto;
+			width: 968px;
+			height: auto;
+			box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+			padding-left: 46px;
+			padding-right: 46px;
+			padding-bottom: 60px;
+		}
+		
+		/* H e a d e r */
+		.header{
+			padding-top: 70px;
+			margin-bottom: 40px;
+		}
+		.header_menu{
+			display: block;
+			background-color: #575656;
+			list-style: none;
+			color: white;
+			width: 966px;
+			height: 40px;
+		}
+		
+		.header_menu li{
+			list-style: none;
+			float: left;
+		}
+		
+		.logo{
+			margin-bottom: 38px;
+		}
+		
+		.header a{
+			display: block;
+			color: #fff;
+			line-height: 40px;
+			width: 130px;
+			text-align: center;
+			font-size: 15px;
+			text-decoration: none;
+			border-right: 1px solid transparent;*/
+			border-left:  1px solid transparent;*/
+		}
+
+		.header a:hover{
+			background: #3e3e3e;
+			border-left:  1px solid #838383;
+			border-right:  1px solid #838383;
+		}
+		
+		/*C o n t a i n e r */
+		
+		.left_menu{
+			list-style: none;
+			border-left: 1px solid #c8c8c8;
+			border-right: 1px solid #c8c8c8;
+			border-top: 1px solid #c8c8c8;
+			width: 240px;
+			float: left;
+			font-size: 13px;
+		}
+		.left_menu li{
+			display: block;
+			border-bottom: 1px solid #c8c8c8;
+			color: #656363;
+		}
+		
+		.container{
+			height: 600px;
+			margin-bottom: 50px;
+		}
+		
+		.content{
+			float: right;
+			margin-left: 50px;
+		}
+		.bike{
+			border: 1px solid #c8c8c8;
+			padding: 50px 85px;
+			margin-bottom: 25px;
+		}
+		
+		span{
+			width: 650px;
+			font-size: 0.8em;
+			line-height: 20px;
+			display: block;
+			margin-left: 20px;
+		}
+
+		.left_menu a{
+			padding-left: 23px;
+			display: block;
+			color: #656363;
+			line-height: 40px;
+			text-decoration: none;
+		}
+
+		.left_menu a:hover{
+			padding-left: 40px;
+			background: #f9f9f9;
+			color: black;
+		}
+		
+		/* F o o t e r */
+		.footer{
+			 overflow: hidden; 
+			background: #e1e1e1;
+			padding: 12px 25px;
+			margin-bottom: 60px;
+		}
+
+		.footer_menu li{
+			list-style: none;
+			text-decoration: none;
+			float: left;
+			color: black;
+			margin-right: 95px;
+			font-size: 13px;	
+
+		}
+		.footer_menu li a{
+			
+			text-decoration: none;
+			color: black;
+		}
+
+		.footer_menu li a:hover {
+			text-decoration: underline;
+		}
+
+		.footer p{
+			float: right;
+			font-size: 13px;
+   			color: #2c2c2c;
+		}
