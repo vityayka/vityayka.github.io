@@ -54,8 +54,8 @@
 			text-align: center;
 			font-size: 15px;
 			text-decoration: none;
-			border-right: 1px solid transparent;*/
-			border-left:  1px solid transparent;*/
+			border-right: 1px solid transparent;
+			border-left:  1px solid transparent;
 		}
 
 		.header a:hover{
@@ -86,22 +86,21 @@
 			margin-bottom: 50px;
 		}
 		
-		.content{
-			float: right;
-			margin-left: 50px;
-		}
+
 		.bike{
+			float: right;
 			border: 1px solid #c8c8c8;
 			padding: 50px 85px;
 			margin-bottom: 25px;
+			width: 502px;
 		}
 		
 		span{
-			width: 650px;
 			font-size: 0.8em;
 			line-height: 20px;
+			float: right;
 			display: block;
-			margin-left: 20px;
+			width: 650px;
 		}
 
 		.left_menu a{
@@ -120,12 +119,16 @@
 		
 		/* F o o t e r */
 		.footer{
-			 overflow: hidden; 
+			clear: both;
 			background: #e1e1e1;
 			padding: 12px 25px;
 			margin-bottom: 60px;
+			font-size: 13px;
 		}
 
+		.footer_menu{
+			display: inline-block;
+		}
 		.footer_menu li{
 			list-style: none;
 			text-decoration: none;
@@ -147,6 +150,5 @@
 
 		.footer p{
 			float: right;
-			font-size: 13px;
    			color: #2c2c2c;
 		}
