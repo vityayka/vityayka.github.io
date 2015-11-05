@@ -1,0 +1,40 @@
+	table{
+		border-collapse: collapse;
+	}
+
+	td{
+		border: 10px solid black;
+		height: 60px;
+		width: 60px;
+	}
+	tr{
+		height: 60px;
+	}
+	.yellow{
+		background: yellow;
+	}
+	.blue{
+		background: blue
+	}
+	.black{
+		background: black;
+	}
+	.red{
+		background: red;
+	}
+	.hide{
+		border: 10px solid white;
+		border-top: none;
+	}
+	.top{
+		border-top: none;
+	}
+	.left{
+		border-left: none;
+	}
+	.right{
+		border-right: none;
+	}
+	.bottom{
+		border-bottom: none;
+	}
