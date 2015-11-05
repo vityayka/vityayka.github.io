@@ -1,0 +1,172 @@
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	@font-face{
+    font-family: 'Helvetica Neue';
+    src: url('fonts/helveticaneue-thin-webfont.eot');
+    src: url('fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
+         url('fonts/helveticaneue-thin-webfont.woff') format('woff'),
+         url('fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+			}
+	body{
+		font-family: 'Helvetica Neue', Tahoma, sans-serif;
+	}
+
+	.wrapper{
+		width: 1215px;
+		margin: 0 auto;
+	}
+	.header{
+		background-color: #074e8c;
+		font-size: 14px;
+		
+		background-image: url(back.png);
+		height: 36px;
+		line-height: 36px;
+	}
+	.enter{
+		float: right;
+		background-image: url(right.png);
+		color: white;
+		margin-right: 22px;
+		
+		padding: 0 13px;
+	}
+	.enter a{
+		color: white;
+	}
+	.ofertas{
+		float: right;
+		color: white;
+		padding: 0 18px;
+		border-left: 1px solid #60b5ed;
+		margin-top: 3px;
+		height: 30px;
+	}
+	.ofertas a{
+		color: white;
+		text-decoration: none;
+		display: block;
+		height: 30px;
+		background: url(invent.png) no-repeat;
+		padding-left: 36px;
+		margin-top: -3px;
+
+	}
+	.ofertas img{
+		margin-top: 5px;
+	}
+
+	.ofertas span{
+		display: inline-block;
+	}
+
+	.header ul{
+		float: right;
+		height: 36px;
+	}
+
+	.header li{
+		display: inline-block;
+		list-style: none;
+	}
+
+	.header li a{
+		text-decoration: none;
+		color: #60b5ed;
+		display: block;
+		line-height: 36px;
+		padding: 0 15px;
+	}
+	.header li a span{
+		border-left: 1px solid #60b5ed;
+		display: inline-block;
+		height: 30px;
+		width: 1px;
+	}
+
+	.header li a:hover{
+		background: #4eabda;
+		color: white;
+	}
+	.content{
+		background: url(Background.png) no-repeat;
+		height: 100%;
+		padding: 212px 0;
+	}
+	.cadastre{
+		margin: auto;
+		background: rgba(0, 0, 0, 0.63);
+		width: 500px;
+	}
+	.cadastre h1{
+		color: white;
+		text-align: center;
+		border-bottom: 2px solid #b6c0a8;
+		line-height: 63px;
+		font-weight: normal;
+		font-size: 24px;
+	}
+	.cadastre img{
+		margin: 36px auto 30px;
+		display: block;
+	}
+	.cadastre .ou{
+		margin: 30px auto;
+	}
+	form{
+		width: 275px;
+		margin: auto;
+	}
+
+	form input{
+		width: 256px;
+		height: 34px;
+		background: black;
+		color: white;
+		border: none;
+		border-bottom: 1px solid #4a4948;
+		margin-bottom: 12px;
+		padding-left: 19px;
+
+	}
+	.input1:focus{
+		box-shadow: 0 0 15px 0 rgba(48, 200, 255, 1);
+		background: #1b5288;
+	}
+	form .check{
+		margin: 10px 8px 0 0;
+		width: 12px;
+		height: 12px;
+	}
+	form label{
+		display: inline;
+		color: white;
+		font-size: 14px;
+		opacity: 0.8;
+	}
+
+	input[type="submit"]{
+		background: url(create.png);
+		padding: 0;
+		margin-top: 20px;
+		width: 150px;
+		border-radius: 3px;
+		margin: 23px 66px 20px;
+	}
+
+	.cadastre p{
+		color: white;
+		width: 300px;
+		font-size: 11px;
+		text-align: center;
+		margin: 0 auto;
+		opacity: 0.8;
+		padding-bottom: 20px;
+	}
