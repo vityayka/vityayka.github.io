@@ -1,0 +1,662 @@
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			font-family: 'Lucida Sans Unicode', Arial;
+		}
+		.wrapper{
+			width: 920px;
+			margin: 0 auto;
+			box-shadow: 0 0 5px 0 black;
+			padding: 0 40px;
+
+		}
+		header{
+			padding-top: 1px;
+		}
+		.top{
+			margin: -1px 8px;
+			margin-bottom: 10px;
+		}
+		.phone{
+			margin-top: 17px;
+			color: #5e696d;
+			font-size: 18px;
+			width: 290px;
+			float: left;
+		}
+		.phone img{
+			position: relative;
+			top: 4px;
+			left: -1px;
+			margin-right: -1px;
+
+		}
+		.phone span{
+			display: inline-block;
+			margin-left: -2px;
+		}
+		.auto{
+			float: left;
+			margin: 17px 0 0 16px;
+			width: 495px;
+			height: 25px;
+			border-radius: 3px;
+		    background: -webkit-linear-gradient(top, rgba(31,103,135,1) 0%,rgba(28,94,127,1) 17%,rgba(19,70,106,1) 50%,rgba(15,60,97,1) 71%,rgba(12,51,87,1) 100%);
+		    box-shadow: 1px 2px 5px 0 #969696;
+		}
+		.auto img{
+			position: relative;
+			left: 7px;
+			top: 4px;
+		}
+		.auto form{
+			display: inline-block;
+			margin-left: 9px;
+		}
+		
+		.auto input{
+			position: relative;
+			top: -2px;
+			left: -2px;
+		}
+		.auto input[type="text"]{
+			display: inline-block;
+			width: 109px;
+			height: 12px;
+			font-size: 11px;
+		}
+		.auto input[type="password"]{
+			width: 112px;
+			font-size: 11px;
+			height: 12px;
+		}
+		.auto input[type="submit"]{
+			background: none;
+			color: white;
+			border: none;
+			font-size: 11px;
+			padding-right: 6px;
+			border-right: 1px solid #d1d6dc;
+			line-height: 11px;
+			cursor: pointer;
+			margin-left: 3px;
+		}
+		.reg{
+			text-decoration: none;
+			color: white;
+			font-size: 11px;
+			position: relative;
+			top: -2px;
+			left: -2px;
+		}
+		.forgot{
+			position: relative;
+			left: 6px;
+			bottom: 2px;
+			color: #bfbfbf;
+			display: inline-block;
+			font-size: 12px;
+			text-decoration: none;
+			line-height: 14px;
+			border-bottom: 1px solid #bfbfbf;
+			margin: 0 0 5px 5px;
+		}
+
+		header nav{
+			float: left;
+			width: 75px;
+			height: 19px;
+			border: 1px solid #c1c8cb;
+			border-radius: 12px;
+			margin-top: 18px;
+			margin-left: 17px;
+			box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.4)
+		}
+		
+		header nav a{
+			position: relative;
+			top: -5px;
+			left: 5px;
+			margin-left: 3px;
+		}
+		.zazor{
+			margin: 7px 0 -1px 0;
+		}
+		.hor_menu{
+			height: 27px;
+			background: -webkit-linear-gradient(top, rgba(109,117,124,1) 0%,rgba(80,88,96,1) 3%,rgba(70,77,84,1) 6%,rgba(45,50,54,1) 13%,rgba(42,46,50,1) 16%,rgba(19,21,23,1) 55%,rgba(7,8,9,1) 81%,rgba(1,1,1,1) 100%);
+			border-radius: 5px;
+			padding-top: 4px;
+			width: 909px;
+			border: 1px solid #0d1642;
+			box-shadow: 1px 3px 5px 1px rgba(0,0,0,0.75);
+		}
+		.hor_menu ul{
+			margin-left: 127px;
+		}
+		.hor_menu li{
+			float: left;
+			list-style: none;
+			color: white;
+		}
+		#pay{
+			margin-left: -4px;
+		}
+		#delivery{
+			margin-left: -7px;
+		}
+		#articles{
+			margin-left: -7px;
+		}
+		#contacts{
+			margin-left: -13px;
+		}
+		.hor_menu li a{
+			color: #b1bcc0;
+			text-decoration: none;
+			display: block;
+			line-height: 26px;
+			padding: 0 18px;
+			font-size: 14px;
+		}
+		.hor_menu li a:hover{
+			background: -webkit-linear-gradient(top, rgba(31,103,135,1) 0%,rgba(30,99,131,1) 9%,rgba(17,65,101,1) 59%,rgba(12,51,87,1) 100%);
+			color: white;
+			border-radius: 12px;
+		}
+
+	    .basket{
+	    	float: left;
+	    	font-size: 11px;
+	    	margin-left: 53px;
+	    	margin-top: -2px;
+	    }
+	    .basket a{
+	    	color: #8a9296;
+	    	text-decoration: none;
+	    }
+	    .basket a img{
+	    	position: relative;
+	    	top: 5px;
+	    	margin-right: 3px;
+	    }
+	    .basket a span{
+	    	color: #0d5a8f;
+	    	margin: 0 11px 0 -2px;
+	    	font-size: 12px;
+	    }
+
+	    .bigspace{
+			margin-left: 5px !important;
+	    }
+	    .findcar{
+	    	float: left;
+	    	margin-top: 13px;
+	    	margin-left: 4px;
+	    	width: 413px;
+	    	height: 132px;
+	    	border: 1px solid #b8b8b9;
+	    	border-radius: 18px;
+	    	box-shadow: 2px 3px 5px 0 rgba(104,104,104, 0.75)
+	    }
+	    .findcar h1{
+	    	font-family: Arial;
+	    	font-size: 14px;
+	    	text-align: center;
+	    	color: #154467;
+	    }
+	    .disk{
+			position: relative;
+			top: -8px;
+			margin-left: 17px;
+	    }
+	    .avto{
+		float: left;
+	    	width: 72px;
+	    }
+	    .findcar h2{
+	    	position: relative;
+	    	top: -15px;
+	    	left: 19px;
+	    	font-size: 12px;
+	    	color:  #154467;
+	    }
+	    .findcar .topcorner{
+	    	position: relative;
+	    	top: -140px;
+	    	left: 337px;
+	    }
+	    .disk li{
+	    	list-style: none;
+	    	font-size: 10px;
+	    	
+	    	line-height: 9px;
+	    	letter-spacing: 0px;
+	    	margin-bottom: 6px;
+	    }
+	    .avto_li{
+	    	margin-bottom: 6px;
+	    }
+	    .disk span{
+	    	color: #77858b;
+	    }
+	    select{
+	    	width: 103px;
+	    	border-bottom: 0px;
+	    	box-shadow: 1px 1px 2px 0 rgba(0,0,0, 0.75) inset;
+	    	-webkit-appearance: none;
+	    	background-image: url('vybir.png');
+			background-position: right center;
+			background-repeat: no-repeat;
+			height: 16px;
+	    }
+	    select[name="short"]{
+	    	width: 59px;
+
+	    }
+	    .sel{
+	    	position: relative;
+	    	float: left;
+	    	top: -5px;
+	    	left: 4px;
+			margin-right: 20px;
+			width: 97px;
+			
+	    }
+	    .avto2{
+	    	position: relative;
+	    	top:-2px;
+	    	margin-left: 16px;
+	    }
+	    .sel2{
+	    	position: relative;
+	    	top: -7px;
+	    }
+	    .search{
+	    	position: relative;	    	
+	    	color: #154467;
+	    	font-style: italic;
+	    	font-size: 14px;
+	    }
+	    .findcar .search{
+	    	left: 323px;
+	    	top: -11px;
+	    }
+	    .findtire{
+	    	float: left;
+	    	margin-top: 13px;
+	    	margin-left: 14px;
+	    	width: 192px;
+	    	height: 132px;
+	    	border: 1px solid #b8b8b9;
+	    	border-radius: 18px;
+	    	box-shadow: 3px 3px 5px 0 rgba(104,104,104, 0.75)
+	    }
+	    .findtire h1{
+	    	margin-top: 4px;
+	    	font-size: 13px;
+	    	margin-left: 10px;
+	    	color: #154467;
+	    	line-height: 13px;
+	    }
+	    .findtire span,p{
+	    	font-size: 10px;
+	    }
+	    .findtire form{
+	    	margin-left: 13px;
+	    	margin-top: -3px;
+	    }
+	    .findtire select{
+	    	border-bottom: 1px solid #d1d1d1;
+	    	width: 52px;
+	    }
+	    .findtire select option{
+	    	font-size: 11px;
+	    }
+	    
+	    .findtire select[name="radius"]{
+	    	width: 40px;
+	    }
+	    .findtire label{
+	    	font-size: 13px;
+	    }
+	    .findtire input[type="checkbox"]{
+	    	height: 11px;
+	    	position: relative;
+	    	top: 2px;
+	    }
+	    .boxes{
+	    	position: relative;
+	    	top: -21px;
+	    	left: 44px;
+	    }
+	    .rad{
+	    	margin-left: 34px;
+	    }
+	    .season{
+	    	margin-left: 2px;
+	    }
+	    .boxes div{
+	    	height: 14px;
+	    }
+		.findtire .search{
+			top: -11px;
+			left: 120px;
+		}
+
+		.finddisk{
+			width:265px;
+			float: left;
+			margin-top: 11px;
+	    	margin-left: 9px;
+			height: 132px;
+			border: 1px solid #b8b8b9;
+	    	border-radius: 18px;
+	    	box-shadow: 3px 3px 5px 0 rgba(104,104,104, 0.75)
+		}
+		.finddisk h1{
+			margin-top: 4px;
+	    	font-size: 15px;
+	    	margin-left: 7px;
+	    	color: #154467;
+	    	line-height: 13px;
+		}
+		.finddisk .measurements{
+			float: left;
+			width: 89px;
+			margin-left: 16px;
+			margin-top: 8px;
+		}
+		.finddisk p{
+			line-height: 8px;
+			font-size: 11px;
+			margin-bottom: 7px;
+		}
+		.finddisk p span{
+			color: #77858b;
+			line-height: 9px;
+			font-size: 10px;
+		}
+		.finddisk form{
+			float: left;
+			width: 58px;
+			margin: 0px 10px 0 1px;
+		}
+		.finddisk select{
+			width: 59px;
+			margin-bottom: 11px;
+		}
+		.finddisk .short{
+			width: 51px;
+		}
+		.finddisk .diameter{
+			float: left;
+			width: 79px;
+			margin: -10px 0 0 0;
+			padding-left: 11px;
+			border-left: 1px solid gray;
+		}
+		.finddisk .diameter span{
+			display: block;
+		}
+		.finddisk .diameter p{
+			margin-bottom: -3px;
+		}
+		.finddisk .diameter select{
+			margin-left: 0px;
+			margin-bottom: 10px;
+		}
+		.finddisk .search{
+			top: 0px;
+			left: 90px;
+		}
+
+
+
+	    .content{
+	    	clear: both;
+	    	width: 909px;
+	    }
+	    .content:after{
+	    	content:'';
+	    	clear: both;
+	    	display: block;
+	    }
+	    .leftmenu{
+	    	float: left;
+	    }
+	    .catalog{
+	    	border: 1px solid #79878d;
+	    	border-radius: 20px;
+	    	margin: 19px 0 12px 0;
+	    	height: 25px;
+	    	font-size: 13px;
+	    	color: #114165;
+	    	width: 179px;
+	    	padding-left: 1px;
+	    	padding-top: 1px;
+	    	box-shadow: 3px 3px 8px -2px rgba(0,0,0,0.4)
+	    }
+	    
+	    
+	    .catalog span{
+			position: relative;
+			bottom: 5px;
+			margin-left: 4px;
+	    }
+
+	    .big_li{
+	    	list-style: none;
+	    	
+	    	color: #114165;
+	    	line-height: 24px;
+	    	width: 160px;
+	    	font-size: 13px;
+	    }
+	    .bordered{
+	    	border: 1px solid #79878d;
+	    	border-radius: 12px;
+	    	width: 148px;
+	    }
+	    .big_li span{
+	    	margin-left: 4px;
+	    	display: inline-block;
+	    	vertical-align: middle;
+	    }
+
+	    .small_li{
+	    	margin-left: 53px;
+	    	font-size: 15px;
+	    	list-style-type: circle;
+	    	margin-bottom: 1px;
+	    	margin-top: 1px;
+	    }
+		.small_li a{
+			color: #465961;
+			text-decoration: none;
+			font-size: 13px;
+			margin-left: -6px;
+		}
+	    .small_li a:hover{
+	    	font-style: italic;
+	    	font-weight: bold;
+	    	color: #0c3256;
+	    	text-decoration: underline;
+	    	font-size: 13px;
+	    }
+	    .circle{
+	    	display: inline-block;
+	    	vertical-align: middle;
+	    	margin-left: 5px;
+	    	width: 11px;
+	    	height: 11px;
+	    	border: 5px solid #114165;
+	    	border-radius: 100%;
+	    }
+	    main{
+	    	float: left;
+	    	width: 525px;
+	    	margin: 16px 10px 10px 9px;
+	    	background: -webkit-linear-gradient(top, rgba(229,231,232,1) 0%,rgba(219,224,226,1) 14%,rgba(186,198,203,1) 44%,rgba(155,173,181,1) 83%,rgba(147,167,176,1) 100%,rgba(161,179,187,1) 100%);
+	    }
+	    section{
+	    	float: left;
+	    }
+	    section div{
+			float: left;
+	    	width: 138px;
+	    	margin: 15px 7px 9px 23px;
+	    }
+	    section h1{
+	    	font-size: 15px;
+	    	color: #206988;
+	    	text-align: center;
+	    	line-height: 15px;
+	    }
+	    section h2{
+	    	font-size: 13px;
+	    	line-height: 13px;
+	    	text-align: center;
+	    	font-weight: normal;
+	    }
+	    section img{
+			background: white;
+			border: 1px solid #b0b9bc;
+			border-radius: 11px;
+			padding: 5px 0;
+	    }
+	    figcaption{
+	    	font-family: Arial;
+	    	text-align: center;
+	    	font-size: 16px;
+	    	padding-left: 15px;
+	    	color: #114165;
+	    	font-weight: bold;
+	    	font-style: italic;
+	    	margin-top: -5px;
+	    }
+	    .third_line{
+	    	margin: 1px 0 21px;
+	    }
+	    aside{
+	    	float: right;
+	    }
+	    .brands{
+	    	border: 1px solid #79878d;
+	    	border-radius: 20px;
+	    	margin: 16px 0 13px 0;
+	    	height: 25px;
+	    	font-size: 14px;
+	    	color: #114165;
+	    	vertical-align: middle;
+	    	width: 179px;
+	    	padding-left: 1px;
+	    	padding-top: 1px;
+	    	box-shadow: 3px 3px 8px -2px rgba(0,0,0,0.4)
+	    }
+	    .brands span{
+	    	position: relative;
+			bottom: 5px;
+			margin-left: 6px;
+			vertical-align: middle;
+	    }
+	    aside p{
+	    	font-family: Arial;
+	    	border: 1px solid #79878d;
+    		border-radius: 12px;
+    		width: 133px;
+    		margin-left: 15px;
+    		font-size: 14px;
+    		padding: 3px 0;
+	    }
+	    .circle2{
+	    	display: inline-block;
+	    	vertical-align: middle;
+	    	margin-left: 4px;
+	    	width: 11px;
+	    	height: 11px;
+	    	border: 5px solid #114165;
+	    	border-radius: 100%;
+	    }
+	    aside p span{
+    			display: inline-block;
+    			vertical-align: middle;
+	    }
+	    aside form{
+			width: 130px;
+			margin: 3px 0 7px 23px;
+	    }
+
+	    aside label{
+			position: relative;
+			top: -2px;
+			left: 12px;
+	    	font-size: 13px;
+	    }
+	    aside input[type="checkbox"]{
+	    	height: 11px;
+			position: relative;
+			top: 0px;
+		    }
+	    aside input[type="submit"]{
+	    	background: -webkit-linear-gradient(top, rgba(31,103,135,1) 0%,rgba(28,94,126,1) 17%,rgba(18,67,102,1) 57%,rgba(12,51,87,1) 100%);
+	    	color: #fff;
+	    	width: 80px;
+	    	height: 24px;
+	    	border-radius: 10px;
+	    	margin-top: 14px;
+	    	cursor: pointer;
+	    	border: 0px;
+	    	box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.3);
+	    	font-family: Arial;
+	    	font-size: 11px;
+	    }
+	    aside form div{
+	    	height: 25px;
+	    }
+	    .corps{
+	    	margin-top: 27px;
+	    	margin-left: 117px;
+	    	margin-bottom: 17px;
+	    }
+	    footer{
+	    	width: 910px;
+	    	font-family: Arial;
+	    	background: #213a4d;
+	    	padding-top: 11px;
+	    	font-size: 12px;
+	    	padding-bottom: 22px;
+	    }
+	    footer ul{
+	    	margin-left: 297px;
+
+	    }
+	    footer li{
+	    	display: inline-block;
+	    	list-style: none;
+	    	color: white;
+	    	margin:0 -1px;
+	    	border-right: 1px solid #bec6c9;
+	    	padding: 0 13px;
+	    }
+	    footer .noborder{
+	    	border-right: 0;
+	    }
+	    footer li a{
+	    	color: #bec6c9;
+	    	text-decoration: none;
+	    	line-height: 10px;
+	    	display: block;   	
+	    }
+	    footer li a:hover{
+	    	color: #52abcb;
+	    }
+	    footer p{
+	    	color: #7f4740;
+	    	margin-left: 376px;
+	    	margin-top: 14px;
+	    	font-size: 10px;
+	    	margin-bottom: 30px;
+	    }
