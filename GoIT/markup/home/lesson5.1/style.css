@@ -21,16 +21,26 @@
 	}
 
 	.wrapper{
-		/*width: 1215px;*/
+		width: 1215px;
 		margin: 0 auto;
 	}
 	.header{
 		background-color: #074e8c;
 		font-size: 14px;
-		padding-right: 15%;
 		background-image: url(back.png);
 		height: 36px;
 		line-height: 36px;
+	}
+	.clearfix:after{
+		content: '';
+		clear: both;
+		display: block;
+	}
+	.header_content{
+		width: 1215px;
+		margin: 0 auto;
+		
+
 	}
 	.enter{
 		float: right;
