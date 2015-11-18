@@ -23,7 +23,7 @@
 			margin-top: 17px;
 			color: #5e696d;
 			font-size: 18px;
-			width: 290px;
+			/*width: 290px;*/
 			float: left;
 		}
 		.phone img{
@@ -34,12 +34,15 @@
 
 		}
 		.phone span{
-			display: inline-block;
+			/*display: inline-block;*/
+			font-family: Arial;
 			margin-left: -2px;
+			letter-spacing: 0.4px;
+			font-size: 18px;
 		}
 		.auto{
 			float: left;
-			margin: 17px 0 0 16px;
+			margin: 17px 0 0 17px;
 			width: 495px;
 			height: 25px;
 			border-radius: 3px;
