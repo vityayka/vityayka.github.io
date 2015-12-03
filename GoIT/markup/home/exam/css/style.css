@@ -528,7 +528,7 @@ footer {
       bottom: 0;
       right: 0;
       width: 60px;
-      z-index: 2; }
+      z-index: 0; }
       header .dropdown-menu-selected-item {
         border: 1px solid transparent;
         display: block;
@@ -558,7 +558,8 @@ footer {
         background: rgba(54, 41, 62, 0.9);
         transition: all 0.7s ease; }
           header .dropdown-menu:hover{
-          	width: 250px;          }
+          	width: 250px;        
+          	z-index: 2;}
           header .dropdown-menu:hover .dropdown-menu-selected-item{
           width: 250px;
           border-radius: 10px 10px 0 0;
