@@ -429,6 +429,16 @@ footer {
     .footer-copyright__author {
       font-weight: 800; }
 
+ @media screen and (max-width: 1090px) {
+	.slider-directions_left{
+		left: 0px; }	
+  }
+@media screen and (max-width: 1030px) {
+	.slider-description{
+		margin-left: 30px; }
+  } 
+
+
 @media screen and (max-width: 959px) {
   .section-wrapper {
     box-sizing: border-box;
