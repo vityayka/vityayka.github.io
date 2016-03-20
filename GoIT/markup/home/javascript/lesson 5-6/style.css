@@ -1,0 +1,20 @@
+*{
+	margin: 0;
+	padding: 0; 
+	font-family: Tahoma; }
+.timer{
+	margin: 0 auto;
+	width: 350px;
+}
+span{
+	font-size: 81px; }
+p{
+	font-size: 20px;
+	margin-left: 310px; }
+input{
+	width: 160px;
+	height: 100px;
+	font-size: 30px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 8px 3px;
+}

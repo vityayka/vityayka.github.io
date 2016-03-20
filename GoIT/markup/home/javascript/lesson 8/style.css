@@ -1,0 +1,48 @@
+body{
+	font-family: Helvetica, sans-serif;
+}
+form{
+	position: relative;
+	border: 2px solid black;
+	padding: 10px;
+	width: 500px;
+}
+input{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+label{
+	display: inline-block;
+	width: 80px;
+	font-size: 15px;
+}
+button{
+	height: 40px;
+	border-radius: 4px;
+	background: #e6e6e6 url("button.png") 50% 50% repeat-x;
+	cursor: pointer;
+}
+.tooltip{
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	box-shadow: 0px 0px 1px 1px;
+	position: absolute;
+	left: 275px;
+	font-size: 13px;
+	opacity: 0;
+}
+.visible{
+	opacity: 1;
+	transition: 1000ms ease;
+
+}
+#tip_1{
+	top: 11px;
+}
+#tip_2{
+	top: 45px;
+}
+#tip_3{
+	top: 79px;
+}

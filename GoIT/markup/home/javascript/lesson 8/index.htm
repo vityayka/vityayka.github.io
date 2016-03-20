@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form tooltip</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<form action="#">
+		<div>
+			<label for="first-name">First name</label>
+			<input type="text" id="first-name" name="#tip_1">
+		</div>
+		<div>
+			<label for="last-name">Last name</label>
+			<input type="text" id="last-name" name="#tip_2">
+		</div>
+		<div>
+			<label for="address">Address</label>
+			<input type="text" id="address" name="#tip_3">
+		</div>
+		<div class="tooltip" id="tip_1">Please provide your first name.</div>
+		<div class="tooltip" id="tip_2">Please provide also your last name.</div>
+		<div class="tooltip" id="tip_3">Your home or work address.</div>
+		<button>Show help</button>
+	</form>
+	
+
+	
+</body>
+</html>
