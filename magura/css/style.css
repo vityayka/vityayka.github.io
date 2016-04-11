@@ -1,0 +1,739 @@
+@font-face{
+	font-family: 'CenturyGothicBold';
+	src: url(../fonts/century-gothic-bold.ttf) format("truetype");
+	
+}
+@font-face{
+	font-family: 'CenturyGothic';
+	src: url(../fonts/century-gothic.ttf) format("truetype");
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+.clearfix:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+body{
+	font-family: "CenturyGothicBold", sans-serif;
+}
+a{
+	text-decoration: none;
+	transition: 0.2s ease;
+}
+img{
+	border: 0;
+}
+a:hover{
+	transition: 0.2s ease;
+}
+header{
+	/*margin: 0 auto;*/
+	/*text-align: center;*/
+	height: 78px;
+	border-bottom: 1px solid #eeeeee;
+}
+  header a{
+  	  line-height: 78px;
+  }
+  .header-logo{
+  	/*float: left;*/
+  	/*margin: 13px 15px 15px 49px;*/
+  		position: absolute;
+    	left: 3.6%;
+    	top: 15px;
+    	/*width: 8.6%;*/
+    	/*height: 63%;*/
+  }
+    .header-logo img{
+    	width: 100%;
+    	height: 100%;
+    }
+  .header-menu{
+  	/*float: left;*/
+  	/*margin-left: 33px;*/
+  		margin-left: 15.8%;
+    	width: 58%;
+    	height: 100%;
+    	/*overflow: hidden;*/
+    	display: inline-block;
+    	transition: 0.2s ease;
+  }
+  .header-menu-item{
+   display: inline-block;
+   list-style: none;
+   position: relative;
+   color: #272727;
+   margin-right: 3.1%;
+   font-size: 15px;
+  }
+  .header-menu-item:nth-child(2){
+  	margin-right: 4.6%;
+  }
+  .header-menu-item:nth-child(3){
+  	margin-right: 4.7%;
+  }
+  .header-menu-item:nth-child(4){
+  	margin-right: 4.1%;
+  }
+  /*.header-menu-item*/
+  /*.header-menu-item__submenu{*/
+  	/*margin-right: 37px;*/
+  /*}*/
+  .header__arrow:after{
+	content: '';
+	background: url(../img/arrow_down.png);
+	position: absolute;
+	top: 35px;
+	right: -17px;
+	width: 11px;
+    height: 7px;
+  }
+  /*.header-menu-item:last-child{*/
+  	/*border-left: 1px solid #eeeeee;*/
+  	/*width: 80px;*/
+  /*}*/
+    /*.header-menu-item:last-child:after{*/
+    	/*right: 10px;*/
+    /*}*/
+
+    .header-menu-item a{
+      text-decoration: none;
+      display: block;
+      color: #272727;
+    }
+    .header__submenu ul{
+      list-style: none;
+	  margin-top: 1px;
+	  position: absolute;
+	  left: -9999px; 
+	  opacity: 0; 
+	  transition: 0.1s ease-out opacity;
+     }
+     .header__submenu ul li{
+	   float: none;
+	   width: 241%;
+	   margin-left: 0;
+	   text-align: left;
+	   border: 1px solid #f1f1f1;
+	   /*width: 100%;*/
+     }
+     .header__submenu ul li:first-child{
+     	border-top: none;
+     }
+     .header__submenu ul li a{
+     	padding-left: 11px;
+     	line-height: 38px;
+     	background: #fff;
+     }
+	.header__submenu li:hover ul,
+	.header__submenu li:focus ul{ 
+	  left: -11px; 
+	  opacity: 1; 
+	  z-index: 9999;
+	  /*width: 150%;*/
+	}
+	.header__submenu li:hover ul li a:hover, 
+	.header__submenu li:hover ul li a:focus{ 
+	  background-color: #d9383c;
+	  color: white;
+	  border: none;
+	}
+	.header__submenu li:hover ul li:hover,
+	.header__submenu li:hover ul li:focus{
+		border: 1px solid #d9383c;
+	}
+	.header__submenu li:hover ul li:first-child:hover,
+	.header__submenu li:hover ul li:first-child:focus{
+		border-top: 0;
+	}
+  .header-menu-show{
+  		display: none;
+  }
+.header-booking{
+	float: right;
+	position: relative;
+	font-size: 10px;
+	background: url(../img/booking.png) 50% 22% #d9383c;
+	background-repeat: no-repeat;
+	width: 82px;
+	height: 100%;
+	vertical-align: text-bottom;
+	border-bottom: 1px solid #d9383c;
+}
+  .header-booking-button{
+  	color: white;
+  	vertical-align: bottom;
+  	display: block;
+  	height: 100%;
+  	text-decoration: none;
+  }
+  .header-booking-button span{
+  	position: absolute;
+  	top: 27%;
+  	right: 23%;
+  }
+  .header-lang{
+  	float: right;
+  	position: relative;
+  	text-align: center;
+  	font-size: 15px;
+  	height: 100%;
+  	width: 80px;
+  	background: url(../img/arrow_down.png) 82% 51% no-repeat;
+  	border-left: 1px solid #eeeeee;
+  }
+  .header-lang a{
+  	 text-decoration: none;
+      display: block;
+      /*line-height: 78px;*/
+      color: #272727;
+      margin-left: -7px;
+  }
+  .header-lang:hover ul{
+  	left: 0;
+  	opacity: 1;
+  	z-index: 99999;
+  }
+
+.slider{
+	/*margin-top: -2px;*/
+	position: relative;
+	transition: 0.5s ease opacity;
+}
+.slider-jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.slider-item{
+	/*width: 1920px;*/
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+.slider-jcarousel ul {
+    width: 20000em;
+    position: relative;
+
+    /* Optional, required in this case since it's a <ul> element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-slide{
+	float: left;
+	/*width: 915px;*/
+	width: 745px;
+}
+ .slider-slide p{
+	/*float: left;*/
+	/*width: 915px;*/
+	margin-bottom: 40px;
+ }
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+.slider-jcarousel li {
+    /* Required only for block elements like <li>'s */
+    float: left;
+    position: relative;
+}
+.slider-wrapper h1{
+	color: #fff;
+	font-size: 100px;
+	position: absolute;
+	top: 26%;
+    left: 32%;
+}
+.slider-wrapper h4{
+	font-size: 18px;
+	color: #fff;
+	position: absolute;
+	top: 53.3%;
+    left: 42.2%;
+	font-weight: normal;
+}
+
+.slider-wrapper ul li img{
+	width: 100%;
+}
+.slider-book-button{
+	display: block;
+	color: white;
+	position: absolute;
+	top: 65.6%;
+    left: 41.3%;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 12px 71px;
+	font-size: 18px;
+}
+.slider-book-button:hover{
+	background: #fff;
+	color: #8c5e51;
+}
+.slider-directions{	
+	cursor: pointer;
+}
+.slider-next{
+	position: absolute;
+	top: 42%;
+	right: 4%;
+	height: 85px;
+	width: 45px;
+	background: url(../img/arrows.png) 45px 0;
+}
+.slider-prev{
+	position: absolute;
+	top: 42%;
+	left: 4%;
+	height: 85px;
+	width: 45px;
+	background: url(../img/arrows.png) 0 0;
+
+}
+ .about{
+ 	padding: 120px 230px 100px;
+ 	text-align: center;
+ }
+   .about h1{
+   		font-size: 72px;
+   		margin-bottom: 38px;
+   		line-height: 58px;
+   }
+   .left-right-figures{
+   		display: inline-block;
+   		font-size: 18px;
+   		margin-bottom: 35px;
+   		position: relative;
+   }
+ 	.left-right-figures:after{
+ 		content: '';
+ 		position: absolute;
+ 		top: 6px;
+ 		right: -52px;
+ 	 	width: 38px;
+ 		height: 10px;
+ 		background: url(../img/about_fig.png);
+ 	}
+ 	.left-right-figures:before{
+ 		content: '';
+ 		position: absolute;
+ 		top: 6px;
+ 		left: -52px;
+ 	 	width: 38px;
+ 		height: 10px;
+ 		background: url(../img/about_fig.png);
+ 	}
+ .about p{
+ 	font-family: "CenturyGothic", sans-serif;
+ 	font-size: 14px;
+ 	line-height: 28px;
+    max-height: 107px;
+    overflow: hidden;
+ }
+   .about__first-par{
+   		margin-bottom: 29px;
+   }
+.hotel{
+	background: #eeeeee;
+}
+.hotel-rest-description{
+	text-align: center;
+	float: left;
+	box-sizing: border-box;
+	width: 37%;
+	height: 100%;
+	padding: 60px 5% 0;
+	background: #eeeeee;
+	color: #272727;
+}
+  .hotel-rest-description h2{
+  		position: relative;
+  		font-size: 48px;
+  		margin-bottom: 60px;
+  		line-height: 40px;
+  }
+  .hotel-rest-description h2:after{
+  		position: absolute;
+  		 top: 63px;
+  		right: 45%;
+  		content: '';
+  		background: url(../img/about_fig.png);
+  		width: 38px;
+ 		height: 10px;
+  }
+  .hotel-rest-description p{
+  		font-family: "CenturyGothic", sans-serif;
+  		font-size: 14px;
+  		line-height: 25px;
+  }
+  .hotel-rest-description a{
+  		display: inline-block;
+  		padding: 17px 27px;
+  		margin-top: 35px;
+  		border: 2px solid #d9383c;
+  		border-radius: 8px;
+  		font-size: 18px;
+  		color: #272727;
+  }
+  .hotel-rest-description a:hover{
+  		background: #d9383c;
+  		color: #fff;
+  }
+.hotel-rest-photo{
+	float: right;
+	height: 540px;
+	width: 63%;
+}
+.hotel-rest-photo img{
+	width: 100%;
+	height: 100%;
+}
+.restaurant{
+	background: #eeeeee;
+}
+.restaurant__description{
+	float: right;
+	width: 38%;
+}
+.restaurant__photo{
+	float: left;
+	width: 62%;
+}
+.events{
+	text-align: center;
+	padding: 58px 120px 105px;
+	color: #272727;
+}
+  .events-wrapper{
+  		margin-top: 30px;
+  }
+.events img{
+	width: 100%;
+}
+  .events h1{
+  		font-size: 60px;
+  		margin-bottom: 45px;
+  }
+.events-item{
+	display: inline-block;
+	position: relative;
+	width: 31%;
+    margin-right: 23px;
+}
+.events-item:last-child{
+	margin-right: 0px;
+}
+.event-description{
+	font-family: "CenturyGothic", sans-serif;
+	font-size: 14px;
+    line-height: 26px;
+    margin-top: 10px;
+}
+  .events-item-date{
+		position: absolute;
+		top: 10px;
+		background: #fff;
+		width: 90px;
+		height: 90px;
+		box-shadow: 0px 2px 7px 0px rgba(32, 22, 0, 0.17);
+  }
+    .events-item-date span{
+    	display: block;
+    }
+    .events-day-number{
+    	font-family: "CenturyGothic", sans-serif;
+    	font-size: 36px;
+    	margin-top: 11px;
+    }
+    .events-month{
+    	font-size: 18px;
+    }
+  .events h4{
+  		margin-top: 10px;
+  }
+  .events a{
+  		font-family: "CenturyGothic", sans-serif;
+  		font-size: 14px;
+  		color: #d9383c;
+  		text-decoration: underline;
+  		font-size: 
+  }
+.gallery{
+	color: #272727;
+	background: #eeeeee;
+}
+.gallery div{
+	float: left;
+	width: 25%;
+	margin-bottom: -4px;
+	margin-right: -1px;
+
+}
+  .gallery-description{
+  		box-sizing: border-box;
+  		padding-top: 100px;
+  		background: #eeeeee;
+  		text-align: center;
+  }
+  .gallery-description h3{
+  		position: relative;
+  		display: inline-block;
+  		font-size: 24px;
+   }
+  .gallery-description h3:after{
+  		content: '';
+  		position: absolute;
+  		top: 35px;
+  		left: 25px;
+  		width: 38px;
+  		height: 10px;
+  		background: url(../img/about_fig.png);
+  		position: absolute;
+  		top: 35px;
+  		left: 25px;
+  	}
+  .gallery-images img{
+  		width: 100%;
+  }
+  .gallery-description p{
+  		margin-top: 25px;
+  		font-family: "CenturyGothic", sans-serif;
+  		font-size: 14px;
+  }
+ 
+ .reviews{
+ 	position: relative;
+ 	text-align: center;
+ 	padding-top: 20px;
+ 	background: url(../img/reviews-background.png) 0 191px repeat-x;
+ 	padding-bottom: 215px;
+ }
+ .slider-jcarousel .slider-jcarousel-container{
+    width: 20000em;
+    position: relative;
+  }
+   .reviews-wrapper{
+   		font-family: "CenturyGothic", sans-serif;
+   		font-size: 14px;
+   		width: 68%;
+   		margin: 0px auto;
+   		height: 160px;
+   		line-height: 30px;
+   }
+   .reviews h1{
+   		font-size: 60px;
+   		margin-bottom: 18px;
+   }
+   .reviews h5{
+   		font-size: 18px;
+   		margin-bottom: 20px;
+   }
+
+  .reviews-arrows{
+	    cursor: pointer;
+  }
+    .reviews-arrows-left{
+  		position: absolute;
+		top: 28%;
+		left: 4%;
+		height: 43px;
+		width: 25px;
+		background: url(../img/reviews-arrows.png) 0 0;
+     }
+    .reviews-arrows-right{
+  		position: absolute;
+		top: 28%;
+		right: 4%;
+		height: 42px;
+		width: 25px;
+		background: url(../img/reviews-arrows.png) 25px 0;	
+    }
+    .reviews-arrows-right:hover{
+    	background: url(../img/reviews-arrows.png) 25px 43px;
+    }
+    .reviews-arrows-left:hover{
+    	background: url(../img/reviews-arrows.png) 0px 43px;
+	}
+  .reviews-buttons{
+  		padding: 18px 22px;
+  		font-size: 18px;
+  		cursor: pointer;
+  		transition: 0.2s ease-out;
+  }
+  .reviews-read-all{
+  		display: inline-block;
+  		margin: 40px 0 0 90px;
+  		color: #fff;
+  		background: #d9383c;
+  		border: 2px solid #d9383c;
+  		border-radius: 10px;
+  }
+  .reviews-feedback{
+  		display: inline-block;
+  		border: 2px solid #d9383c;
+  		border-radius: 10px;
+  		margin-left: 30px;
+  }
+  .reviews-read-all:hover{
+  		background: transparent;
+  		color: #272727;
+  }
+  .reviews-feedback:hover{
+  		background: #d9383c;
+  		color: #fff;
+  }
+
+ footer{
+	/*height: 330px;*/
+	background: #272727;
+	padding: 36px 120px 40px;
+	
+}
+  nav{
+  	text-align: left;
+  	display: inline-block;
+  }
+  .footer-categories ul{
+	float: left;
+	margin-right: 123px;
+  }
+  .footer-categories ul:nth-child(2){
+  		margin-right: 74px;
+  }
+  .footer-categories li{
+	list-style: none;
+	margin-bottom: 17px;
+	line-height: 11px;
+  }
+  .footer-categories li:first-child{
+  	margin-bottom: 20px;
+  }
+    .footer-categories li:last-child{
+    	margin-bottom: 0;
+    }
+
+  .footer-categories ul li:first-child a{
+  	font-family: "CenturyGothicBold", sans-serif;
+  	font-size: 14px;
+  	color: #fff;
+  }
+  .footer-categories a{
+  		color: #a7a7a7;
+  		font-family: "CenturyGothic", sans-serif;
+  		font-size: 14px;
+  }
+  .footer-categories a:hover{
+  		color: #e8888a;
+  }
+ .footer-contacts{
+  	    float: right;
+  	    margin-right: 6px;
+  	    color: #fff;
+ }
+   .footer-contacts h3{
+   		font-size: 14px;
+    	font-weight: normal;
+    	margin-bottom: 9px;
+    	margin-left: 3px;
+   }
+   .footer-contacts p{
+   		font-family: "CenturyGothic", sans-serif;
+   }
+   .footer-contacts-phone{
+   		font-size: 30px ;
+   }
+   .footer-contacts-address{
+   		font-size: 14px;
+   		margin-top: 6px;    	
+    	margin-left: 3px;
+    	letter-spacing: 0.3px;
+   }
+   .footer-contacts-email{
+   		margin-top: 12px;
+    	margin-left: 3px;
+    	margin-bottom: 24px;
+    	font-size: 14px;
+   }
+     .footer-contacts-email a{
+     	text-decoration: underline;
+     	color: white;
+     }
+   .footer-contacts-book{
+   		display: inline-block;
+   		margin-left: 3px;
+   		border: 2px solid #fff;
+   		font-family: "CenturyGothicBold", sans-serif !important;
+   		font-size: 18px;
+   		border-radius: 8px;
+   		text-align: center;
+   		padding: 8px 20px;
+   		cursor: pointer;
+   		transition: 0.2s;
+
+   }
+   .footer-contacts-book:hover{
+   		background: #e8888a;
+   		color: #272727;
+   		border: 2px solid #e8888a;
+   		transition: 0.2s;
+   }
+ .footer-copyright{
+ 	color: #fff;
+ 	font-size: 14px;
+ 	margin-top: 53px;
+ }
+  .footer-socials{
+  		margin-left: 12px;
+    	margin-top: 22px;
+  }
+    .footer-socials a{
+    	  width: 100%;
+    	  height: 100%;
+    	  display: block;
+    }
+  .footer-contacts-socials{
+		display: inline-block;
+		margin-right: 10px;
+		transition: 0.2s;
+  }
+    .footer-contacts-socials:hover{
+    	transition: 0.2s;
+    }
+
+  .footer-contacts-socials__facebook{
+		width: 9px;
+		height: 18px;
+		background: url(../img/socials.png);
+  }
+  .footer-contacts-socials__twitter{
+		width: 16px;
+		height: 20px;
+		background: url(../img/socials.png) -9px 1px;
+  }
+  .footer-contacts-socials__google{
+		width: 21px;
+		height: 18px;
+		background: url(../img/socials.png) 21px 0;
+  }
+    .footer-contacts-socials__facebook:hover{
+    	background: url(../img/socials.png) 0 18px;
+    }
+    .footer-contacts-socials__twitter:hover{
+		background: url(../img/socials.png) -9px 19px;
+	}
+	.footer-contacts-socials__google:hover{
+		background: url(../img/socials.png) 21px 18px;
+
+
+
