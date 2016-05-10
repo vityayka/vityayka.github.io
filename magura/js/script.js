@@ -110,7 +110,7 @@ $(function() {
       $(".calendar__guests .calendar-slider").html(guests);
     });
 
-    $(".header-booking-button, .hotel-rest-book").click(function(e){
+    $(".header-booking-button, .hotel-rest-book, .footer-contacts-book").click(function(e){
       e.preventDefault();
       // $(".book-popup").css('display','block');
       $(".book-popup").slideToggle(100);
@@ -121,6 +121,7 @@ $(function() {
       if ($(window).width() > 768) {
         if(!$("body").find("#TB_overlay").is("div")) {
           $("body").append("<div id='TB_overlay'></div>");
+          $("body").css('overflow', 'hidden');
          }
       }
     });
@@ -128,6 +129,7 @@ $(function() {
     $(".book-cross").click(function(){
       $(".book-popup").css('display','none');        
       $("#TB_overlay").remove();
+      $("body").css('overflow', '');
     })
 
     $( ".book-a-room .datepicker" ).datepicker({
