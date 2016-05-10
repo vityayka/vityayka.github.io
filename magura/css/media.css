@@ -199,6 +199,7 @@ footer{
     position: absolute;
     top: 42px;
     left: 0;
+    margin-left: 0;
     width: 100%;
     border-radius: 0;
     text-align: left;
@@ -289,8 +290,11 @@ footer{
     padding: 13px;
  }
   .reviews-wrapper {
-  	width: 100%;
+  	width: 95%;
   	height: 100%;
+  }
+  .reviews-wrapper .slider-slide{
+       width: 10%;
   }
 
   .reviews-arrows {

@@ -8,8 +8,9 @@ $(function() {
           duration: 1000,
           easing: 'easeInOutCirc'
         },
-        transitions: true
-
+        transitions: {
+        	transforms: true
+        }
     })
 
     .jcarouselAutoscroll({
@@ -18,24 +19,6 @@ $(function() {
       autostart: true
   	});
 
-        // var reviewsWidth = $(".reviews-wrapper").css('width');
-        // $(".reviews-wrapper").jcarousel('items').css('width', reviewsWidth);
-
-
-    $(window).resize(function(){
-    	$('.slider-jcarousel').jcarousel('reload', {animation: 'slow' });
-        var bodyWidth = $('body').css('width');
-        
-        if (parseInt(bodyWidth) > 1366) {
-          
-          $(".slider-jcarousel").jcarousel('items').css('width', bodyWidth);
-
-        } else{
-            $(".slider-jcarousel").jcarousel('items').css('width', '');
-        };
-
-        
-    });
 
      $('.slider-prev').jcarouselControl({
         target: '-=1'
@@ -57,13 +40,13 @@ $(function() {
     
       if ($('.header-menu').css('display') == 'none') {;
         $('.header-menu').css('display','inline-block');
-        $('.slider').css('opacity','0');
-        $('.slider').css('height','0');
+        $('.slider').css({'opacity': '0',
+						  'height':'0'});
         $('.book-popup').css('display', 'none');
       } else{
     	 $('.header-menu').css('display','none');
-    	 $('.slider').css('opacity','1');
-    	 $('.slider').css('height','100%');
+    	 $('.slider').css({'opacity': '1',
+						   'height': '100%'});
         }
     });
 
@@ -133,7 +116,7 @@ $(function() {
       $(".book-popup").slideToggle(100);
       
       if($(window).width() < 768){
-        $(".header-menu").slideToggle();
+        $(".header-menu").slideUp();
       }
       if ($(window).width() > 768) {
         if(!$("body").find("#TB_overlay").is("div")) {

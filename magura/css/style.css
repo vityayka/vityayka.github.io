@@ -25,33 +25,30 @@ a{
 }
 img{
 	border: 0;
+    display: block;
 }
 a:hover{
 	transition: 0.2s ease;
 }
 header{
-  position: relative;
-  max-width: 1400px;
-  height: 78px;
-  margin: 0 auto;
-	border-bottom: 1px solid #eeeeee;
+    position: relative;
+    max-width: 1400px;
+    height: 78px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eeeeee;
 }
   header a{
   	  line-height: 78px;
   }
   .header-logo{
-  	/*float: left;*/
-  	/*margin: 13px 15px 15px 49px;*/
   		position: absolute;
     	left: 3.6%;
     	top: 15px;
-    	/*width: 8.6%;*/
-    	/*height: 63%;*/
   }
-    .header-logo img{
-    	width: 100%;
-    	height: 100%;
-    }
+   .header-logo img{
+        width: 100%;
+   }
+
   .header-menu{
   		margin-left: 15.8%;
     	width: 61%;
@@ -60,43 +57,31 @@ header{
     	transition: 0.2s ease;
   }
   .header-menu-item{
-   display: inline-block;
-   list-style: none;
-   position: relative;
-   color: #272727;
-   margin-right: 3%;
-   font-size: 15px;
+       display: inline-block;
+       list-style: none;
+       position: relative;
+       color: #272727;
+       margin-right: 3%;
+       font-size: 15px;
   }
   .header-menu-item:nth-child(2){
-  	margin-right: 4.3%;
+       margin-right: 4.3%;
   }
   .header-menu-item:nth-child(3){
-  	margin-right: 4.4%;
+  	   margin-right: 4.4%;
   }
   .header-menu-item:nth-child(4){
-  	margin-right: 4%;
+  	   margin-right: 4%;
   }
-  /*.header-menu-item*/
-  /*.header-menu-item__submenu{*/
-  	/*margin-right: 37px;*/
-  /*}*/
   .header__arrow:after{
-	content: '';
-	background: url(../img/arrow_down.png);
-	position: absolute;
-	top: 35px;
-	right: -17px;
-	width: 11px;
-    height: 7px;
+	   content: '';
+	   background: url(../img/arrow_down.png);
+	   position: absolute;
+	   top: 35px;
+	   right: -17px;
+	   width: 11px;
+       height: 7px;
   }
-  /*.header-menu-item:last-child{*/
-  	/*border-left: 1px solid #eeeeee;*/
-  	/*width: 80px;*/
-  /*}*/
-    /*.header-menu-item:last-child:after{*/
-    	/*right: 10px;*/
-    /*}*/
-
     .header-menu-item a{
       text-decoration: none;
       display: block;
@@ -116,7 +101,6 @@ header{
 	   margin-left: 0;
 	   text-align: left;
 	   border: 1px solid #f1f1f1;
-	   /*width: 100%;*/
      }
      .header__submenu ul li:first-child{
      	border-top: none;
@@ -131,7 +115,6 @@ header{
 	  left: -11px; 
 	  opacity: 1; 
 	  z-index: 9999;
-	  /*width: 150%;*/
 	}
 	.header__submenu li:hover ul li a:hover, 
 	.header__submenu li:hover ul li a:focus{ 
@@ -186,7 +169,6 @@ header{
     .header-lang a{
     	 text-decoration: none;
         display: block;
-        /*line-height: 78px;*/
         color: #272727;
         margin-left: -7px;
     }
@@ -210,7 +192,6 @@ header{
 }
 
 .slider{
-	/*margin-top: -2px;*/
 	position: relative;
 	transition: 0.5s ease opacity;
 }
@@ -480,7 +461,8 @@ have a fixed width and height (but it's not required).
     position: fixed;
     text-align: center;
     top: 10%;
-    left: 28%;
+    left: 50%;
+    margin-left: -300px;
     padding-top: 22px;
     z-index: 99999;
     background: #fff;
@@ -515,7 +497,7 @@ have a fixed width and height (but it's not required).
       background: #fff;
   }
     .book-a-room select{
-      background: url(../img/arrow_down.png) no-repeat 97% 50%;
+      background: url(../img/arrow_down.png) no-repeat 96% 50%;
       background-size: 13px 9px;
       -webkit-appearance: none;
       -ms-appearance: none;
@@ -608,7 +590,6 @@ have a fixed width and height (but it's not required).
 	float: left;
 	box-sizing: border-box;
 	width: 37%;
-	height: 540px;
 	padding-top: 60px;
 	background: #eeeeee;
 	color: #272727;
@@ -630,7 +611,7 @@ have a fixed width and height (but it's not required).
  		height: 10px;
   }
   .hotel-rest-description p{
-      padding: 0 17%;
+      padding: 0 13%;
   		font-family: "CenturyGothic", sans-serif;
   		font-size: 14px;
   		line-height: 25px;
@@ -650,9 +631,9 @@ have a fixed width and height (but it's not required).
   }
 .hotel-rest-photo{
 	float: right;
-	height: 540px;
+	/*height: 540px;*/
 	width: 63%;
-  overflow: hidden;
+    overflow: hidden;
 }
 .hotel-rest-photo img{
 	min-width: 100%;
@@ -786,13 +767,8 @@ have a fixed width and height (but it's not required).
  	padding-bottom: 215px;
  }
  .slider-jcarousel .slider-jcarousel-container{
-    width: 20000em;
+    width: 1000%;
     position: relative;
-  }
-   .slider-slide p{
-  /*float: left;*/
-  /*width: 915px;*/
-      /*margin-bottom: 40px;*/
   }
    .reviews-wrapper{
    		font-family: "CenturyGothic", sans-serif;
@@ -814,20 +790,19 @@ have a fixed width and height (but it's not required).
   .reviews-arrows{
 	    cursor: pointer;
   }
-    .reviews-arrows-left{
-  		position: absolute;
-		top: 28%;
-		left: 4%;
-		height: 43px;
-		width: 25px;
-		background: url(../img/reviews-arrows.png) 0 0;
-     }
+    .reviews-arrows-left,
     .reviews-arrows-right{
   		position: absolute;
 		top: 28%;
-		right: 4%;
-		height: 42px;
+		height: 43px;
 		width: 25px;
+     }
+     .reviews-arrows-left{
+        left: 4%;
+        background: url(../img/reviews-arrows.png) 0 0;
+     }
+    .reviews-arrows-right{
+		right: 4%;
 		background: url(../img/reviews-arrows.png) 25px 0;	
     }
     .reviews-arrows-right:hover{
