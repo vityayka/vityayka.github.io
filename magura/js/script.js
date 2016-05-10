@@ -7,16 +7,17 @@ $(function() {
         animation: {
           duration: 1000,
           easing: 'easeInOutCirc'
-        }
+        },
+        transitions: true
 
     })
-    .jcarouselAutoscroll({
-      interval: 5000,
-      target: '+=1',
-      autostart: true
-  });
-            var reviewsWidth = $(".reviews-wrapper").css('width');
+    // .jcarouselAutoscroll({
+      // interval: 5000,
+      // target: '+=1',
+      // autostart: true
+  	// });
 
+        var reviewsWidth = $(".reviews-wrapper").css('width');
         $(".reviews-wrapper").jcarousel('items').css('width', reviewsWidth);
 
 
@@ -25,10 +26,11 @@ $(function() {
         var bodyWidth = $('body').css('width');
         
         if (parseInt(bodyWidth) > 1366) {
+          
           $(".slider-jcarousel").jcarousel('items').css('width', bodyWidth);
 
         } else{
-            // $(".slider-jcarousel").jcarousel('items').css('width', '');
+            $(".slider-jcarousel").jcarousel('items').css('width', '');
         };
 
         //Second slider

@@ -1,5 +1,17 @@
 
 @media screen and (min-width: 1367px) {
+  .slider-wrapper h1, h4, .slider-book-button{
+        left: 50% !important;
+  }
+  .slider-wrapper h1{
+       margin-left: -245px;
+  }
+  .slider-wrapper h4{
+       margin-left: -116px;
+  }
+  .slider-wrapper .slider-book-button{
+       margin-left: -128px;
+  }
   .hotel-rest-description {
       width: 50%;
   }
