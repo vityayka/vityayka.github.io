@@ -30,9 +30,10 @@ a:hover{
 	transition: 0.2s ease;
 }
 header{
-	/*margin: 0 auto;*/
-	/*text-align: center;*/
-	height: 78px;
+  position: relative;
+  max-width: 1400px;
+  height: 78px;
+  margin: 0 auto;
 	border-bottom: 1px solid #eeeeee;
 }
   header a{
@@ -52,12 +53,9 @@ header{
     	height: 100%;
     }
   .header-menu{
-  	/*float: left;*/
-  	/*margin-left: 33px;*/
   		margin-left: 15.8%;
-    	width: 58%;
+    	width: 61%;
     	height: 100%;
-    	/*overflow: hidden;*/
     	display: inline-block;
     	transition: 0.2s ease;
   }
@@ -66,17 +64,17 @@ header{
    list-style: none;
    position: relative;
    color: #272727;
-   margin-right: 3.1%;
+   margin-right: 3%;
    font-size: 15px;
   }
   .header-menu-item:nth-child(2){
-  	margin-right: 4.6%;
+  	margin-right: 4.3%;
   }
   .header-menu-item:nth-child(3){
-  	margin-right: 4.7%;
+  	margin-right: 4.4%;
   }
   .header-menu-item:nth-child(4){
-  	margin-right: 4.1%;
+  	margin-right: 4%;
   }
   /*.header-menu-item*/
   /*.header-menu-item__submenu{*/
@@ -176,27 +174,40 @@ header{
   	right: 23%;
   }
   .header-lang{
-  	float: right;
-  	position: relative;
-  	text-align: center;
-  	font-size: 15px;
-  	height: 100%;
-  	width: 80px;
-  	background: url(../img/arrow_down.png) 82% 51% no-repeat;
-  	border-left: 1px solid #eeeeee;
+  	   float: right;
+  	   position: relative;
+  	   text-align: center;
+  	   font-size: 15px;
+  	   height: 100%;
+  	   width: 80px;
+  	   background: url(../img/arrow_down.png) 82% 51% no-repeat;
+  	   border-left: 1px solid #eeeeee;
   }
-  .header-lang a{
-  	 text-decoration: none;
-      display: block;
-      /*line-height: 78px;*/
-      color: #272727;
-      margin-left: -7px;
-  }
-  .header-lang:hover ul{
-  	left: 0;
-  	opacity: 1;
-  	z-index: 99999;
-  }
+    .header-lang a{
+    	 text-decoration: none;
+        display: block;
+        /*line-height: 78px;*/
+        color: #272727;
+        margin-left: -7px;
+    }
+	.header-lang:hover ul{
+	    left: 0;
+	    width: 100%;
+	    opacity: 1;
+	    z-index: 99999;
+	}
+	.header-lang ul li{
+	    width: auto;
+	    text-align: center;
+	}
+	.header-lang ul li a{
+	    padding-left: 0;
+	    margin-left: 0;
+	}
+	.header-lang:hover ul li a:hover{
+	    background-color: #d9383c;
+	    color: #fff;
+}
 
 .slider{
 	/*margin-top: -2px;*/
@@ -207,9 +218,6 @@ header{
     position: relative;
     overflow: hidden;
     width: 100%;
-}
-.slider-item{
-	/*width: 1920px;*/
 }
 
 /*
@@ -229,14 +237,9 @@ that the width is big enough to contain all items.
 
 .slider-slide{
 	float: left;
-	/*width: 915px;*/
-	width: 745px;
+	width: 915px;
 }
- .slider-slide p{
-	/*float: left;*/
-	/*width: 915px;*/
-	margin-bottom: 40px;
- }
+
 
 /*
 These are the item elements. jCarousel works best, if the items
@@ -246,6 +249,7 @@ have a fixed width and height (but it's not required).
     /* Required only for block elements like <li>'s */
     float: left;
     position: relative;
+    width: 1920px;
 }
 .slider-wrapper h1{
 	color: #fff;
@@ -286,7 +290,7 @@ have a fixed width and height (but it's not required).
 }
 .slider-next{
 	position: absolute;
-	top: 42%;
+	top: 35%;
 	right: 4%;
 	height: 85px;
 	width: 45px;
@@ -294,15 +298,267 @@ have a fixed width and height (but it's not required).
 }
 .slider-prev{
 	position: absolute;
-	top: 42%;
+	top: 35%;
 	left: 4%;
 	height: 85px;
 	width: 45px;
 	background: url(../img/arrows.png) 0 0;
-
 }
+
+.calendar{
+	/*margin-top: -40px;*/
+  margin-top: -69px;
+	text-align: center;
+}
+ .calendar-item{
+ 	    position: relative;
+ 	    display: inline-block;
+      padding: 10px 3% 20px;
+ 	    margin-right: 1.9%;
+ 	    background: #fff;
+      background-color: #fff;
+      box-shadow: 0px 2px 7px 0px rgba(32, 22, 0, 0.17);
+ }
+   .calendar-item:before{
+   		content: '';   		
+   		position: absolute;
+   		display: block;
+   		width: 100%;
+   		top: -26px;
+   		left: 0;
+   		color: #fff;
+   		font-family: "CenturyGothic";
+   		font-size: 18px;
+   }
+   .calendar__guests{
+      margin-right: 0;
+   }
+   
+   .calendar__arriving:before{
+   		content: 'Arriving';
+   }
+   .calendar__departing:before{
+   		content: 'Departing';
+   }
+   .calendar__guests:before{
+   		content: 'Guests';
+   }
+   .calendar-month{
+   		font-size: 18px;
+   }
+   .calendar-slider{
+   		font-family: "CenturyGothic", sans-serif;
+   		font-size: 72px;
+   		width: 78px;
+   }
+ .calendar input[type="text"]{
+ 	   position: absolute;
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+ 	     opacity: 0;
+ }
+   .calendar-arrow-left{
+         top: 71px;
+         width: 12px;
+         height: 20px;
+         position: absolute;
+         left: 8px;
+         background-image: url(../img/reviews-arrows.png);
+         background-position: 0px 0px;
+         background-size: 200%;
+         cursor: pointer;
+   }
+   .calendar-arrow-right{
+   		 top: 71px;
+         width: 12px;
+         height: 20px;
+         position: absolute;
+         right: 8px;
+         background-image: url(../img/reviews-arrows.png);
+         background-position: 12px 0px;
+         background-size: 200%;
+         cursor: pointer;
+   }
+
+   .calendar input[type="button"]{
+        position: relative;
+        bottom: 34px;
+        left: 20px;
+        background: #d9383c;
+        color: #fff;
+        margin-top: 28px; 
+        padding: 14px 28px;
+        border: 0;
+        border-radius: 10px;
+        font-size: 18px;
+        font-family: "CenturyGothicBold", sans-serif;
+        cursor: pointer;
+   }
+   .calendar input[type="button"]:hover{
+      background: #e8888a;      
+   }
+ .ui-datepicker{
+ 	font-size: 14px !important;
+ 	border: none !important;
+ 	border-radius: 0 !important;
+ 	width: auto !important;
+ 	background: #fff !important; 
+  	box-shadow: 0px 2px 7px 0px rgba(32, 22, 0, 0.17) !important;
+ }
+ 
+ .ui-datepicker-header{
+ 	  font-family: "CenturyGothicBold", sans-serif;
+ 	  /*font-size: 14px !important;*/
+ 	  color: #d9383c !important;
+ 	  background: #fff !important;
+ 	  border: none !important;
+ 	  border-radius: 0 !important;
+ }
+  .ui-icon{
+  	    width: 8px !important;
+    	height: 14px !important;
+  	    background-image: url(../img/calendar-arrows.png) !important;
+   }
+    .ui-icon-circle-triangle-e {
+    	 background-position: -8px 0px !important;
+     }
+     .ui-icon-circle-triangle-w {
+      	 background-position: 0px 0px !important;
+	  }
+	.ui-state-hover{
+		background: #fff !important;
+		border: 0 !important;
+		/*right: 2px !important;*/
+		/*top: 7px !important;*/
+	}
+	.ui-datepicker-prev,
+	.ui-datepicker-next {
+		top: 7px !important;
+	}
+	.ui-state-hover .ui-icon-circle-triangle-e{
+		right: 50% !important;
+		background-position: -8px -14px !important;
+	}
+	.ui-state-hover .ui-icon-circle-triangle-w{
+		left: 50% !important;
+		background-position: 0px -14px !important;
+	}
+
+
+  .ui-datepicker td {
+     /* border: 0; */
+     padding: 10px !important;
+   }
+   .ui-datepicker-calendar{
+   		font-family: "CenturyGothic", sans-serif !important;
+   		background: #fff !important;
+   		text-transform: uppercase;
+   }
+    .ui-datepicker-calendar thead{
+    	border-bottom: 2px solid #eeeeee;
+    }
+   .ui-state-default, 
+   .ui-widget-content, 
+   .ui-state-default{
+   		border: none !important;
+   		background: none !important;
+   }
+   .ui-state-highlight,
+   .ui-state-active{
+   		background: #d9383c !important;
+   		color: #fff !important;
+   		border-radius: 20% !important;
+   }
+   .ui-datepicker td span, 
+   .ui-datepicker td a {
+   		text-align: center !important;
+   	}
+ .book-popup{
+    display: none;
+    position: fixed;
+    text-align: center;
+    top: 10%;
+    left: 28%;
+    padding-top: 22px;
+    z-index: 99999;
+    background: #fff;
+    border-radius: 10px;
+ }
+  .book-popup-header{
+      position: relative;
+  }
+ .book-a-room{
+    position: relative;
+    display: block;    
+    box-sizing: border-box;
+    width: 600px;
+    padding: 0 67px 36px 56px;
+    
+ }
+  .book-popup h1{
+     font-size: 48px;
+     margin-bottom: 24px;
+  }
+  .book-a-room input, select{
+      display: block;
+      box-sizing: border-box;
+      width: 475px;
+      padding: 13px 19px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      font-family: "CenturyGothic", sans-serif;
+      font-size: 18px;
+      color: #a8a8a8;
+      border: 1px solid #cecece;
+      background: #fff;
+  }
+    .book-a-room select{
+      background: url(../img/arrow_down.png) no-repeat 97% 50%;
+      background-size: 13px 9px;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      -moz-appearance: none;
+      appearance: none !important;
+      /*background-position: 98% 50%;*/
+  }
+  .book-a-room input, select:focus{
+      color: #000;
+  }
+
+  .book-a-room .datepicker{
+      background-image: url(../img/small-calendar.png);
+      background-position: 98% 50%;
+      background-repeat: no-repeat;
+  }
+  .book-a-room input[type="submit"]{
+      margin: 0 auto;
+      width: 194px;
+      border: 2px solid #d9383c;
+      font-family: "CenturyGothicBold", sans-serif;
+      cursor: pointer;
+  }
+  .book-a-room input[type="submit"]:hover{
+      background: #d9383c;
+      color: #fff;
+  }
+  .book-cross{
+      position: absolute;
+      right: 19px;
+      top: 0;
+      width: 17px;
+      height: 17px;
+      background: url(../img/cross.png) 0 0;
+      cursor: pointer;
+  }
+  .book-cross:hover{
+      background: url(../img/cross.png) 17px 0;
+  }
+
+
  .about{
- 	padding: 120px 230px 100px;
+ 	padding: 120px 17% 100px;
  	text-align: center;
  }
    .about h1{
@@ -352,13 +608,14 @@ have a fixed width and height (but it's not required).
 	float: left;
 	box-sizing: border-box;
 	width: 37%;
-	height: 100%;
-	padding: 60px 5% 0;
+	height: 540px;
+	padding-top: 60px;
 	background: #eeeeee;
 	color: #272727;
 }
   .hotel-rest-description h2{
   		position: relative;
+      display: inline-block;
   		font-size: 48px;
   		margin-bottom: 60px;
   		line-height: 40px;
@@ -373,6 +630,7 @@ have a fixed width and height (but it's not required).
  		height: 10px;
   }
   .hotel-rest-description p{
+      padding: 0 17%;
   		font-family: "CenturyGothic", sans-serif;
   		font-size: 14px;
   		line-height: 25px;
@@ -394,10 +652,10 @@ have a fixed width and height (but it's not required).
 	float: right;
 	height: 540px;
 	width: 63%;
+  overflow: hidden;
 }
 .hotel-rest-photo img{
-	width: 100%;
-	height: 100%;
+	min-width: 100%;
 }
 .restaurant{
 	background: #eeeeee;
@@ -412,11 +670,11 @@ have a fixed width and height (but it's not required).
 }
 .events{
 	text-align: center;
-	padding: 58px 120px 105px;
+	padding: 58px 8.9% 105px;
 	color: #272727;
 }
   .events-wrapper{
-  		margin-top: 30px;
+  	margin-top: 30px;
   }
 .events img{
 	width: 100%;
@@ -426,12 +684,18 @@ have a fixed width and height (but it's not required).
   		margin-bottom: 45px;
   }
 .events-item{
-	display: inline-block;
+  float: left;
 	position: relative;
-	width: 31%;
-    margin-right: 23px;
+	width: 31.4%;
+  max-width: 350px;
+  margin-right: 2.8%;
+}
+.events-item:nth-child(2){
+    float: none;
+    display: inline-block;
 }
 .events-item:last-child{
+  float: right;
 	margin-right: 0px;
 }
 .event-description{
@@ -471,18 +735,20 @@ have a fixed width and height (but it's not required).
   }
 .gallery{
 	color: #272727;
-	background: #eeeeee;
 }
-.gallery div{
+.gallery-wrapper{
+      background: #eeeeee;
+}
+.gallery-wrapper div{
 	float: left;
 	width: 25%;
 	margin-bottom: -4px;
-	margin-right: -1px;
+	/*margin-right: -1px;*/
 
 }
   .gallery-description{
   		box-sizing: border-box;
-  		padding-top: 100px;
+  		padding-top: 5%;
   		background: #eeeeee;
   		text-align: center;
   }
@@ -523,10 +789,15 @@ have a fixed width and height (but it's not required).
     width: 20000em;
     position: relative;
   }
+   .slider-slide p{
+  /*float: left;*/
+  /*width: 915px;*/
+      /*margin-bottom: 40px;*/
+  }
    .reviews-wrapper{
    		font-family: "CenturyGothic", sans-serif;
    		font-size: 14px;
-   		width: 68%;
+   		width: 915px;
    		margin: 0px auto;
    		height: 160px;
    		line-height: 30px;
@@ -573,7 +844,7 @@ have a fixed width and height (but it's not required).
   }
   .reviews-read-all{
   		display: inline-block;
-  		margin: 40px 0 0 90px;
+  		margin: 40px auto;
   		color: #fff;
   		background: #d9383c;
   		border: 2px solid #d9383c;
@@ -597,19 +868,23 @@ have a fixed width and height (but it's not required).
  footer{
 	/*height: 330px;*/
 	background: #272727;
-	padding: 36px 120px 40px;
+	padding: 36px 8.9% 40px;
 	
 }
   nav{
   	text-align: left;
   	display: inline-block;
   }
+
   .footer-categories ul{
 	float: left;
 	margin-right: 123px;
   }
   .footer-categories ul:nth-child(2){
   		margin-right: 74px;
+  }
+  .footer-categories ul:last-child{
+      margin-right: 0;
   }
   .footer-categories li{
 	list-style: none;
@@ -734,6 +1009,26 @@ have a fixed width and height (but it's not required).
 	}
 	.footer-contacts-socials__google:hover{
 		background: url(../img/socials.png) 21px 18px;
+  }
+
+  #TB_overlay {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000;
+      filter:progid:DXImageTransform.Microsoft.Alpha(opacity=55);
+      -moz-opacity: 0.55;
+      -khtml-opacity: 0.55;
+      opacity: 0.55;
+  }
+* html #TB_overlay {
+    position: absolute;
+    height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + "px");
+  }
+
 
 
 

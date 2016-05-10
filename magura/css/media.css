@@ -1,3 +1,71 @@
+
+@media screen and (min-width: 1367px) {
+  .hotel-rest-description {
+      width: 50%;
+  }
+  .hotel-rest-photo {
+      width: 50%;
+      overflow: hidden;
+  }
+  .events {
+    text-align: center;
+    padding: 58px 18% 105px;
+  }
+  .gallery{
+      padding: 0 13%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+    .slider-jcarousel li {
+        width: 1366px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hotel-rest-description {
+       width: 50%;
+    }
+    .hotel-rest-photo {
+        width: 50%;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    footer{
+  padding: 25px 35px 30px;
+}
+ .footer-categories ul {
+     margin-right: 50px;
+  }
+ .footer-categories ul:nth-child(2){
+   margin-right: 40px;
+ }
+ .footer-categories ul:last-child{
+  margin-right: 0;
+ }
+}
+
+@media screen and (max-width: 850px) {
+ .hotel-rest-description {
+      padding-top: 9%;
+ }
+  .hotel-rest-description p{
+      padding: 0 4%;
+      letter-spacing: -0.5px;
+  }
+  .hotel-rest-description h2 {
+      font-size: 36px;
+  }
+   .hotel-rest-description h2:after {
+      top: 53px;
+    }
+  .hotel-rest-description a {
+      padding: 12px 23px;
+    }
+}
+
 @media screen and (max-width: 768px) {
   header{
   	height: 100%;
@@ -14,17 +82,16 @@
 	  		display: list-item;
 	  		font-size: 14px;
 	  		margin-right: 0 !important;
-	  		/*padding-left: 10px;*/
 	  		border-bottom: 1px solid #f1f1f1;
 	  }
 	  .header-menu-item:first-child{
 	  		border-top: 1px solid #f1f1f1;
 	  }
 	  .header-menu-item a{
-	  		padding-left: 10px;
+	       padding-left: 10px;
 	  }
 	  .header__submenu ul{
-	  		position: static;
+	  		/*position: static;*/
 	  		height: 0;
 	  		/*opacity: 1;*/
 	  		width: 100%;
@@ -34,12 +101,11 @@
 	  .header__submenu ul li{
 	  		width: 100%;
 	  }
-	  .header__submenu li:hover ul{
+	  .header__submenu:hover ul{
 	  	height: 100%;
 	  }
 	  .header__submenu ul li a{
 	  		background: #f8f8f8;
-	  		padding-left: 20px;
 	  }
 	  .header__arrow:after{
 	  		top: 17px;
@@ -47,6 +113,7 @@
 	  }
 	.header-logo{
 		top: 3px;
+    left: 2%;
 		height: 37px;
 		width: 87px;
 	}
@@ -76,7 +143,8 @@
 		cursor: pointer;
 	}
  .slider-prev {
- 	left: 2%;
+ 	  left: 2%;
+    top: 125px;
     height: 65px;
     width: 35px;
     background: url(../img/arrows.png) 0 0;
@@ -84,6 +152,7 @@
   }
   .slider-next {
   	   right: 2%;
+       top: 125px;
        height: 65px;
        width: 35px;
        background: url(../img/arrows.png) 35px 0;
@@ -94,6 +163,9 @@
   		left: 28%;
   		top: 23%;
    }
+   .slider-slide{
+      width: 745px;
+   }
    .slider-jcarousel li {
    		width: 768px;
 	}
@@ -103,26 +175,62 @@
 	.slider-book-button {
 		left: 35%;
 	}
-.about{
-	padding: 120px 20px 100px;
-}
-.hotel-rest-description {
-	padding: 60px 26px;
-	width: 50%;
-}
-  .hotel-rest-description h2 {
-  	  font-size: 36px;
+ 
+ .book-popup{
+    /*display: block;*/
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    padding-top: 0;
+
+ }
+  .book-a-room{
+      width: auto;
+      padding: 0 13px 36px 16px;
   }
-  .hotel-rest-description a {
-  		padding: 11px 23px;
-  	}
-  .hotel-rest-photo {
-  		width: 50%;
-  		overflow: hidden;
-  }
-   .hotel-rest-photo img {
-   		width: 200%;
+   .book-popup h1 {
+      position: relative;
+      text-align: left;
+      font-size: 18px;
+      line-height: 38px;
+      margin-bottom: 16px;
+      padding-left: 32px;
+      border-bottom: 1px solid #f1f1f1;
    }
+   .book-a-room input, select {
+      width: 100%;
+   }
+   .book-cross {
+      position: absolute;
+      left: 16px;
+      top: 14px;
+      width: 7px;
+      height: 11px;
+      background: url(../img/calendar-arrows.png) 0 0;
+      background-size: 203%;
+    }
+      .book-cross:hover{
+        width: 7px;
+        height: 11px;
+        background: url(../img/calendar-arrows.png) 0 0;
+        background-size: 203%;
+      }
+
+  .calendar{
+      margin-top: -25px;
+  } 
+  .calendar input[type="button"]{
+      position: static;
+      display: block;
+      margin: 26px auto 0;
+  }
+.about{
+	padding: 40px 20px 100px;
+}
+
 .events {
 	padding: 31px 15px 20px;
 } 
@@ -139,16 +247,19 @@
   		display: none;
   	}
   	.events-item:first-child{
-  		margin-right: 39px;
+  		margin-right: 5.4%;
   	}
   	
   .left-right-figures {
   		margin-bottom: 20px;
    }
- .gallery div {
+ .gallery-wrapper div {
  		width: 50%;
   }
-   .gallery div:nth-child(n+5){
+  .gallery-description {
+      padding-top: 13%;
+  }
+   .gallery-wrapper div:nth-child(n+5){
    		display: none;
    }
 .reviews {
@@ -162,37 +273,70 @@
   .reviews-arrows {
   		display: none;
   	}
-
+  footer nav{
+     display: none;
+  }
+   .footer-contacts {
+       float: none;
+       text-align: center;
+       margin: 0;
+   }
  /*.slider-wrapper ul li img {*/
  		/*width: 70%;*/
   /*}*/
+}
 
-footer{
-	padding: 25px 35px 30px;
-}
- .footer-categories ul {
-     margin-right: 50px;
+@media screen and (max-width: 540px) {
+  .slider-directions {
+      display: none;
   }
- .footer-categories ul:nth-child(2){
- 	 margin-right: 40px;
- }
- .footer-categories ul:last-child{
- 	margin-right: 0;
- }
-}
+  .hotel-rest-description {
+    width: 100%;
+    padding: 9% 0;
+    height: auto;
+  }
+   .hotel-rest-description h2 {
+     margin-bottom: 40px;
+   }
+   .hotel-rest-description p{
+      padding: 0 3%;
+      line-height: 19px;
+   }
+  .hotel-rest-photo {
+    width: 100%;
+    height: 100%;
+    /*height: 203px;*/
+   }
+   .hotel-rest-photo img {
+        width: 100%;
+    }
+
 @media screen and (max-width: 320px) {
  .slider-wrapper h1 {
- 	font-size: 48px;
+ 	  font-size: 48px;
+    left: 34%;
  }
  .slider-slide{
- 	width: 300px;
+ 	  width: 300px;
  }
  .slider-jcarousel {
- 	overflow: visible;
+ 	  /*overflow: visible;*/
  }
-  .slider-directions {
-  		display: none;
+ .slider-jcarousel li {
+    /*width: 320px;*/
+}
+ .slider-wrapper h4 {
+    left: 34%;
+    top: 41%;
+}
+  .slider-book-button {
+    left: 33%;
+    top: 52%;
+}
+ .calendar{
+    display: none;
   }
+
  .about {
     padding: 20px 14px;
  }
@@ -207,18 +351,7 @@ footer{
  .about__first-par {
     margin-bottom: 0px;
  }
- .hotel-rest-description {
-    padding: 26px 14px;
-    width: 100%;
-  }
-  .hotel-rest-photo {
-    width: 100%;
-    height: 100%;
-    /*height: 203px;*/
-   }
-   .hotel-rest-photo img {
-        width: 100%;
-    }
+ 
  .events {
  	 padding: 0;
  	 margin-top: 20px;
@@ -268,19 +401,7 @@ footer{
 footer {
     padding: 22px 16px 30px;
 }
- footer nav{
- 	display: none;
- }
- .footer-contacts {
- 	  float: none;
-      text-align: center;
-      margin: 0;
-  }
   .footer-copyright{
   		margin-top: 11px;
   }
-
-
-
-
 }

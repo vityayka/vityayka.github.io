@@ -5,7 +5,10 @@
 	<title>Hotel Magura</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script src="js/jquery.jcarousel.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
@@ -52,8 +55,28 @@
 			<li class="header-menu-item"><a href="#">FEEDBACK</a></li>
 			<li class="header-menu-item"><a href="#">CONTACT US</a></li>
 		</ul>
-		
+		<div class="book-popup">
+		<div class="book-popup-header">
+			<h1>BOOK A ROOM</h1>
+			<div class="book-cross"></div>
+		</div>
+		<form action="#" class="book-a-room">
+			<!-- <h1>BOOK A ROOM</h1> -->
+			<input type="text" name="" id="book-arrival-date" class="datepicker" placeholder="Arrival date">
+			<input type="text" name="" id="book-departure-date" class="datepicker" placeholder="Departure date">
+			<input type="text" name="" id="book-departure-date" placeholder="Guests">
+			<select name="book-room-type" id="book-room-type">
+				<option value="type1">room type 1</option>
+				<option value="type1">room type 3</option>
+				<option value="type1">room type 3</option>
+			</select>
+			<input type="text" name="" id="book-your-name" placeholder="Your name">
+			<input type="text" name="" id="book-your-phone" placeholder="Your phone">
+			<input type="submit" value="Book now!">
+		</form>
+	</div>		
 	</header>
+
 	<section class="slider">
 		<div class="slider-jcarousel slider-wrapper">
 			<ul>
@@ -69,7 +92,7 @@
 				</li>
 				<li>
 					<!-- <div class="slider-item"> -->
-					<img src="img/home-food.jpg" alt=""> 
+					<img src="img/home-food1.jpg" alt=""> 
 					<h1>WELCOME</h1>
 					<h4>Enjoy delicious italian food</h4>
 					<a href="#" class="slider-book-button">
@@ -95,6 +118,30 @@
 			<div class="slider-prev">				
 			</div>
 		</div>
+		<section class="calendar">
+		<!-- <p><input type="text" id="datepicker"></p> -->
+		<div class="calendar-item calendar__arriving">
+			<span class="calendar-month">March</span>
+			<p class="calendar-slider">20</p>
+				<p class="calendar-arrow-left"></p>
+				<p class="calendar-arrow-right"></p>
+			<p><input type="text" class="datepicker"></p>
+		</div>
+		<div class="calendar-item calendar__departing">
+			<span class="calendar-month">March</span>
+			<p class="calendar-slider">30</p>
+				<p class="calendar-arrow-left"></p>
+				<p class="calendar-arrow-right"></p>
+			<p><input type="text" class="datepicker"></p>
+		</div>
+		<div class="calendar-item calendar__guests">
+			<span>&nbsp</span>
+			<p class="calendar-slider">2</p>
+				<p class="calendar-arrow-left"></p>
+				<p class="calendar-arrow-right"></p>			
+		</div>
+		<input type="button" value="Book a table">
+		</section>
 	</section>
 	<section class="about">
 		<h1>ABOUT US</h1>
@@ -139,7 +186,7 @@
 		<h5 class="left-right-figures">
 			And special offers
 		</h5>
-		<div class="events-wrapper">
+		<div class="events-wrapper clearfix">
 		<div id="event-1" class="events-item">
 			<img src="img/event1.jpg" alt="">
 			<div class="events-item-date">
@@ -184,37 +231,38 @@
 		</div>
 	</div>
 	</section>
-	<section class="gallery clearfix">
-		<div class="gallery-description">
-			<h3>Gallery</h3>
-			<!-- <img src="img/about_fig.png" alt=""> -->
-			<p>Our last photos</p>
-		</div>
-		<div class="gallery-images">
-			<img src="img/gallery-1.jpg" alt="">
-		</div>
-		<div class="gallery-images">
-			<img src="img/gallery-2.jpg" alt="">
-		</div>
-		<div class="gallery-images">
-			<img src="img/gallery-3.jpg" alt="">
-		</div>
-		<div class="gallery-images">
-			<img src="img/gallery-4.jpg" alt="">
-		</div>
-		<div class="gallery-images">
-			<img src="img/gallery-5.jpg" alt="">
-		</div>
-		<div class="gallery-images">
-			<img src="img/gallery-6.jpg" alt="">
-		</div>
-		<div class="gallery-images">
-			<img src="img/gallery-7.jpg" alt="">
+	<section class="gallery">
+		<div class="gallery-wrapper clearfix">
+			<div class="gallery-description">
+				<h3>Gallery</h3>
+				<!-- <img src="img/about_fig.png" alt=""> -->
+				<p>Our last photos</p>
+			</div>
+			<div class="gallery-images">
+				<img src="img/gallery-1.jpg" alt="">
+			</div>
+			<div class="gallery-images">
+				<img src="img/gallery-2.jpg" alt="">
+			</div>
+			<div class="gallery-images">
+				<img src="img/gallery-3.jpg" alt="">
+			</div>
+			<div class="gallery-images">
+				<img src="img/gallery-4.jpg" alt="">
+			</div>
+			<div class="gallery-images">
+				<img src="img/gallery-5.jpg" alt="">
+			</div>
+			<div class="gallery-images">
+				<img src="img/gallery-6.jpg" alt="">
+			</div>
+			<div class="gallery-images">
+				<img src="img/gallery-7.jpg" alt="">
+			</div>
 		</div>
 	</section>
 	<section class="reviews">
-		<h1>OUR CLIENT SAYS</h1>
-		
+		<h1>OUR CLIENT SAYS</h1>		
 		<div class="slider-jcarousel reviews-wrapper">
 			<div class="slider-jcarousel-container">
 				<div class="slider-slide">
@@ -246,7 +294,7 @@
 			</div>
 		<!-- </div> -->
 	</section>
-	<footer>
+	<footer class="clearfix">
 		<nav class="footer-categories clearfix">
 			<ul>
 				<li><a href="#">HOTEL</a></li>
