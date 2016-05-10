@@ -3,7 +3,7 @@ $(function() {
     $('.slider-jcarousel').jcarousel({
         // Configuration goes here
         wrap: 'circular',
-        center:'true',
+        center: 'true',
         animation: {
           duration: 1000,
           easing: 'easeInOutCirc'
@@ -11,14 +11,15 @@ $(function() {
         transitions: true
 
     })
-    // .jcarouselAutoscroll({
-      // interval: 5000,
-      // target: '+=1',
-      // autostart: true
-  	// });
 
-        var reviewsWidth = $(".reviews-wrapper").css('width');
-        $(".reviews-wrapper").jcarousel('items').css('width', reviewsWidth);
+    .jcarouselAutoscroll({
+      interval: 5000,
+      target: '+=1',
+      autostart: true
+  	});
+
+        // var reviewsWidth = $(".reviews-wrapper").css('width');
+        // $(".reviews-wrapper").jcarousel('items').css('width', reviewsWidth);
 
 
     $(window).resize(function(){
@@ -33,9 +34,6 @@ $(function() {
             $(".slider-jcarousel").jcarousel('items').css('width', '');
         };
 
-        //Second slider
-        var reviewsWidth = $(".reviews-wrapper").css('width');
-        $(".reviews-wrapper").jcarousel('items').css('width', reviewsWidth);
         
     });
 
