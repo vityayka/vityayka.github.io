@@ -1,6 +1,5 @@
 $(function() {
     $('.jcarousel').jcarousel({
-        // Configuration goes here
         wrap: 'circular',
         transitions: {
           transforms: true
@@ -13,11 +12,13 @@ $(function() {
     $('.jcarousel-next').jcarouselControl({
         target: '+=1'
     });
+
     $('.jcarousel').jcarouselAutoscroll({
       interval: 5000,
       target: '+=1',
       autostart: true
-  }); 
+    }); 
+
      $('.jcarousel-pagination')
        .on('jcarouselpagination:active', 'a', function() {
            $(this).addClass('isActive');
