@@ -13,11 +13,19 @@ $(function() {
     $('.jcarousel-next').jcarouselControl({
         target: '+=1'
     });
+<<<<<<< HEAD
   //   $('.jcarousel').jcarouselAutoscroll({
   //     interval: 5000,
   //     target: '+=1',
   //     autostart: true
   // }); 
+=======
+     $('.jcarousel').jcarouselAutoscroll({
+       interval: 5000,
+       target: '+=1',
+       autostart: true
+   });
+>>>>>>> 933201a7a9c2466f8e84b47f172bac36fbd11e9c
      $('.jcarousel-pagination')
        .on('jcarouselpagination:active', 'a', function() {
            $(this).addClass('isActive');
