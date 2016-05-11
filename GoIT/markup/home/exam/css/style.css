@@ -28,17 +28,15 @@ h1, h2, h3, h4 {
     display: table;
     clear: both; }
 
-    .jcarousel {
-    position: relative;
-    width: 960px;
-}
+.jcarousel {
+  position: relative;
+  width: 960px;
+  margin-top: -18px; }
 .jcarousel .slider-holder {
     width: 20000em;
     position: relative;}
 .jcarousel .slider-holder-slide{
-   float: left;
-    /*list-style: none;*/
-}
+   float: left; }
 .main-nav {
   float: right;
   margin: 74px 0 0;
@@ -67,7 +65,7 @@ h1, h2, h3, h4 {
 
 .jcarousel-pagination, .dots-nav {
   position: absolute;
-  right: 35%;
+  right: 34%;
   bottom: -109px; }
   .jcarousel-pagination a, 
   .dots-nav-item {
@@ -124,24 +122,25 @@ header {
   height: 400px;
   background-color: rgba(0, 0, 0, 0.2); }
   .slider .section-wrapper {
-    position: relative; }
+    position: relative;
+    padding-top: 0.1px; }
   .slider-wrapper {
     overflow: hidden;
     position: relative; }
   .slider-directions_left,
   .slider-directions_right {
     position: absolute;
-    top: 41%;
+    top: 44%;
     width: 30px;
     height: 42px;
     background-image: url("../img/arrows.png");
     cursor: pointer;
     background-position: 0 0; }
     .slider-directions_left{
-      left: 5%;
+      left: 8%;
       background-position: 0 0; }
   .slider-directions_right {
-    right: 5%;
+    right: 8%;
     background-position: -30px 0; }
   .slider-holder {
     position: relative;
@@ -153,7 +152,7 @@ header {
       width: 960px; }
   .slider-description {
     float: left;
-    margin-top: 77px;
+    margin-top: 95px;
     width: 55%;
     text-shadow: 0 2px #868686; }
     .slider-description__title {
@@ -643,8 +642,7 @@ footer {
       .slider-description__text {
         display: none; }
     .slider-image {
-      width: 40%; 
-  	  top: -7px;}
+      width: 40%; }
   	  .slider-image__action{
   	  	top: 34%;
   	  	left: 45%;
