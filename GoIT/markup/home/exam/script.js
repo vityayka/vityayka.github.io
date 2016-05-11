@@ -6,8 +6,6 @@ $(function() {
           transforms: true
         }
     });
-    // $('.jcarousel').jcarousel('scroll', '+=1');
-
     $('.jcarousel-prev').jcarouselControl({
         target: '-=1'
     });
