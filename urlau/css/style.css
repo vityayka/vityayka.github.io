@@ -1,0 +1,100 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+section{
+	width: 320px;
+	margin: 0 auto;
+}
+section.top{
+	color: #fff;
+	background: url(../img/head.jpg) center;
+	background-size: cover;
+	text-align: center;
+}
+.top h1{
+	margin-top: 35px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+}
+.top h3{
+	margin-top: 15px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+}
+header{
+	padding-top: 20px;
+}
+.header-logo{
+	display: block;
+	margin-top: 115px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+}
+.top a{
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+}
+header a{
+	display: inline-block;
+	padding: 8px 16px;
+}
+.header-signup{
+	border: 2px solid #fff;
+	border-radius: 25px;
+}
+.top-button{
+	display: inline-block;
+	margin-top: 17px;
+	margin-bottom: 138px;
+	padding: 14px 50px;
+	border-radius: 25px;
+	background-color: #ff4e50;
+}
+.steps h2{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 22px;
+	color: #333;
+	text-align: center;
+}
+
+.slider-holder-item{
+	position: relative;
+	width: 300px;
+	height: 240px;
+	overflow: hidden;
+	color: #fff;
+}
+.slide-title, .slider-holder-item h3, .slide-description{
+	position: absolute;
+	left: 20px;
+}
+.slide-title{
+	top: 69px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 10px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	padding: 7px 14px;
+	background-color: #ff4e50;
+	border-radius: 15px;
+}
+.slider-holder-item h3{
+	top: 109px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+.slide-description{
+	top: 177px;
+	padding-right: 12px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+
