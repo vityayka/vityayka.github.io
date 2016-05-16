@@ -6,12 +6,18 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="js/jquery.jcarousel.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
 	<section class="top">
-	<header>
-		<a href="#" class="header-login">Log in</a>
-		<a href="#" class="header-signup">Sign up</a>
+	<header class="clearfix">
+		<div class="header-buttons">
+			<a href="#" class="header-login">Log in</a>
+			<a href="#" class="header-signup">Sign up</a>
+		</div>
 		<span class="header-logo">URLAUBSGLÜCK</span>
 	</header>
 	<h1>SHARE YOUR HOLIDAY DREAMS</h1>
@@ -30,6 +36,22 @@
 						<p class="slide-description">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
 					</div>
 				</div>
+				<div class="slider-holder-item">
+					<img src="img/slide-1.jpg" alt="">
+					<div class="slide-text">	
+						<span class="slide-title">STEP 1</span>
+						<h3>Sed leo enim, <br>condimentum</h3>
+						<p class="slide-description">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+					</div>
+				</div>
+				<div class="slider-holder-item">
+					<img src="img/slide-1.jpg" alt="">
+					<div class="slide-text">	
+						<span class="slide-title">STEP 1</span>
+						<h3>Sed leo enim, <br>condimentum</h3>
+						<p class="slide-description">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="slider-wrapper jcarousel">
@@ -38,8 +60,8 @@
 					<img src="img/slide-2.jpg" alt="">
 					<div class="slide-text">	
 						<span class="slide-title">STEP 2</span>
-						<h3>Sed leo enim, <br>condimentum</h3>
-						<p class="slide-description">Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.</p>
+						<h3>Morbi velit risus</h3>
+						<p class="slide-description">Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.</p>
 					</div>
 				</div>		
 			</div>
@@ -99,6 +121,7 @@
 				<p class="partner-text">Based in Chicago. I love playing tennis and loud music.</p>
 			</figcaption>
 		</figure>
+		<a href="#" class="partner-button">See other partners</a>
 	</section>
 	<section class="ideas">
 		<h2>Discover holiday activity ideas</h2>
@@ -144,7 +167,36 @@
 				<figcaption>Travelling</figcaption>
 			</a>
 		</figure>
+		<figure></figure>
 	</section>
+	<section class="search">
+		<h2>Discover holiday activity ideas</h2>
+		<h4>Hi! What are your holiday interests?</h4>
+		<form action="#">
+			<input type="text" id="search-interests" placeholder="Enter your interests">
+			<input type="submit" value="Search partners">
+		</form>
+	</section>
+	<footer class="clearfix">
+		<h2>URLAUBSGLÜCK</h2>
+		<nav>
+			<ul>
+				<li>Company</li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contacts</a></li>
+				<li><a href="#">Press</a></li>
+				<li><a href="#">Blog</a></li>
+			</ul>
+			<ul>
+				<li>Partners</li>
+				<li></li>
+			</ul>
+		</nav>
+		<div class="footer-logo">
+			<p>DESIGNED BY</p>
+			<img src="img/footer-logo.png" alt="">
+		</div>
+	</footer>
 
 	
 </body>
