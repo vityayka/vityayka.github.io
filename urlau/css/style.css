@@ -12,6 +12,11 @@ h1, h2{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 }
+a{
+	-webkit-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
+	transition: 0.3s ease;
+}
 .clearfix:after{
 	content: '';
 	display: block;
@@ -59,13 +64,23 @@ header a{
 	border: 2px solid #fff;
 	border-radius: 25px;
 }
+.header-buttons .header-signup:hover{
+	background-color: #fff;
+	color: #333;
+}
 .top-button{
 	display: inline-block;
 	margin-top: 17px;
 	margin-bottom: 138px;
-	padding: 14px 50px;
+	padding: 12px 48px;
+	border: 2px solid #ff4e50;
 	border-radius: 25px;
 	background-color: #ff4e50;
+}
+.top-button:hover{
+	background: #fff;
+	border: 2px solid #ff4e50;
+	color: #ff4e50;
 }
 section.steps{
 	min-height: 777px;
@@ -175,9 +190,6 @@ figure.partner-wrapper{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    -webkit-transition: 0.1s ease-in;
-    -o-transition: 0.1s ease-in;
-    transition: 0.1s ease-in;
 }
 .partner-button:hover{
 	background: #ff4e50;
@@ -199,6 +211,7 @@ section.ideas{
 	overflow: hidden;
     margin: 0 auto 9px;
     border-radius: 4px;
+    cursor: pointer;
 }
 .ideas figure:last-child{
 	width: 100%;
@@ -207,6 +220,21 @@ section.ideas{
 }
 .ideas figure img{
 	margin-top: -38px;
+}
+.ideas figure:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: rgba(100,0,0,0.4);
+	-webkit-transition: 0.4s ease;
+	-o-transition: 0.4s ease;
+	transition: 0.4s ease;
+}
+.ideas figure:hover:after{
+	opacity: 1;
 }
 .ideas figcaption{
 	margin-top: -228px;
@@ -254,7 +282,7 @@ section.search{
 #search-interests{
 	width: 280px;
 	margin-top: 15px;
-    line-height: 38px;
+    height: 38px;
     box-sizing: border-box;
     padding-left: 15px;
     border-radius: 4px;
@@ -293,6 +321,9 @@ footer nav li:last-child{
 footer nav a{
 	text-decoration: none;
 	color: #666;
+}
+footer nav a:hover{
+	color: #ff4e50;
 }
 .footer-logo p{
 	margin-bottom: 9px;
