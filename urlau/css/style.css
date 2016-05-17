@@ -299,6 +299,7 @@ footer nav a{
     font-family: Montserrat, sans-serif;
     font-weight: bold;
     font-size: 10px;
+    letter-spacing: 1px;
     color: #ccc;
 }
 .footer-logo img{
@@ -456,6 +457,7 @@ footer nav a{
     }
     .footer-logo{
     	float: right;
+    	text-align: right;
     }
 }
 @media screen and (min-width: 1440px){
