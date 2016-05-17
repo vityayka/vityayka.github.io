@@ -68,6 +68,7 @@ header a{
 	background-color: #ff4e50;
 }
 section.steps{
+	min-height: 777px;
 	margin-top: 35px;
 }
 .steps h2{
@@ -76,7 +77,8 @@ section.steps{
 	text-align: center;
 }
 .slider-wrapper{
-	margin-top: 10px;
+	width: 300px;
+    margin: 10px auto;
 }
 .slider-holder-item{
 	position: relative;
@@ -197,6 +199,11 @@ section.ideas{
 	overflow: hidden;
     margin: 0 auto 9px;
     border-radius: 4px;
+}
+.ideas figure:last-child{
+	width: 100%;
+	height: 0;
+	visibility: hidden;
 }
 .ideas figure img{
 	margin-top: -38px;
@@ -324,6 +331,7 @@ footer nav a{
 	}
 	section.steps{
 		margin-top: 95px;
+		min-height: 378px;
 		text-align: center;
 	}
 	.slider-wrapper{
@@ -331,8 +339,28 @@ footer nav a{
 		margin-right: 16px;
 		margin-top: 37px;
 		text-align: left;
-		width: 306px;
+		width: 236px;
+		height: 400px;
 	}
+	.slider-left,
+	.slider-right{
+		position: absolute;
+		top: 40px;
+		width: 30px;
+		height: 55px;
+		background: url(../img/arrows.png);
+		cursor: pointer;
+	}
+	.slider-left{
+		left: 22px;
+		background-position: 0 0;
+		z-index: 1;
+	}
+	.slider-right{
+		right: 22px;
+		background-position: 30px 0;
+	}
+		
 	.slider-wrapper:last-child{
 		margin-right: 0;
 	}
@@ -386,11 +414,6 @@ footer nav a{
 		margin-top: -170px;
 		padding: 0 13px;
 	}
-	.ideas figure:last-child{
-		width: 100%;
-		height: 0;
-		visibility: hidden;
-	}
 	.ideas figure img{
 		margin-top: 0;
 	}
@@ -442,9 +465,16 @@ footer nav a{
 	.header-logo{
 		margin-top: 0;
 	}
+	.slider-wrapper{
+		width: 306px;
+	}
 	.slider-holder-item {
    		width: 306px;
    	}
+	.slider-left,
+	.slider-right{
+		top: 153px;
+	}
 	.partners{
 		width: 960px;
 	}
@@ -481,7 +511,7 @@ You must ensure that the position is relative or absolute and
 that the width is big enough to contain all items.
 */
 .jcarousel .slider-holder {
-    width: 1000px;
+    width: 2000px;
     position: relative;
 }
 
