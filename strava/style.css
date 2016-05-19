@@ -16,7 +16,7 @@
 			}
 	body{
 		font-family: 'Helvetica Neue', Tahoma, sans-serif;
-		background: url(Background.png) no-repeat;
+		background: url(Background.png) fixed no-repeat;
 		background-size: cover;
 	}
 
