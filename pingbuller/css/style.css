@@ -359,7 +359,6 @@ header {
           color: #edbfff; 
         }
       .info-testimonials-item__text {
-        height: 178px;
         overflow: hidden;
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
