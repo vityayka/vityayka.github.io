@@ -42,10 +42,17 @@
 		<div class="my-bimedis">
 			<div class="my-bimedis-content">
 				<ul>
-					<li><a class="my-bimedis-name" href="#">Трансформатор Трансформаторов</a></li>
-					<li><a class="my-bimedis-cabinet" href="#">Перейти в кабинет</a></li>
-					<li><a class="my-bimedis-currency" href="#">USD</a></li>
-					<li><a class="my-bimedis-exit" href="#">Выйти</a></li>
+					<li class="my-bimedis-name"><a href="#">Трансформатор Трансформаторов</a></li>
+					<li class="my-bimedis-cabinet"><a href="#">Перейти в кабинет</a></li>
+					<li class="my-bimedis-currency">
+						<a  href="#">USD</a>
+						<ul class="my-bimedis-currency-list">
+							<li><a href="#">GBP</a></li>
+							<li><a href="#">EUR</a></li>
+							<li><a href="#">UAH</a></li>
+						</ul>
+					</li>
+					<li class="my-bimedis-exit"><a href="#">Выйти</a></li>
 				</ul>
 			</div>
 			<h3>Мій БіМедіс</h3>
@@ -775,7 +782,17 @@
 			><ul>
 				<li><a href="#">ЛОР</a></li>
 				<li><a href="#">Лучевая терапия</a></li>
-				<li><a href="#">Мониторы/Реанимация</a></li>
+				<li id="categories-menu"><a href="#">Мониторы/Реанимация</a>
+					<ul id="categories-mon-reanim">
+						<h4>МОНИТОРЫ/РЕАНИМАЦИЯ</h4>
+						<li><a href="#">Дефибрилляторы</a></li>
+						<li><a href="#">Записывающие устройства</a></li>
+						<li><a href="#">Модули, стойки</a></li>
+						<li><a href="#">Мониторы</a></li>
+						<li><a href="#">Мониторы АД</a></li>
+						<li><a href="#">Мониторы апноэ</a></li>
+					</ul>
+				</li>
 				<li><a href="#">Неврология</a></li>
 				<li><a href="#">Офтальмологическое оборудование</a></li>
 				<li><a href="#">Плетизмограф</a></li>
@@ -815,6 +832,9 @@
 			</ul>
 		</div>
 	</footer>
+	<div class="online-help">
+		<span>Online Поддержка</span>
+	</div>
 	
 </body>
 </html>

@@ -2,7 +2,11 @@ $(function() {
     $('.ads-slider').jcarousel({
         wrap: 'circular',
         transitions: {
-          transforms: true
+          transforms: true,
+          easing: 'cubic-bezier(0.81,-0.26, 0.68, 0.19)'
+        },
+        animation: {
+          duration: 800
         }
     });
     $('.ads-slider-prev').jcarouselControl({
@@ -12,7 +16,7 @@ $(function() {
     $('.ads-slider-next').jcarouselControl({
         target: '+=2'
     });
-
+// AUTOSCROLL
     // $('.ads-slider').jcarouselAutoscroll({
       // interval: 3000,
       // target: '+=2',

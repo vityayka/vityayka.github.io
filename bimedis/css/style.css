@@ -28,6 +28,16 @@
     font-style: normal;
     font-weight: normal;
 }
+/* font-family: "MyriadProBold"; */
+@font-face {
+    font-family: "MyriadProBold";
+    src: url("../fonts/MyriadProBold/MyriadProBold.eot");
+    src: url("../fonts/MyriadProBold/MyriadProBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProBold/MyriadProBold.woff") format("woff"),
+    url("../fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -269,7 +279,7 @@ li.third-level-menu{
 .my-bimedis:hover .my-bimedis-content,
 .lang-select:hover .lang-select-content{
 	display: block;
-	height: 330px;
+	height: 440px;
 	z-index: 3;
 	-webkit-transition-delay: 0s;
 	-o-transition-delay: 0s;
@@ -278,7 +288,7 @@ li.third-level-menu{
 .my-bimedis:active h3{}
 .my-bimedis-content:hover,
 .lang-select-content:hover{
-	height: 330px;
+	height: 440px;
 	z-index: 3;
 }
 .my-bimedis ul,
@@ -304,7 +314,6 @@ li.third-level-menu{
 .lang-select li{
     width: 100%;
     box-sizing: border-box;
-    padding: 0px 0px 0 17px;
     border-left: 1px solid #0080ff;
     border-right: 1px solid #0080ff;
     border-bottom: 1px solid #dae0e6;
@@ -351,50 +360,112 @@ li.third-level-menu{
 .lang-select li a{
 	position: relative;
 	display: block;
+	padding-left: 17px;
 	line-height: 58px;
 	font-family: "SegoeUIRegular", Arial, sans-serif;
 	font-size: 13px;
 	color: #000;
 }
-.my-bimedis .my-bimedis-name{
+.my-bimedis .my-bimedis-name a{
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
 	line-height: 29px;
 }
-.my-bimedis-currency:before{
+.my-bimedis-currency > a:before{
 	content: '';
     position: absolute;
     width: 0px;
     height: 16px;
     top: 22.5px;
-    left: 117px;
+    left: 129px;
     border-right: 1px solid #919599;
+   	-webkit-transition: 0.2s ease-in-out all;
+	-o-transition: 0.2s ease-in-out all;
+	transition: 0.2s ease-in-out all;
 }
-.my-bimedis-currency:after{
+.my-bimedis-currency > a:after{
     content: '';
     position: absolute;
 	top: 25px;
-    left: 112px;
+    left: 124px;
 	width: 11px;
 	height: 11px;
 	background: transparent;
 	border-top: 1px solid #919599;
 	border-right: 1px solid #919599;
+	-webkit-transition: 0.2s ease-in-out all;
+	-o-transition: 0.2s ease-in-out all;
+	transition: 0.2s ease-in-out all;
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-.my-bimedis-exit:after{
+.my-bimedis-currency:hover > a:after{
+	-webkit-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+.my-bimedis-currency:hover > a:before{
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+ul.my-bimedis-currency-list{
+	opacity: 0;
+	height: 0;
+	-webkit-transition: 0.2s ease-in-out all 0.5s;
+	-o-transition: 0.2s ease-in-out all 0.5s;
+	transition: 0.2s ease-in-out all 0.5s;
+}
+ul.my-bimedis-currency-list li{
+	margin-top: 0 !important;
+	background: #edf0f2;
+	text-align: center;
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+ul.my-bimedis-currency-list a{
+	padding-left: 0;
+	font-family: "SegoeUISemiBold", Arial, sans-serif;
+	font-size: 14px;
+}
+ul.my-bimedis-currency-list li:before{
+	display: none;
+}
+ul.my-bimedis-currency-list li:hover{
+	background: #2693ff;
+}
+
+ul.my-bimedis-currency-list li:first-child{
+	border-top-color: #dae0e6;
+	border-radius: 0;
+}
+ul.my-bimedis-currency-list li:first-child:hover{
+	border-top-color: #0080ff;
+}
+.my-bimedis-currency:hover{
+	border-bottom-color: #dae0e6;
+}
+.my-bimedis-currency:hover ul.my-bimedis-currency-list{
+	opacity: 1;
+	height: 178px;
+}
+.my-bimedis-exit a:after{
     content: '';
     position: absolute;
     top: 50%;
-    left: 100px;
+    left: 117px;
     width: 30px;
     height: 30px;
     background: url(../img/sprite.png) -277px -30px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.my-bimedis li .my-bimedis-exit:hover:after{
+.my-bimedis .my-bimedis-exit:hover a:after{
 	background-position: -246px -30px;
 }
 .my-bimedis-unread-msg{
@@ -452,9 +523,11 @@ div.lang-select{
 .lang-select:hover:before{
 	border-color: #fff;
 }
-.lang-select li{
+.lang-select li,
+.lang-select li a{
 	padding: 0;
 }
+
 section.search{
 	position: relative;
 	padding-top: 9px;
@@ -518,6 +591,7 @@ div.search-form{
 	border-top-right-radius: 30px;
 	border-bottom-right-radius: 30px;
 	border-left: 0;
+	cursor: pointer;
 }
 .search-form form:after{
 	content: '';
@@ -549,7 +623,7 @@ div.search-form{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	top: 50%;
+	top: 17px;
 	right: 10px;
 	width: 8.5px;
 	height: 8.5px;
@@ -563,8 +637,8 @@ div.search-form{
 #search-categories:before{
 	content: '';
 	position: absolute;
-	top: 50%;
-	right: 5px;
+	top: 17px;
+	right: 5.2px;
 	width: 12px;
 	border-bottom: 1px solid #919599;
 }
@@ -911,7 +985,7 @@ div.ads-slider-popup{
 }
 .ads-slider-item:hover .ads-slider-popup{
 	opacity: 1;
-	height: auto;
+	height: 200px;
 }
 .ads-slider-popup-descr{
 	text-align: left;
@@ -1107,6 +1181,7 @@ div.categories-wrapper{
 	margin: 0 auto;
 }
 .categories ul{
+	position: relative;
 	display: inline-block;
 	margin-top: 30px;
 	margin-right: 10px;
@@ -1158,6 +1233,73 @@ div.categories-wrapper{
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
+#categories-menu:hover ul#categories-mon-reanim{
+	display: block;
+}
+ul#categories-mon-reanim{
+	position: absolute;
+	display: none;
+	margin-top: 0;
+	top: 0;
+	left: 0;
+	background: #fff;
+	z-index: 1;
+	border-bottom: 1px solid #008cff;
+	border-top: 1px solid #008cff;
+}
+#categories-mon-reanim li{
+	margin-bottom: 0;
+	width: 386px;
+	padding: 0 33px 0 21px;
+	box-sizing: border-box;
+	border: 0;
+	border-left: 1px solid #008cff;
+	border-right: 1px solid #008cff;
+	border-radius: 0;
+}
+#categories-mon-reanim a{
+	padding: 19px 0;
+	border-bottom: 1px solid #e6ecf2;
+	font-size: 13px;
+}
+#categories-mon-reanim a:before,
+#categories-mon-reanim a:after{
+	display: none;
+}
+#categories-mon-reanim h4{
+	position: relative;
+    padding: 23px 0 26px 21px;
+	border-left: 1px solid #008cff;
+    border-right: 1px solid #008cff;
+    border-bottom: 1px solid #dae0e5;
+    font-family: "SegoeUISemiBold", Arial, sans-serif;
+    font-size: 14px;
+}
+#categories-mon-reanim h4:after,
+#categories-mon-reanim h4:before{
+	content: '';
+	position: absolute;
+	right: 15px;
+	top: 28px;
+	width: 28px;
+	height: 0;
+	border-top: 2px solid #007fff;
+	cursor: pointer;
+}
+#categories-mon-reanim h4:before{
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+#categories-mon-reanim h4:after{
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+
 footer{
 	background: #0069cc;
 }
@@ -1259,4 +1401,28 @@ p.footer-logo{
 	color: #fff;
 	font-family: "SegoeUIRegular", Arial, sans-serif;
 	font-size: 14px;
+}
+
+div.online-help{
+	position: fixed;
+	right: -64px;
+	top: 300px;
+	text-align: center;
+	font-family: "MyriadProBold", Arial, sans-serif;
+	font-size: 16px;
+	color: #0066cc;
+	background: rgba(255,255,255,0.5);
+	border: 1px solid #ced4d9;
+	border-bottom: 0;
+	border-radius: 4px;
+	cursor: pointer;
+ 	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
+	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+.online-help span{
+	line-height: 49px;
+	padding: 0 20px;
 }
