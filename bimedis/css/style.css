@@ -1035,6 +1035,10 @@ section.news{
 	border-bottom: 1px solid #003366;
 }
 .news-wrapper{
+	width: 1180px;
+	margin: 0 auto;
+}
+.news-item{
 	display: inline-block;
 	margin: 30px 11px 30px 0;
 	margin-right: 11px;
@@ -1043,7 +1047,7 @@ section.news{
 	border-radius: 3px;
 	background: #fff;
 }
-.news-wrapper:last-child{
+.news-item:last-child{
 	margin-right: 0;
 }
 p.new-header{
@@ -1052,7 +1056,7 @@ p.new-header{
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
 	font-size: 14px;
 }
-.news-wrapper figcaption{
+.news-item figcaption{
 	margin-top: 16px;
 	padding: 0 18px;
 	text-align: justify;
@@ -1094,6 +1098,10 @@ a.news-button:hover{
 section.categories{
 	text-align: center;
 }
+div.categories-wrapper{
+	width: 1180px;
+	margin: 0 auto;
+}
 .categories ul{
 	display: inline-block;
 	margin-top: 30px;
@@ -1105,7 +1113,7 @@ section.categories{
 	margin-right: 0;
 }
 .categories li{
-	width: 385px;
+	width: 384px;
 	border: 1px solid #dae0e5;
 	border-radius: 3px;
 	margin-bottom: 10px;
