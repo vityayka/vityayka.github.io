@@ -62,7 +62,7 @@ header{
 	border-bottom: 1px solid #dae0e6;
 }
 .header-wrapper,
-section.search{
+.search-wrapper{
 	margin: 0 auto;
 	width: 1180px;
 }
@@ -75,22 +75,27 @@ section.search{
 li.first-level-menu{
 	position: relative;
 	float: left;
-	margin: 0 10px 0 -9px;
+	margin-left: -9px;
 	border: 1px solid transparent;
 }
-li.first-level-menu:nth-child(n+2){
-	border: 1px solid transparent;
-	margin-right: 23px;
+#header-more{
+	position: relative;
+	float: left;
 }
-li.first-level-menu:nth-child(n+2) a{
-	padding-right: 0;
+#header-more li{
+	margin-left: -7px;
+    float: left;
+    border: 1px solid transparent;
 }
 
-li.first-level-menu:nth-child(n+2):hover{
+#header-more li:hover{
 	background: #fff;
 	box-shadow: none;
 	border: 1px solid transparent;
 	border-bottom: 1px solid #0080ff;
+}
+#header-more span{
+	display: none;
 }
 li.first-level-menu:nth-child(n+2):hover a{
 	color: #000;
@@ -104,6 +109,7 @@ a.first-level-link{
 	position: relative;
 	display: block;
 	padding: 0 18px 0 49px;
+	line-height: 57px;
 	text-decoration: none;
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
 	font-size: 15px;
@@ -130,12 +136,16 @@ a.first-level__services:before{
 a.first-level__news:before{
 	background-position: -60px 0;
 }
-header li:hover{
+.header-menu li:hover,
+.my-bimedis li:hover,
+.lang-select li:hover{
 	background: #2693ff;
 	border: 1px solid #0f5aa7;
 	box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.2) inset;
 }
-header li:hover > a{
+.header-menu li:hover > a,
+.my-bimedis li:hover > a,
+.lang-select li:hover > a{
 	color: #fff;
 }
 .header-menu ul{
@@ -249,7 +259,7 @@ li.third-level-menu{
     content: '';
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 16px;
     width: 33px;
     height: 30px;
     background: url(../img/sprite.png) -180px -30px no-repeat;
@@ -299,8 +309,8 @@ li.third-level-menu{
 .my-bimedis h3,
 .lang-select h3{
     display: block;
-    padding-left: 60px;
-    padding-right: 20px;
+    padding-left: 56px;
+    padding-right: 17px;
     z-index: 2;
     font-family: 'SegoeUISemiBold', Arial, sans-serif;
     font-size: 14px;
@@ -527,15 +537,17 @@ div.lang-select{
 .lang-select li a{
 	padding: 0;
 }
-
 section.search{
-	position: relative;
-	padding-top: 9px;
-	padding-bottom: 20px;
-	min-height: 400px;
-	background: url(../img/photo-main.jpg) -100px -55px;
+/*	background: url(../img/photo-main.jpg) -100px -55px;*/
 }
-section.search:before{
+div.search-wrapper{
+	position: relative;
+	padding-top: 11px;
+	padding-bottom: 20px;
+	min-height: 400px;	
+	background: url(../img/photo-main.jpg) -89px -59px;
+}
+div.search-wrapper:before{
 	content: '';
 	position: absolute;
 	top: 6px;
@@ -596,8 +608,8 @@ div.search-form{
 .search-form form:after{
 	content: '';
 	position: absolute;
-	top: 10px;
-	right: 33px;
+	top: 12px;
+	right: 29px;
 	width: 17px;
 	height: 18px;
 	background: url(../img/sprite.png) -332px 0;
@@ -624,7 +636,7 @@ div.search-form{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	top: 17px;
-	right: 10px;
+	right: 16px;
 	width: 8.5px;
 	height: 8.5px;
 	border-right: 1px solid #919599;
@@ -638,7 +650,7 @@ div.search-form{
 	content: '';
 	position: absolute;
 	top: 17px;
-	right: 5.2px;
+	right: 11.2px;
 	width: 12px;
 	border-bottom: 1px solid #919599;
 }
@@ -752,7 +764,7 @@ div.banner-text:hover{
 	box-shadow: 0 0 30px 12px #fff;
 }
 .banner-text h2{
-	margin-bottom: 10px;
+	margin-bottom: 12px;
 	font-size: 36px;
 	color: #000;
 }
@@ -813,12 +825,12 @@ div.buttons-blue{
 }
 a#button-search,
 a#button-off-repres{
-	width: 288px;
+	width: 292px;
 	padding-left: 107px;
 }
 a#button-off-repres{
 	line-height: 25px;
-	padding-right: 47px;
+	padding-right: 49px;
 	text-align: center;
 }
 a#button-search,
@@ -829,8 +841,8 @@ a#button-off-repres{
 	border-left: 1px solid #4ca9ff;
 }
 a#button-howto{
-	width: 294px;
-	padding-left: 88px;
+	width: 298px;
+	padding-left: 87px;
 }
 a#button-pro-acc{
 	padding-left: 120px;
@@ -850,7 +862,7 @@ a#button-pro-acc{
 }
 a#button-search:before{
 	background-position: -349px 0;
-	left: 19px;
+	left: 20px;
 }
 a#button-howto:before{
 	background-position: -399px 0;
@@ -862,7 +874,7 @@ a#button-pro-acc:before{
 }
 a#button-off-repres:before{
 	background-position: -499px 0;
-	left: 22px;
+	left: 24px;
 }
 /*id="button-search">ПОИ*/
 /*id="button-howto">КАК */
@@ -900,13 +912,13 @@ div.buy-sell-wrapper{
 	border-top-right-radius: 30px;
 }
 .buy-sell nav li:nth-child(2){
-	padding: 0 15px 0 19px;
+	padding: 0 15px 0 18px;
 	border-left-color: #0080ff;
 	border-right-color: #0080ff;
 }
 .buy-sell nav li a{
 	display: block;
-	line-height: 38px;
+	line-height: 36px;
 	color: #000;
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
 	font-size: 14px;
@@ -960,8 +972,16 @@ p.ads-slider-description{
 p.ads-slider-description{
 	line-height: 15px;
 	font-size: 13px;
+    position: absolute;
+    font-size: 13px;
+    width: 100%;
+    top: 14px;
+    transform: translateY(-50%);
 }
 p.ads-slider-price{
+	position: absolute;
+    bottom: 6px;
+    width: 100%;
 	font-family: "SegoeUIBold", Arial, sans-serif;
 	font-size: 22px;
 	line-height: 22px;
@@ -998,10 +1018,7 @@ div.ads-slider-popup{
 }
 .ads-slider figcaption{
 	position: relative;
-    height: 52px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
+    height: 60px;
 }
 .ads-slider-popup-header{
 	padding: 8px 0 4px;
@@ -1072,6 +1089,7 @@ div.ads-slider-popup{
 	position: absolute;
 	margin-top: -150px;
 	left: 50%;
+	z-index: -1;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
@@ -1098,7 +1116,7 @@ div.ads-slider-popup{
 }
 
 section.news{
-	margin-top: -92px;
+	margin-top: -91px;
 	text-align: center;
 	background: #f2f6f7;
 }
@@ -1118,8 +1136,7 @@ section.news{
 }
 .news-item{
 	display: inline-block;
-	margin: 30px 11px 30px 0;
-	margin-right: 11px;
+	margin: 30px 10px 30px 0;
 	width: 384px;
 	border: 1px solid #b6babf;
 	border-radius: 3px;
@@ -1136,7 +1153,7 @@ p.new-header{
 }
 .news-item figcaption{
 	margin-top: 16px;
-	padding: 0 18px;
+	padding: 0 15px 0 21px;
 	text-align: justify;
 	font-family: "SegoeUIRegular", Arial, sans-serif;
 	font-size: 13px;
@@ -1154,12 +1171,12 @@ p.new-header{
 }
 a.news-button{
 	display: inline-block;
-	margin-top: 17px;
-	margin-bottom: 19px;
+	margin-top: 15px;
+	margin-bottom: 20px;
 	font-family: "SegoeUIRegular", Arial, sans-serif;
 	font-size: 13px;
 	color: #000;
-	padding: 13px 56px;
+	padding: 10px 55px;
 	border: 1px solid #0080ff;
 	border-radius: 30px;
 	-webkit-transition: 0.2s ease all;
@@ -1182,20 +1199,23 @@ div.categories-wrapper{
 }
 .categories ul{
 	position: relative;
-	display: inline-block;
-	margin-top: 30px;
+	margin: 29px 0 20px;
 	margin-right: 10px;
-	vertical-align: top;
 	text-align: left;
 }
 .categories ul:last-child{
 	margin-right: 0;
 }
 .categories li{
+	display: inline-block;
+	margin-right: 10px;
 	width: 384px;
 	border: 1px solid #dae0e5;
 	border-radius: 3px;
 	margin-bottom: 10px;
+}
+.categories li:nth-child(3n){
+	margin-right: 0;
 }
 .categories li:hover{
 	border-color: #66b3ff;
@@ -1204,7 +1224,7 @@ div.categories-wrapper{
 .categories a{
 	position: relative;
 	display: block;
-	padding: 19px 0 19px 21px;
+	padding: 14px 0 14px 21px;
 	font-family: "SegoeUIRegular", Arial, sans-serif;
 	font-size: 14px;
 	color: #000;
@@ -1214,14 +1234,14 @@ div.categories-wrapper{
     position: absolute;
     width: 0px;
     height: 19.2px;
-    top: 22.3px;
+    top: 14.3px;
     right: 20px;
     border-right: 1px solid #919599;
 }
 .categories a:after{
     content: '';
     position: absolute;
-    top: 25px;
+    top: 17px;
     right: 13px;
     width: 13px;
     height: 13px;
@@ -1234,16 +1254,23 @@ div.categories-wrapper{
 	transform: rotate(45deg);
 }
 #categories-menu:hover ul#categories-mon-reanim{
-	display: block;
+	height: auto;
+	left: 396px;
+	opacity: 1;
+	-webkit-transition: 0.2s ease-out opacity;
+	-o-transition: 0.2s ease-out opacity;
+	transition: 0.2s ease-out opacity;
 }
 ul#categories-mon-reanim{
 	position: absolute;
-	display: none;
+	width: 386px;
 	margin-top: 0;
-	top: 0;
-	left: 0;
+	top: -1px;
+	left: -5000px;
+	height: 0;
 	background: #fff;
 	z-index: 1;
+	opacity: 0;
 	border-bottom: 1px solid #008cff;
 	border-top: 1px solid #008cff;
 }
@@ -1255,7 +1282,18 @@ ul#categories-mon-reanim{
 	border: 0;
 	border-left: 1px solid #008cff;
 	border-right: 1px solid #008cff;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
 	border-radius: 0;
+}
+#categories-mon-reanim li:hover{
+	background: #2693ff;
+	border: 1px solid #0f5aa7;
+    box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.2) inset;
+}
+#categories-mon-reanim li:hover a{
+	color: #fff;
+	border-color: transparent;
 }
 #categories-mon-reanim a{
 	padding: 19px 0;
@@ -1319,6 +1357,7 @@ div.footer-wrapper{
 }
 .footer-menu a{
 	position: relative;
+	display: block;
 	padding-left: 39px;
 	line-height: 70px;
 	color: #fff;
@@ -1364,6 +1403,9 @@ a.footer-contacts:before{
 	width: 30px;
 	height: 70px;
 }
+.footer-socials li:last-child{
+	margin-right: 0;
+}
 .footer-socials a{
 	position: absolute;
 	top: 50%;
@@ -1396,7 +1438,7 @@ a#social-insta{
 }
 p.footer-logo{
 	float: right;
-	margin-left: 6px;
+	margin-left: 15px;
 	line-height: 70px;
 	color: #fff;
 	font-family: "SegoeUIRegular", Arial, sans-serif;

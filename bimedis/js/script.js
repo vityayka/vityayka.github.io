@@ -18,9 +18,9 @@ $(function() {
     });
 // AUTOSCROLL
     // $('.ads-slider').jcarouselAutoscroll({
-      // interval: 3000,
-      // target: '+=2',
-      // autostart: true
+    //   interval: 3000,
+    //   target: '+=2',
+    //   autostart: true
     // }); 
 
      $('.ads-slider-pagination')
@@ -36,6 +36,7 @@ $(function() {
        .jcarouselPagination({
            item: function(page) {
                return '<a href="#' + page + '"></a>';
-           }
+           },
+           'perPage': 3
        });
 });

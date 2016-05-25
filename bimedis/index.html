@@ -5,6 +5,7 @@
 	<title>Bimedis</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel.js"></script>
 	<script src="js/script.js"></script>
@@ -14,7 +15,7 @@
 	<div class="header-wrapper clearfix">
 		<nav>
 			<ul class="header-menu">
-				<li class="first-level-menu"><a href="#" class="first-level-link first-level__equipment">Обладнання</a>
+				<li id="header-equipment" class="first-level-menu"><a href="#" class="first-level-link first-level__equipment">Обладнання</a>
 					<ul class="header-submenu">
 						<li class="second-level-menu"><a href="#">Анестезиология/Пульмонология</a></li>
 						<li class="second-level-menu"><a href="#">Больничная мебель</a></li>
@@ -35,8 +36,11 @@
 						<li class="second-level-menu"><a href="#">Косметология/Дерматология</a></li>
 					</ul>
 				</li>
-				<li class="first-level-menu"><a href="#" class="first-level-link first-level__services">Послуги</a></li>
-				<li class="first-level-menu"><a href="#" class="first-level-link first-level__news">Новости медицины</a></li>
+			</ul>
+			<ul id="header-more" class="clearfix">
+				<li id="header-services"><a href="#" class="first-level-link first-level__services">Послуги</a></li
+				><li id="header-news"><a href="#" class="first-level-link first-level__news">Новости медицины</a></li
+				><span>Еще...</span>
 			</ul>
 		</nav>
 		<div class="my-bimedis">
@@ -75,43 +79,45 @@
 	</div>	<!-- .header-wrapper -->
 	</header>
 	<section class="search">
-		<div class="search-top clearfix">
-			<div class="search-form">
-				<form action="#">
-					<input type="text" name="find" id="find">
-					<div id="search-categories">
-						<span>В категории</span>
-						<ul>
-							<li><a href="#">Анестезиология/Пульмонология</a></li
-							><li><a href="#">Больничная мебель</a></li
-							><li><a href="#">Ветеринария</a></li
-							><li><a href="#">Внутренняя медицина</a></li
-							><li><a href="#">Диагностика/Визуализация</a></li
-							><li><a href="#">Косметология/Дерматология</a></li
-							><li class="menu__long-text"><a href="#">Лабораторное, стерилизационное и фармакологическое оборудование</a></li>
-						</ul>
-					</div>
-					<input type="submit" value="">
-				</form>
-			</div>	
-			<a href="#" id="place-ad">Déposer une annonce</a>
-		</div>
-		<div class="banner-text">
-			<h2>Medical Equipment Trading Platform</h2>
-			<span>13144 оголошень від 1332 продавців/покупців із 180 країн</span>
-			<ul>
-				<li><a href="#">ПРОДАТЬ</a></li>
-				<li><a href="#">КУПИТЬ</a></li>
-				<li><a href="#">АПГРЕЙД</a></li>
-			</ul>
-		</div>
-		<div class="buttons-blue">
-			<ul>
-				<li><a href="#" id="button-search">ПОИСК МОДЕЛИ</a></li>
-				<li><a href="#" id="button-howto">КАК КУПИТЬ/ПРОДАТЬ ?</a></li>
-				<li><a href="#" id="button-pro-acc">ПРО АККАУНТ</a></li>
-				<li><a href="#" id="button-off-repres">ОФИЦИАЛЬНЫЕ ПРЕДСТАВИТЕЛИ</a></li>
-			</ul>
+		<div class="search-wrapper">
+			<div class="search-top clearfix">
+				<div class="search-form">
+					<form action="#">
+						<input type="text" name="find" id="find">
+						<div id="search-categories">
+							<span>В категории</span>
+							<ul>
+								<li><a href="#">Анестезиология/Пульмонология</a></li
+								><li><a href="#">Больничная мебель</a></li
+								><li><a href="#">Ветеринария</a></li
+								><li><a href="#">Внутренняя медицина</a></li
+								><li><a href="#">Диагностика/Визуализация</a></li
+								><li><a href="#">Косметология/Дерматология</a></li
+								><li class="menu__long-text"><a href="#">Лабораторное, стерилизационное и фармакологическое оборудование</a></li>
+							</ul>
+						</div>
+						<input type="submit" value="">
+					</form>
+				</div>	
+				<a href="#" id="place-ad">Déposer une annonce</a>
+			</div>
+			<div class="banner-text">
+				<h2>Medical Equipment Trading Platform</h2>
+				<span>13144 оголошень від 1332 продавців/покупців із 180 країн</span>
+				<ul>
+					<li><a href="#">ПРОДАТЬ</a></li>
+					<li><a href="#">КУПИТЬ</a></li>
+					<li><a href="#">АПГРЕЙД</a></li>
+				</ul>
+			</div>
+			<div class="buttons-blue">
+				<ul>
+					<li><a href="#" id="button-search">ПОИСК МОДЕЛИ</a></li
+					><li><a href="#" id="button-howto">КАК КУПИТЬ/ПРОДАТЬ ?</a></li
+					><li><a href="#" id="button-pro-acc">ПРО АККАУНТ</a></li
+					><li><a href="#" id="button-off-repres">ОФИЦИАЛЬНЫЕ ПРЕДСТАВИТЕЛИ</a></li>
+				</ul>
+			</div>
 		</div>
 	</section>
 	<section class="buy-sell">
@@ -138,19 +144,15 @@
 									</div>
 									<figcaption>
 										<p class="ads-slider-description">
-											Система обработки, передачи<br> и архивации изображений AGFA CR 85-X
+											Система обработки, передачи и архивации изображений AGFA CR 85-X
 										</p>
 										<p class="ads-slider-price">
 											55 $
 										</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													18 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">18 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -177,20 +179,12 @@
 										<img src="img/slide-1.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Супер термометр
-										</p>
-										<p class="ads-slider-price">
-											55 $
-										</p>
+										<p class="ads-slider-description">Супер термометр</p>
+										<p class="ads-slider-price">55 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													18 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">18 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -220,20 +214,12 @@
 										<img src="img/slide-2.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Logic C5 Premium УЗИ-аппарат
-										</p>
-										<p class="ads-slider-price">
-											18 000 $
-										</p>
+										<p class="ads-slider-description">Logic C5 Premium УЗИ-аппарат</p>
+										<p class="ads-slider-price">18 000 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													18 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">18 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -260,20 +246,12 @@
 										<img src="img/slide-2.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Logic C5 Premium УЗИ-аппарат
-										</p>
-										<p class="ads-slider-price">
-											18 000 $
-										</p>
+										<p class="ads-slider-description">Logic C5 Premium УЗИ-аппарат</p>
+										<p class="ads-slider-price">18 000 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													18 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">18 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -303,20 +281,12 @@
 										<img src="img/slide-3.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Medoton-устройство
-										</p>
-										<p class="ads-slider-price">
-											250 $
-										</p>
+										<p class="ads-slider-description">Medoton-устройство</p>
+										<p class="ads-slider-price">250 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													250 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">250 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -343,20 +313,12 @@
 										<img src="img/slide-3.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Medoton-устройство
-										</p>
-										<p class="ads-slider-price">
-											250 $
-										</p>
+										<p class="ads-slider-description">Medoton-устройство</p>
+										<p class="ads-slider-price">250 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													250 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">250 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -386,21 +348,13 @@
 										<img src="img/slide-4.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Mindray УЗИ аппарат
-										</p>
-										<p class="ads-slider-price">
-											12 000 $
-										</p>
+										<p class="ads-slider-description">Mindray УЗИ аппарат</p>
+										<p class="ads-slider-price">12 000 $</p>
 										<p></p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													12 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">12 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -427,20 +381,12 @@
 										<img src="img/slide-4.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Mindray УЗИ аппарат
-										</p>
-										<p class="ads-slider-price">
-											12 000 $
-										</p>
+										<p class="ads-slider-description">Mindray УЗИ аппарат</p>
+										<p class="ads-slider-price">12 000 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													12 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">12 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -470,20 +416,12 @@
 										<img src="img/slide-1.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Система обработки, передачи и архивации изображений AGFA CR 85-X
-										</p>
-										<p class="ads-slider-price">
-											55 $
-										</p>
+										<p class="ads-slider-description">Система обработки, передачи и архивации изображений AGFA CR 85-X</p>
+										<p class="ads-slider-price">55 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													18 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">18 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -510,20 +448,12 @@
 										<img src="img/slide-1.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Супер термометр
-										</p>
-										<p class="ads-slider-price">
-											55 $
-										</p>
+										<p class="ads-slider-description">Супер термометр</p>
+										<p class="ads-slider-price">55 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													18 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">18 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -553,20 +483,12 @@
 										<img src="img/slide-2.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Logic C5 Premium УЗИ-аппарат
-										</p>
-										<p class="ads-slider-price">
-											18 000 $
-										</p>
+										<p class="ads-slider-description">Logic C5 Premium УЗИ-аппарат</p>
+										<p class="ads-slider-price">18 000 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													18 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">18 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -593,20 +515,12 @@
 										<img src="img/slide-2.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Logic C5 Premium УЗИ-аппарат
-										</p>
-										<p class="ads-slider-price">
-											18 000 $
-										</p>
+										<p class="ads-slider-description">Logic C5 Premium УЗИ-аппарат</p>
+										<p class="ads-slider-price">18 000 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													18 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">18 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -636,12 +550,8 @@
 										<img src="img/slide-2.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Logic C5 Premium УЗИ-аппарат
-										</p>
-										<p class="ads-slider-price">
-											18 000 $
-										</p>
+										<p class="ads-slider-description">Logic C5 Premium УЗИ-аппарат</p>
+										<p class="ads-slider-price">18 000 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
 												<p class="ads-slider-popup-name">
@@ -676,20 +586,12 @@
 										<img src="img/slide-2.jpg" alt="">
 									</div>
 									<figcaption>
-										<p class="ads-slider-description">
-											Logic C5 Premium УЗИ-аппарат
-										</p>
-										<p class="ads-slider-price">
-											18 000 $
-										</p>
+										<p class="ads-slider-description">Logic C5 Premium УЗИ-аппарат</p>
+										<p class="ads-slider-price">18 000 $</p>
 										<div class="ads-slider-popup">
 											<div class="ads-slider-popup-header">
-												<p class="ads-slider-popup-name">
-													Logic C5 Premium УЗИ-аппарат
-												</p>
-												<p class="ads-slider-popup-price">
-													18 000 $
-												</p>
+												<p class="ads-slider-popup-name">Logic C5 Premium УЗИ-аппарат</p>
+												<p class="ads-slider-popup-price">18 000 $</p>
 											</div>
 											<div class="ads-slider-popup-descr clearfix">
 												<ul>
@@ -725,7 +627,7 @@
 		<div class="news-wrapper">
 		<div class="news-item">
 			<p class="new-header">
-				Оксид графена: революция в стоматологии и альтернатива антибиот
+				<span>Оксид графена: революция в стоматологии и альтернатива антибиот</span>
 			</p>
 			<figure>
 				<div class="new-image">
@@ -739,7 +641,7 @@
 		</div
 		><div class="news-item">
 			<p class="new-header">
-				Оксид графена: революция в стоматологии и альтернатива антибиот
+				<span>Оксид графена: революция в стоматологии и альтернатива антибиот</span>
 			</p>
 			<figure>
 				<div class="new-image">
@@ -753,7 +655,7 @@
 		</div
 		><div class="news-item">
 			<p class="new-header">
-				Оксид графена: революция в стоматологии и альтернатива антибиот
+				<span>Оксид графена: революция в стоматологии и альтернатива антибиот</span>
 			</p>
 			<figure>
 				<div class="new-image">
@@ -771,18 +673,14 @@
 		<h2>КАТЕГОРИИ ТОВАРОВ</h2>
 		<div class="categories-wrapper">
 			<ul>
-				<li><a href="#">Анестезиология/Пульмонология</a></li>
-				<li><a href="#">Больничная мебель</a></li>
-				<li><a href="#">Ветеринария</a></li>
-				<li><a href="#">Внутренняя медицина</a></li>
-				<li><a href="#">Диагностика/Визуализация</a></li>
-				<li><a href="#">Косметология/Дерматология</a></li>
-				<li><a href="#">Лабораторное, стерилизационное и фармако...</a></li>
-			</ul
-			><ul>
-				<li><a href="#">ЛОР</a></li>
-				<li><a href="#">Лучевая терапия</a></li>
-				<li id="categories-menu"><a href="#">Мониторы/Реанимация</a>
+				<li><a href="#">Анестезиология/Пульмонология</a></li
+				><li><a href="#">ЛОР</a></li
+				><li><a href="#">Средства для ухода/реабилитации</a></li
+				><li><a href="#">Больничная мебель</a></li
+				><li><a href="#">Лучевая терапия</a></li
+				><li><a href="#">Стоматологическое оборудование</a></li
+				><li><a href="#">Ветеринария</a></li
+				><li id="categories-menu"><a href="#">Мониторы/Реанимация</a>
 					<ul id="categories-mon-reanim">
 						<h4>МОНИТОРЫ/РЕАНИМАЦИЯ</h4>
 						<li><a href="#">Дефибрилляторы</a></li>
@@ -792,20 +690,20 @@
 						<li><a href="#">Мониторы АД</a></li>
 						<li><a href="#">Мониторы апноэ</a></li>
 					</ul>
-				</li>
-				<li><a href="#">Неврология</a></li>
-				<li><a href="#">Офтальмологическое оборудование</a></li>
-				<li><a href="#">Плетизмограф</a></li>
-				<li><a href="#">Расходные материалы</a></li>
-			</ul
-			><ul>
-				<li><a href="#">Средства для ухода/реабилитации</a></li>
-				<li><a href="#">Стоматологическое оборудование</a></li>
-				<li><a href="#">Физиотерапия</a></li>
-				<li><a href="#">Хирургическое оборудование</a></li>
-				<li><a href="#">Экстренная медицина/Скорая помощь</a></li>
-				<li><a href="#">Эндоскопическое оборудование</a></li>
-			</ul>
+				</li
+				><li><a href="#">Физиотерапия</a></li
+				><li><a href="#">Внутренняя медицина</a></li
+				><li><a href="#">Неврология</a></li
+				><li><a href="#">Хирургическое оборудование</a></li
+				><li><a href="#">Диагностика/Визуализация</a></li
+				><li><a href="#">Офтальмологическое оборудование</a></li
+				><li><a href="#">Экстренная медицина/Скорая помощь</a></li
+				><li><a href="#">Косметология/Дерматология</a></li
+				><li><a href="#">Плетизмограф</a></li
+				><li><a href="#">Эндоскопическое оборудование</a></li
+				><li><a href="#">Лабораторное, стерилизационное и фар...</a></li
+				><li><a href="#">Расходные материалы</a></li>
+				</ul>
 		</div>
 	</section>
 	<footer>
@@ -820,7 +718,7 @@
 				</ul>
 			</nav>
 			<p class="footer-logo">
-				BiMedis &copy 2013-2016
+				BiMedis<span> &copy 2013-2016</span>
 			</p>
 			<ul class="footer-socials">
 				<li><a href="#" id="social-gplus"></a></li
