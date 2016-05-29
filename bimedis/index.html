@@ -6,43 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/perfect-scrollbar.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/perfect-scrollbar.jquery.js"></script>
 </head>
 <body>
 	<header>
 	<div class="header-wrapper clearfix">
-		<nav>
-			<ul class="header-menu">
-				<li id="header-equipment" class="first-level-menu"><a href="#" class="first-level-link first-level__equipment">Обладнання</a>
-					<ul class="header-submenu">
-						<li class="second-level-menu"><a href="#">Анестезиология/Пульмонология</a></li>
-						<li class="second-level-menu"><a href="#">Больничная мебель</a></li>
-						<li class="second-level-menu"><a href="#">Ветеринария</a></li>
-						<li class="second-level-menu"><a href="#">Внутренняя медицина</a></li>
-						<li class="second-level-menu"><a href="#">Диагностика/Визуализация</a></li>
-						<li class="menu__long-text second-level-menu"><a href="#">Лабораторное, стерилизационное и фармакологическое оборудование</a>
-							<ul class="header-sub-submenu">
-								<li class="third-level-menu"><a href="#">Анализаторы газов крови</a></li>
-								<li class="third-level-menu"><a href="#">Анализаторы гематологические</a></li>
-								<li class="third-level-menu"><a href="#">Анализаторы иммунологические</a></li>
-								<li class="third-level-menu"><a href="#">Анализаторы коагуляции</a></li>
-								<li class="third-level-menu"><a href="#">Анализаторы микробиологические</a></li>
-								<li class="third-level-menu"><a href="#">Анализаторы мочи</a></li>
-								<li class="third-level-menu"><a href="#">Анализаторы химичснкие</a></li>
-							</ul>
-						</li>
-						<li class="second-level-menu"><a href="#">Косметология/Дерматология</a></li>
-					</ul>
-				</li>
-			</ul>
-			<ul id="header-more" class="clearfix">
-				<li id="header-services"><a href="#" class="first-level-link first-level__services">Послуги</a></li
-				><li id="header-news"><a href="#" class="first-level-link first-level__news">Новости медицины</a></li
-				><span>Еще...</span>
-			</ul>
-		</nav>
 		<div class="my-bimedis">
 			<div class="my-bimedis-content">
 				<ul>
@@ -76,6 +48,50 @@
 			</div>
 			<h3>ENG</h3>
 		</div>
+		<nav>
+			<ul class="header-menu">
+				<li id="header-equipment" class="first-level-menu"><a href="#" class="first-level-link first-level__equipment">Обладнання</a>
+					<div id="container">
+					<ul class="header-submenu">
+						<li class="second-level-menu"><a href="#">Анестезиология/Пульмонология</a></li>
+						<li class="second-level-menu"><a href="#">Больничная мебель</a>
+							<ul class="header-sub-submenu">
+								<li class="third-level-menu"><a href="#">Cтойки/подставки</a></li>
+								<li class="third-level-menu"><a href="#">Кресла/Стулья/Банкетки</a></li>
+								<li class="third-level-menu"><a href="#">Кровати больничные</a></li>
+								<li class="third-level-menu"><a href="#">Кровати детские</a></li>
+								<li class="third-level-menu"><a href="#">Cтойки/подставки</a></li>
+							</ul>
+						</li>
+						<li class="second-level-menu"><a href="#">Ветеринария</a></li>
+						<li class="second-level-menu"><a href="#">Внутренняя медицина</a></li>
+						<li class="second-level-menu"><a href="#">Диагностика/Визуализация</a></li>
+						<li class="menu__long-text second-level-menu"><a href="#">Лабораторное, стерилизационное и фармакологическое оборудование</a>
+							<ul class="header-sub-submenu">
+								<li class="third-level-menu"><a href="#">Анализаторы газов крови</a></li>
+								<li class="third-level-menu"><a href="#">Анализаторы гематологические</a></li>
+								<li class="third-level-menu"><a href="#">Анализаторы иммунологические</a></li>
+								<li class="third-level-menu"><a href="#">Анализаторы коагуляции</a></li>
+								<li class="third-level-menu"><a href="#">Анализаторы микробиологические</a></li>
+								<li class="third-level-menu"><a href="#">Анализаторы мочи</a></li>
+								<li class="third-level-menu"><a href="#">Анализаторы химичснкие</a></li>
+							</ul>
+						</li>
+						<li class="second-level-menu"><a href="#">Косметология/Дерматология</a></li>
+						<li class="second-level-menu"><a href="#">Косметология/Дерматология</a></li>
+						<li class="second-level-menu"><a href="#">Косметология/Дерматология</a></li>
+						<li class="second-level-menu"><a href="#">Косметология/Дерматология</a></li>
+						<li class="second-level-menu"><a href="#">Косметология/Дерматология</a></li>
+					</ul>
+					</div>
+				</li>
+			</ul>
+			<ul id="header-more" class="clearfix">
+				<li id="header-services"><a href="#" class="first-level-link first-level__services">Послуги</a></li
+				><li id="header-news"><a href="#" class="first-level-link first-level__news">Новости медицины</a></li
+				><span>Еще...</span>
+			</ul>
+		</nav>
 	</div>	<!-- .header-wrapper -->
 	</header>
 	<section class="search">
@@ -673,13 +689,13 @@
 		<h2>КАТЕГОРИИ ТОВАРОВ</h2>
 		<div class="categories-wrapper">
 			<ul>
-				<li><span><a href="#">Анестезиология/Пульмонология</a></span></li
-				><li><span><a href="#">ЛОР</a></span></li
-				><li><span><a href="#">Средства для ухода/реабилитации</a></span></li
-				><li><span><a href="#">Больничная мебель</a></span></li
-				><li><span><a href="#">Лучевая терапия</a></span></li
-				><li><span><a href="#">Стоматологическое оборудование</a></span></li
-				><li><span><a href="#">Ветеринария</a></span></li
+				<li><a href="#">Анестезиология/Пульмонология</a></li
+				><li><a href="#">ЛОР</a></li
+				><li><a href="#">Средства для ухода/реабилитации</a></li
+				><li><a href="#">Больничная мебель</a></li
+				><li><a href="#">Лучевая терапия</a></li
+				><li><a href="#">Стоматологическое оборудование</a></li
+				><li><a href="#">Ветеринария</a></li
 				><li id="categories-menu"><span><a href="#">Мониторы/Реанимация</a></span>
 					<ul id="categories-mon-reanim">
 						<h4>МОНИТОРЫ/РЕАНИМАЦИЯ</h4>
@@ -691,18 +707,18 @@
 						<li><a href="#">Мониторы апноэ</a></li>
 					</ul>
 				</li
-				><li><span><a href="#">Физиотерапия</a></span></li
-				><li><span><a href="#">Внутренняя медицина</a></span></li
-				><li><span><a href="#">Неврология</a></span></li
-				><li><span><a href="#">Хирургическое оборудование</a></span></li
-				><li><span><a href="#">Диагностика/Визуализация</a></span></li
-				><li><span><a href="#">Офтальмологическое оборудование</a></span></li
-				><li><span><a href="#">Экстренная медицина/Скорая помощь</a></span></li
-				><li><span><a href="#">Косметология/Дерматология</a></span></li
-				><li><span><a href="#">Плетизмограф</a></span></li
-				><li><span><a href="#">Эндоскопическое оборудование</a></span></li
-				><li><span><a href="#">Лабораторное, стерилизационное и фармако...</a></span></li
-				><li><span><a href="#">Расходные материалы</a></span></li>
+				><li><a href="#">Физиотерапия</a></li
+				><li><a href="#">Внутренняя медицина</a></li
+				><li><a href="#">Неврология</a></li
+				><li><a href="#">Хирургическое оборудование</a></li
+				><li><a href="#">Диагностика/Визуализация</a></li
+				><li><a href="#">Офтальмологическое оборудование</a></li
+				><li><a href="#">Экстренная медицина/Скорая помощь</a></li
+				><li><a href="#">Косметология/Дерматология</a></li
+				><li><a href="#">Плетизмограф</a></li
+				><li><a href="#">Эндоскопическое оборудование</a></li
+				><li><a href="#">Лабораторное, стерилизационное и фармакологическое оборудование</a></li
+				><li><a href="#">Расходные материалы</a></li>
 				</ul>
 		</div>
 	</section>

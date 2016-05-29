@@ -52,8 +52,27 @@ $(function() {
       lang = 'Ukrainian';
     };
 
-    if (lang.length < 11) {
-      $('.lang-select').toggleClass('lang-select-' + lang);
-    }
+      $('.lang-select').removeClass('lang-select-English lang-select-Romana lang-select-Francais lang-select-Russian lang-select-Ukrainian');
+      $('.lang-select').addClass('lang-select-' + lang);
   });
+
+  $('.second-level-menu').click(function(){
+    // $('.second-level-menu').removeClass('second-level-menu_clicked');
+    $(this).toggleClass('second-level-menu_clicked');
+    $('.header-submenu').perfectScrollbar('destroy');
+  });
+  $('ul.header-sub-submenu, .second-level-menu').mouseleave(function(){
+    $('.second-level-menu').removeClass('second-level-menu_clicked');
+    $('.header-submenu').perfectScrollbar();
+
+
+
+  });
+
+
+
+
+  $('.header-submenu').perfectScrollbar({
+    suppressScrollX: true
+  }); 
 });
