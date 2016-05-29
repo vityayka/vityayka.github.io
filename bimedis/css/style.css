@@ -330,8 +330,8 @@ li.third-level-menu{
     border-top: 1px solid transparent;
     background: #fff;
 }
-.my-bimedis li:hover > a:before,
-.my-bimedis li:hover > a:after{
+#my-bimedis-currency:hover > a:before,
+#my-bimedis-currency:hover > a:after{
 	border-color: #fff;
 }
 .my-bimedis li:first-child,
@@ -376,11 +376,11 @@ li.third-level-menu{
 	font-size: 13px;
 	color: #000;
 }
-.my-bimedis .my-bimedis-name a{
+.my-bimedis #my-bimedis-name a{
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
 	line-height: 29px;
 }
-.my-bimedis-currency > a:before{
+#my-bimedis-currency > a:before{
 	content: '';
     position: absolute;
     width: 0px;
@@ -392,7 +392,7 @@ li.third-level-menu{
 	-o-transition: 0.2s ease-in-out all;
 	transition: 0.2s ease-in-out all;
 }
-.my-bimedis-currency > a:after{
+#my-bimedis-currency > a:after{
     content: '';
     position: absolute;
 	top: 25px;
@@ -410,59 +410,59 @@ li.third-level-menu{
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-.my-bimedis-currency:hover > a:after{
+#my-bimedis-currency:hover > a:after{
 	-webkit-transform: rotate(135deg);
 	-ms-transform: rotate(135deg);
 	-o-transform: rotate(135deg);
 	transform: rotate(135deg);
 }
-.my-bimedis-currency:hover > a:before{
+#my-bimedis-currency:hover > a:before{
 	-webkit-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
 	-o-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
-ul.my-bimedis-currency-list{
+ul#my-bimedis-currency-list{
 	opacity: 0;
 	height: 0;
 	-webkit-transition: 0.2s ease-in-out all 0.5s;
 	-o-transition: 0.2s ease-in-out all 0.5s;
 	transition: 0.2s ease-in-out all 0.5s;
 }
-ul.my-bimedis-currency-list li{
+ul#my-bimedis-currency-list li{
 	margin-top: 0 !important;
 	background: #edf0f2;
 	text-align: center;
 	border-left-color: transparent;
 	border-right-color: transparent;
 }
-ul.my-bimedis-currency-list a{
+ul#my-bimedis-currency-list a{
 	padding-left: 0;
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
 	font-size: 14px;
 }
-ul.my-bimedis-currency-list li:before{
+ul#my-bimedis-currency-list li:before{
 	display: none;
 }
-ul.my-bimedis-currency-list li:hover{
+ul#my-bimedis-currency-list li:hover{
 	background: #2693ff;
 }
 
-ul.my-bimedis-currency-list li:first-child{
+ul#my-bimedis-currency-list li:first-child{
 	border-top-color: #dae0e6;
 	border-radius: 0;
 }
-ul.my-bimedis-currency-list li:first-child:hover{
+ul#my-bimedis-currency-list li:first-child:hover{
 	border-top-color: #0080ff;
 }
-.my-bimedis-currency:hover{
+#my-bimedis-currency:hover{
 	border-bottom-color: #dae0e6;
 }
-.my-bimedis-currency:hover ul.my-bimedis-currency-list{
+#my-bimedis-currency:hover ul#my-bimedis-currency-list{
 	opacity: 1;
 	height: 178px;
 }
-.my-bimedis-exit a:after{
+#my-bimedis-exit a:after{
     content: '';
     position: absolute;
     top: 50%;
@@ -475,7 +475,7 @@ ul.my-bimedis-currency-list li:first-child:hover{
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.my-bimedis .my-bimedis-exit:hover a:after{
+.my-bimedis #my-bimedis-exit:hover a:after{
 	background-position: -246px -30px;
 }
 .my-bimedis-unread-msg{
@@ -530,6 +530,23 @@ div.lang-select{
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+	.lang-select-English:before{
+		background-position: -71px -60px;
+	}
+	.lang-select-Romana:before{
+		background-position: -14px -61px;
+	}
+	.lang-select-Francais:before{
+		background-position: -128px -61px;
+	}
+	.lang-select-Russian:before{
+		background-position: -196px -61px;
+	}
+	.lang-select-Ukrainian:before{
+		background-position: -240px -61px;
+	}
+
+
 .lang-select:hover:before{
 	border-color: #fff;
 }
@@ -815,6 +832,7 @@ div.buttons-blue{
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
 	font-size: 16px;
 	vertical-align: middle;
+	text-transform: uppercase;
 }
 .buttons-blue li a{
 	position: relative;
@@ -1017,6 +1035,8 @@ div.ads-slider-popup{
 	float: right;
 }
 .ads-slider figcaption{
+	box-sizing: border-box;
+	border-top: 1px solid #dae0e6;
 	position: relative;
     height: 60px;
 }
@@ -1135,9 +1155,11 @@ section.news{
 	margin: 0 auto;
 }
 .news-item{
+	position: relative;
 	display: inline-block;
 	margin: 30px 10px 30px 0;
 	width: 384px;
+	vertical-align: top;
 	border: 1px solid #b6babf;
 	border-radius: 3px;
 	background: #fff;
@@ -1146,10 +1168,16 @@ section.news{
 	margin-right: 0;
 }
 p.new-header{
+	display: table;
+	margin: 0 auto;
+	height: 49px;
     line-height: 16px;
-    padding: 8px 0;
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
 	font-size: 14px;
+}
+.new-header span{
+	display: table-cell;
+	vertical-align: middle;
 }
 .news-item figcaption{
 	margin-top: 16px;
@@ -1213,6 +1241,7 @@ div.categories-wrapper{
 	border: 1px solid #dae0e5;
 	border-radius: 3px;
 	margin-bottom: 10px;
+	vertical-align: top;
 }
 .categories li:nth-child(3n){
 	margin-right: 0;

@@ -39,4 +39,21 @@ $(function() {
            },
            'perPage': 3
        });
+
+       // LANG SELECT
+
+  $('.lang-select-content li a').click(function(e){
+    e.preventDefault();
+    var lang = $(this).html();
+
+    if (lang == 'Русский') {
+      lang = 'Russian';
+    } else if (lang == 'Українська') {
+      lang = 'Ukrainian';
+    };
+
+    if (lang.length < 11) {
+      $('.lang-select').toggleClass('lang-select-' + lang);
+    }
+  });
 });
