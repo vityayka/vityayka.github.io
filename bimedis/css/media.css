@@ -1,4 +1,11 @@
+@media screen and (max-width: 1300px){
+	div.ads-slider-next,
+	div.ads-slider-prev{
+		display: none;
+	}
+}
 @media screen and (max-width: 1180px){
+
 	div.header-wrapper,
 	div.search-wrapper,
 	div.buy-sell-wrapper,
@@ -43,11 +50,6 @@
 	}
 	a#button-off-repres {
     	padding-right: 20px;
-	}
-	
-	div.ads-slider-next,
-	div.ads-slider-prev{
-		display: none;
 	}
 	div.ads-slider-element{
 		width: 235px;
@@ -94,9 +96,6 @@
 		width: 320px;
 		text-align: left;
 	}
-	#categories-menu:hover ul#categories-mon-reanim {
-		left: 330px;
-	}
  	#categories-mon-reanim li {
  		width: 320px;
  	}
@@ -113,8 +112,12 @@
  	.footer-logo span{
  		display: none;
  	}
- 	div.online-help{
+ 	div.online-help,
+ 	div.faq{
  		display: none;
+ 	}
+ 	#btn-gotop{
+ 		right: 0;
  	}
 }
 @media screen and (max-width: 1024px){
@@ -145,6 +148,9 @@
 	div.banner-text {
     	margin-top: 140px;
     }
+    .banner-text span{
+    	margin-left: 0;
+    }
     .banner-text ul{
     	margin-top: 29px;
     }
@@ -174,9 +180,6 @@
 
 	.categories ul{
 		text-align: center;
-	}
-	#categories-menu:hover ul#categories-mon-reanim {
-		left: 370px;
 	}
 	.categories li{
 		text-align: left;
@@ -216,15 +219,18 @@
     	padding-top: 0;
     	left: auto;
     }
-	
+    .header-submenu li{
+    	width: 249px;
+    	padding: 0 0 0 8px;
+    }
+	ul.header-submenu {
+    	height: 260px;
+	}
 	.second-level-menu:first-child:before{
 		display: none;
 	}
-	li.second-level-menu{
-    	padding: 0 59px 0 10px;
-    }
 	#header-more{
-		z-index: 2;
+		z-index: 4;
 	}
 	#header-more li{
 		position: absolute;
@@ -241,10 +247,11 @@
 	#header-more span{
 		float: left;
 		display: block;
-		padding: 0 18px;
+		padding: 0 17px;
 		line-height: 57px;
 		font-family: "SegoeUIRegular", Arial, sans-serif;
 		font-size: 13px;
+		border: 1px solid transparent;
 		cursor: pointer;
 	}
 	#header-more:hover span{
@@ -254,7 +261,7 @@
 		color: #fff;
 	}
 	#header-more:hover li{
-		left: -3px;
+		left: -9px;
 		top: 100%;	
 		opacity: 1;	
 	}
@@ -306,10 +313,25 @@
     a.first-level-link:before{
     	display: none;
     }
+    ul.header-sub-submenu {
+    	top: 0;
+    	height: 261px;
+    	left: 248px;
+    }
+	li.third-level-menu{
+		width: 249px;
+		padding: 0 19px 0 9px;
+	}
+
+    #container{
+    	right: 0;
+    	width: auto;
+    }
     .header-submenu .second-level-menu{
     	border-bottom: 1px solid #dae0e6;
     }    
     .header-submenu .second-level-menu > a{
+    	width: 180px;
     	border-color: transparent;
     }
     .second-level-menu > a:after {
@@ -349,7 +371,7 @@
     }
     li.second-level-menu:hover > a:before{
     	height: 100%;
-    	width: 56px;
+    	width: 58px;
     	/*border-color: transparent;*/
  		background: #2693ff;
 		box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.2) inset;
@@ -572,12 +594,15 @@
 @media screen and (max-width: 480px){
 	div.header-wrapper,
 	div.search-wrapper,
-	div.buy-sell-wrapper,
-	div.news-wrapper,
-	div.categories-wrapper,
 	div.footer-wrapper{
 		margin: 0 auto;
 		width: 320px;
+	}
+	div.buy-sell-wrapper,
+	div.news-wrapper,
+	div.categories-wrapper{
+		margin: 0 auto;
+		width: 300px;
 	}
 	header{
 		height: auto;
@@ -589,6 +614,9 @@
 	ul.header-menu{
 		clear: both;
 	}
+	#header-more{
+		z-index: 2;
+	}
 	#header-more li{
 		margin-left: 0;
 	}
@@ -596,6 +624,7 @@
 		margin-left: 0;
 	}
 	li#header-services {
+		margin-right: 5px;
 		border-radius: 0;
 	}
 	li#header-news {
@@ -612,6 +641,20 @@
     	display: block;
     	padding: 0 13px 0;
     }
+    #container{
+    	right: auto;
+    	left: 0;
+    }
+	ul.header-submenu {
+    	height: 380px;
+	}
+	ul.header-sub-submenu {
+	    top: 119px;
+	    left: 0px;
+	}
+	li.third-level-menu {
+	    width: 320px;
+	}
 
 	#header-more span{
 		display: none;
@@ -628,9 +671,11 @@
 	}
 	li.second-level-menu {
 		position: relative;
+		width: 320px;
     	padding: 0 0px 0 18px;
 	}
-	li.second-level-menu > a{
+	.header-submenu li.second-level-menu > a{
+		width: 300px;
 		font-family: "SegoeUISemiBold", Arial, sans-serif;
 	}
 	li.second-level-menu:hover > a:before{
@@ -727,14 +772,19 @@
     	border-bottom-right-radius: 30px;
     	border-top-right-radius: 30px;
 	}
-
+	
+	div.ads-slider{
+		height: 390px;
+	}
 	div.ads-slider-element {
+		float: none;
     	width: 320px;
 	}
 	.ads-slider-item {
     	height: 120px;
     	border-left: 0;
     	border-right: 0;
+    	text-align: left;
 	}
 	div.ads-slider-item-image {
     	display: inline-block;
@@ -758,6 +808,16 @@
 		font-family: "SegoeUIRegular", Arial, sans-serif;
     	font-size: 14px;
 	}
+	div.ads-slider-popup{
+		display: none;
+	}
+	.ads-slider-pagination{
+		margin-top: 26px;
+	}
+
+	section.news{
+		margin-top: 85px;
+	}
 	div.news-wrapper{
 		padding: 19px 0 10px;
 	}
@@ -772,13 +832,16 @@
 	.new-image {
     	height: 170px;
 	}
-	
+	#categories-menu:hover ul#categories-mon-reanim {
+    	height: 356px;
+    	overflow: hidden;
+    }
 	.categories li {
     	width: 100%;
 	}
 	.categories a{
 		font-size: 13px;
-		padding: 15px 0 15px 9px;
+		padding: 15px 55px 15px 9px;
 	}
 	.categories a:before {
     	left: 285px;

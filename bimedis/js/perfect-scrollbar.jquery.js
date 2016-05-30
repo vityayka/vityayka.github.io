@@ -1252,13 +1252,18 @@ function Instance(element) {
   i.scrollbarYActive = null;
   i.scrollbarYHeight = null;
   i.scrollbarYTop = null;
-  i.scrollbarYRight = _.toInt(dom.css(i.scrollbarYRail, 'right'));
+
+
+  // MANUAL ADJUST!!!!!!!!!
+
+
+  i.scrollbarYRight = _.toInt(dom.css(i.scrollbarYRail, 'right')) - 3;
   i.isScrollbarYUsingRight = i.scrollbarYRight === i.scrollbarYRight; // !isNaN
   i.scrollbarYLeft = i.isScrollbarYUsingRight ? null : _.toInt(dom.css(i.scrollbarYRail, 'left'));
   i.scrollbarYOuterWidth = i.isRtl ? _.outerWidth(i.scrollbarY) : null;
   i.railBorderYWidth = _.toInt(dom.css(i.scrollbarYRail, 'borderTopWidth')) + _.toInt(dom.css(i.scrollbarYRail, 'borderBottomWidth'));
   dom.css(i.scrollbarYRail, 'display', 'block');
-  i.railYMarginHeight = _.toInt(dom.css(i.scrollbarYRail, 'marginTop')) + _.toInt(dom.css(i.scrollbarYRail, 'marginBottom'));
+  i.railYMarginHeight = _.toInt(dom.css(i.scrollbarYRail, 'marginTop')) + _.toInt(dom.css(i.scrollbarYRail, 'marginBottom')) + 10;
   dom.css(i.scrollbarYRail, 'display', '');
   i.railYHeight = null;
   i.railYRatio = null;

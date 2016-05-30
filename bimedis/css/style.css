@@ -81,15 +81,19 @@ li.first-level-menu{
 li#header-equipment{
 	width: 150px;
 	height: 57px;
+	z-index: 4;
 }
 #header-more{
 	position: relative;
 	float: left;
 }
 #header-more li{
-	margin-left: -7px;
+	margin-left: -1px;
     float: left;
     border: 1px solid transparent;
+}
+li#header-services{
+	margin-right: 10px;
 }
 
 #header-more li:hover{
@@ -112,7 +116,7 @@ li.first-level-menu:nth-child(n+2):hover a{
 a.first-level-link{
 	position: relative;
 	display: block;
-	padding: 0 18px 0 49px;
+	padding: 0 0 0 49px;
 	line-height: 57px;
 	text-decoration: none;
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
@@ -160,9 +164,10 @@ a.first-level__news:before{
 	-webkit-transition: 0.3s linear opacity;
 	-o-transition: 0.3s linear opacity;
 	transition: 0.3s linear opacity;
-	border-bottom: 1px solid #0080ff;
+	/*border-bottom: 1px solid #0080ff;*/
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
+	border-bottom: 1px solid #0080ff;
 	z-index: 10;
 }
 ul.header-submenu{
@@ -178,14 +183,24 @@ ul.header-submenu{
 	width: 100%;
 	padding-top: 10px;	
 }
-.header-submenu li{
+ul.header-submenu_opened{
+	opacity: 1;
+	left: 0px;
+	width: 100%;
+	padding-top: 10px;	
+}
+.header-submenu li,
+.header-sub-submenu li{
 	padding: 0 10px 0 19px;
 	border-left: 1px solid #0080ff;
 	border-right: 1px solid #0080ff;
 	border-top: 1px solid transparent;
 	border-bottom: 1px solid transparent;
+	width: 308px;
+	box-sizing: border-box;
 }
-.header-submenu li:first-child{
+.header-submenu li:first-child,
+.header-sub-submenu li:first-child{
 	position: relative;
 	border-top: 1px solid #0080ff;
 	border-top-right-radius: 3px;
@@ -206,7 +221,8 @@ ul.header-submenu{
 .second-level-menu:first-child:hover:before{
 	background: #2181e0;
 }
-.header-submenu li a{
+.header-submenu li a,
+.header-sub-submenu li a{
 	position: relative;
 	font-family: "SegoeUIRegular";
 	font-size: 13px;
@@ -217,13 +233,17 @@ ul.header-submenu{
 .menu__long-text > a{
 	padding: 12px 0 !important;
 }
-.header-submenu li:last-child a{
+.header-sub-submenu li:last-child{
+	border-bottom: 1px solid #0080ff;
+}
+.header-submenu li:last-child a,
+.header-sub-submenu li:last-child a{
 	border-bottom: 1px solid transparent;
 }
 .second-level-menu > a:after{
 	content: '';
 	position: absolute;
-	left: 95%;
+	right: 22px;
 	top: 50%;
 	width: 10px;
 	height: 10px;
@@ -231,22 +251,25 @@ ul.header-submenu{
 	border-left: 2px solid #dae0e6;
 	border-top: 2px solid #dae0e6;
 }
-.header-submenu li:hover > a{
+.header-submenu li:hover > a,
+.header-sub-submenu li:hover > a{
 	border-bottom: 1px solid transparent;
 }
 .second-level-menu:hover a:after{
 	border-color: #fff;
 }	
 /*.second-level-menu:hover */
-li.second-level-menu_clicked ul.header-sub-submenu{
+ul.header-sub-submenu{
+	display: none;
 	opacity: 1;
-	left: 100%;
+	height: 419px;
+	left: 292px;
 	top: 10px;	
 	width: 100%;
 	z-index: 100;
-}
-li.third-level-menu{
-	border-left: 1px solid transparent;
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
 }
 
 .my-bimedis,
@@ -796,6 +819,7 @@ div.banner-text:hover{
 	color: #000;
 }
 .banner-text span{
+	margin-left: 82px;
 	font-size: 18px;
 }
 .banner-text ul,
@@ -1298,7 +1322,7 @@ div.categories-wrapper{
 }
 #categories-menu:hover ul#categories-mon-reanim{
 	height: auto;
-	left: 396px;
+	left: auto;
 	opacity: 1;
 	-webkit-transition: 0.2s ease-out opacity;
 	-o-transition: 0.2s ease-out opacity;
@@ -1488,10 +1512,9 @@ p.footer-logo{
 	font-size: 14px;
 }
 
-div.online-help{
+div.online-help,
+div.faq{
 	position: fixed;
-	right: -64px;
-	top: 300px;
 	text-align: center;
 	font-family: "MyriadProBold", Arial, sans-serif;
 	font-size: 16px;
@@ -1507,13 +1530,43 @@ div.online-help{
 	-o-transform: rotate(-90deg);
 	transform: rotate(-90deg);
 }
-.online-help span{
+div.online-help{
+	top: 300px;
+	right: -64px;
+}
+div.faq{
+	top: 440px;
+	right: -9px;
+}
+.online-help span,
+.faq span{
 	line-height: 49px;
 	padding: 0 20px;
 }
-
 #container{
-	position: relative;
-	width: 310px;
-	height: 200px;
+	position: absolute;
+	width: 308px;
+	height: 0;
+}
+#btn-gotop{
+	display: none;
+	position: fixed;
+	bottom: 100px;
+	right: 40px;
+	width: 38px;
+	height: 38px;
+	border: 1px solid #0682ff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+#btn-gotop:after{
+	content: '';
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	width: 11px;
+	height: 11px;
+	border-top: 2px solid #888;
+	border-left: 2px solid #888;
+	transform: translateX(-50%) rotate(45deg);
 }

@@ -13,19 +13,21 @@
   .ps-container.ps-active-x > .ps-scrollbar-x-rail,
   .ps-container.ps-active-y > .ps-scrollbar-y-rail {
     display: block;
-    background-color: transparent; }
+    background-color: #edf0f2; }
   .ps-container.ps-in-scrolling {
     pointer-events: none; }
     .ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
       background-color: #eee;
-      opacity: 0.9; }
+      /*opacity: 0.9; */
+    }
       .ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
         background-color: #999; }
     .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
-      background-color: #eee;
-      opacity: 0.9; }
+      background-color: #edf0f2;
+      /*opacity: 0.9; */
+    }
       .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
-        background-color: #999; }
+        background-color: #fff; }
   .ps-container > .ps-scrollbar-x-rail {
     display: none;
     position: absolute;
@@ -33,7 +35,7 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    opacity: 0;
+    /*opacity: 0;*/
     -webkit-transition: background-color .2s linear, opacity .2s linear;
     -moz-transition: background-color .2s linear, opacity .2s linear;
     -o-transition: background-color .2s linear, opacity .2s linear;
@@ -58,54 +60,98 @@
   .ps-container > .ps-scrollbar-y-rail {
     display: none;
     position: absolute;
+    margin-top: 20px !important;
     /* please don't change 'position' */
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    opacity: 0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    /*opacity: 0;*/
     -webkit-transition: background-color .2s linear, opacity .2s linear;
     -moz-transition: background-color .2s linear, opacity .2s linear;
     -o-transition: background-color .2s linear, opacity .2s linear;
     transition: background-color .2s linear, opacity .2s linear;
     right: 3px;
     /* there must be 'right' for ps-scrollbar-y-rail */
-    width: 8px; }
+    width: 14px;
+    background-color: #edf0f2;
+    border: 1px solid #c2c7cc; }
     .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
       position: absolute;
       /* please don't change 'position' */
-      background-color: #aaa;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
+      background-color: #fff;
+        border-top: 1px solid #c2c7cc;
+        border-bottom: 1px solid #c2c7cc;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
       -webkit-transition: background-color .2s linear;
       -moz-transition: background-color .2s linear;
       -o-transition: background-color .2s linear;
       transition: background-color .2s linear;
       right: 0;
       /* there must be 'right' for ps-scrollbar-y */
-      width: 8px; }
+      width: 14px; }
   .ps-container:hover.ps-in-scrolling {
     pointer-events: none; }
     .ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
       background-color: #eee;
-      opacity: 0.9; }
+      /*opacity: 0.9; */
+    }
       .ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
         background-color: #999; }
     .ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
-      background-color: #eee;
-      opacity: 0.9; }
+      background-color: #edf0f2;
+      /*opacity: 0.9; */
+    }
       .ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
-        background-color: #999; }
+        background-color: #fff; }
   .ps-container:hover > .ps-scrollbar-x-rail,
   .ps-container:hover > .ps-scrollbar-y-rail {
-    opacity: 0.6; }
+    /*opacity: 0.6; */
+  }
   .ps-container:hover > .ps-scrollbar-x-rail:hover {
     background-color: #eee;
-    opacity: 0.9; }
+    /*opacity: 0.9; */
+  }
     .ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x {
       background-color: #999; }
   .ps-container:hover > .ps-scrollbar-y-rail:hover {
-    background-color: #eee;
-    opacity: 0.9; }
+    background-color: #edf0f2;
+    /*opacity: 0.9; */
+  }
     .ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
-      background-color: #999; }
+      background-color: #fff; }
+@media screen and (max-width: 768px){
+    .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+        background-color: #dae0e6;
+        border-top: 0;
+        border-bottom: 0;
+        opacity: 0;
+    }
+        .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+      /* please don't change 'position' */
+      margin-right: 6px;
+      background-color: #dae0e6;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px;
+      /* there must be 'right' for ps-scrollbar-y */
+      width: 5px; }
+      .ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+        background-color: #dae0e6;
+        opacity: 0.9; }
+    .ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
+      background-color: #dae0e6; }
+
+  .ps-container.ps-active-y > .ps-scrollbar-y-rail {
+    background-color: transparent; }
+    .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+      background-color: transparent;
+      /*opacity: 0.9; */
+    }
+  .ps-container > .ps-scrollbar-y-rail {
+    width: 5px;
+    background-color: transparent;
+    border: 0; }
+
+}
