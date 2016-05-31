@@ -17,11 +17,11 @@ $(function() {
         target: '+=2'
     });
 // AUTOSCROLL
-    // $('.ads-slider').jcarouselAutoscroll({
-    //   interval: 3000,
-    //   target: '+=2',
-    //   autostart: true
-    // }); 
+    $('.ads-slider').jcarouselAutoscroll({
+      interval: 3000,
+      target: '+=2',
+      autostart: true
+    }); 
 
      $('.ads-slider-pagination')
        .on('jcarouselpagination:active', 'a', function() {
