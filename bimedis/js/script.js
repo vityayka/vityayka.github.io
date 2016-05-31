@@ -60,10 +60,12 @@ $(function() {
     var positionTop = $(this).position().top;
     var currentID = $(this).attr('id');
     var currentHeight = $(this).height();
+    var scrollOffset = $('.header-submenu').scrollTop();
+
     $('#container').toggleClass('second-level-menu_clicked');
 
     if ($(window).width() <= 480) {    
-      $('.' + currentID).css('top', positionTop + currentHeight);
+      $('.' + currentID).css('top', positionTop + currentHeight - scrollOffset);
     };
 
     $('.' + currentID).perfectScrollbar({
@@ -85,10 +87,9 @@ $(function() {
     $('.header-sub-submenu').fadeOut();
   });
 
-  $('.header-submenu').perfectScrollbar({
+    $('.header-submenu, #search-container ul, ul#categories-mon-reanim ').perfectScrollbar({
     suppressScrollX: true,
     wheelPropagation: false
-    // maxScrollbarLength: 400
   }); 
 
     $(window).scroll(function(){
@@ -100,7 +101,7 @@ $(function() {
   });
 
   $('#btn-gotop').click(function(){
-    window.scrollTo(0, 0);
+    $('body, html').animate({'scrollTop': 0}, 300);
   });
 
 });

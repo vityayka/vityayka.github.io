@@ -119,6 +119,7 @@ a.first-level-link{
 	padding: 0 0 0 49px;
 	line-height: 57px;
 	text-decoration: none;
+	color: #000;
 	font-family: "SegoeUISemiBold", Arial, sans-serif;
 	font-size: 15px;
 }
@@ -643,9 +644,14 @@ div.search-form{
     background: #fff;
     border: 1px solid #dae0e6;
 }
-#search-categories ul{
+#search-container{
 	position: absolute;
-	left: -9000px;
+}
+#search-categories ul{
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	border-bottom: 1px solid #0080ff;
 	opacity: 0;
 }
 .search-form input[type="submit"]{
@@ -720,7 +726,7 @@ div.search-form{
 	line-height: 38px;
 }
 #search-categories:hover ul{
-	left: 0;
+	height: 430px;
 	opacity: 1;
 	-webkit-transition: 0.2s ease-out opacity;
 	-o-transition: 0.2s ease-out opacity;
@@ -774,7 +780,6 @@ div.search-form{
 }
 
 #search-categories li:last-child{
-	border-bottom-color: #0080ff;
 	border-bottom-right-radius: 3px;
 	border-bottom-left-radius: 3px;
 }
@@ -875,28 +880,28 @@ div.buttons-blue{
 	color: #fff;
 	box-sizing: border-box;
 }
-a#button-search,
-a#button-off-repres{
+#button-search a,
+#button-off-repres a{
 	width: 292px;
 	padding-left: 107px;
 }
-a#button-off-repres{
+#button-off-repres a{
 	line-height: 25px;
 	padding-right: 49px;
 	text-align: center;
 }
-a#button-search,
-a#button-howto{
+#button-search a,
+#button-howto a{
 	border-right: 1px solid #4ca9ff;
 }
-a#button-off-repres{
+#button-off-repres a{
 	border-left: 1px solid #4ca9ff;
 }
-a#button-howto{
+#button-howto a{
 	width: 298px;
 	padding-left: 87px;
 }
-a#button-pro-acc{
+#button-pro-acc a{
 	padding-left: 120px;
 	width: 295px;
 }
@@ -912,19 +917,19 @@ a#button-pro-acc{
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-a#button-search:before{
+#button-search a:before{
 	background-position: -349px 0;
 	left: 20px;
 }
-a#button-howto:before{
+#button-howto a:before{
 	background-position: -399px 0;
 	left: 17px;
 }
-a#button-pro-acc:before{
+#button-pro-acc a:before{
 	background-position: -449px 0;
 	left: 19px;
 }
-a#button-off-repres:before{
+#button-off-repres a:before{
 	background-position: -499px 0;
 	left: 24px;
 }
@@ -1259,10 +1264,13 @@ section.categories{
 div.categories-wrapper{
 	width: 1180px;
 	margin: 0 auto;
+	padding: 29px 0 20px;
+}
+.categories form{
+	display: none;
 }
 .categories ul{
 	position: relative;
-	margin: 29px 0 20px;
 	margin-right: 10px;
 	text-align: left;
 }
@@ -1320,26 +1328,36 @@ div.categories-wrapper{
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-#categories-menu:hover ul#categories-mon-reanim{
+#categories-menu:hover div#categories-container{
 	height: auto;
 	left: auto;
 	opacity: 1;
+	z-index: 4;
 	-webkit-transition: 0.2s ease-out opacity;
 	-o-transition: 0.2s ease-out opacity;
 	transition: 0.2s ease-out opacity;
 }
-ul#categories-mon-reanim{
+#categories-menu:hover ul#categories-mon-reanim{
+	display: block;
+	height: 332px;
+}
+div#categories-container{
 	position: absolute;
+    top: 0;
+    border-bottom: 1px solid #008cff;
+    border-top: 1px solid #008cff;
+    background: #fff;
+    z-index: -1;
+    height: 0;
+   	opacity: 0;
+}
+ul#categories-mon-reanim{
+	display: none;
+	position: relative;
 	width: 386px;
 	margin-top: 0;
-	top: -1px;
-	left: -5000px;
-	height: 0;
-	background: #fff;
 	z-index: 3;
-	opacity: 0;
-	border-bottom: 1px solid #008cff;
-	border-top: 1px solid #008cff;
+	overflow: hidden;
 }
 #categories-mon-reanim li{
 	margin-bottom: 0;
@@ -1371,17 +1389,18 @@ ul#categories-mon-reanim{
 #categories-mon-reanim a:after{
 	display: none;
 }
-#categories-mon-reanim h4{
+#categories-container h4{
 	position: relative;
     padding: 23px 0 26px 21px;
 	border-left: 1px solid #008cff;
     border-right: 1px solid #008cff;
     border-bottom: 1px solid #dae0e5;
+    background: #fff;
     font-family: "SegoeUISemiBold", Arial, sans-serif;
     font-size: 14px;
 }
-#categories-mon-reanim h4:after,
-#categories-mon-reanim h4:before{
+#categories-container h4:after,
+#categories-container h4:before{
 	content: '';
 	position: absolute;
 	right: 15px;
@@ -1391,13 +1410,13 @@ ul#categories-mon-reanim{
 	border-top: 2px solid #007fff;
 	cursor: pointer;
 }
-#categories-mon-reanim h4:before{
+#categories-container h4:before{
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-#categories-mon-reanim h4:after{
+#categories-container h4:after{
 	-webkit-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	-o-transform: rotate(-45deg);
@@ -1558,6 +1577,8 @@ div.faq{
 	border: 1px solid #0682ff;
 	border-radius: 50%;
 	cursor: pointer;
+	background: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
 }
 #btn-gotop:after{
 	content: '';

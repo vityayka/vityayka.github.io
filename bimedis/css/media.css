@@ -33,22 +33,26 @@
 	div.banner-text{
 		margin-top: 180px;
 	}
-    a#button-search, a#button-off-repres {
+	.banner-text span {
+		margin-left: 0;
+	}
+    #button-search a, 
+    #button-off-repres a {
     	width: 243px;
     	padding-left: 89px;
 	}
-	a#button-howto {
+	#button-howto a{
     	width: 245px;
     	padding-left: 88px;
     	padding-right: 38px;
     	line-height: 25px;
     	text-align: center;
 	}
-	a#button-pro-acc {
+	#button-pro-acc a{
 	    padding-left: 101px;
 	    width: 244px;
 	}
-	a#button-off-repres {
+	#button-off-repres a{
     	padding-right: 20px;
 	}
 	div.ads-slider-element{
@@ -555,24 +559,26 @@
 		left: 203px;
 		z-index: 2;
 	}
+	#categories-menu:hover div#categories-container {
+		left: 0;
+	}
 	#categories-menu:hover ul#categories-mon-reanim{
-	    	left: 0;
-	    	width: 100%;
+	    width: 100%;
+	    height: 100%;
 	}
 	#categories-mon-reanim li{
-	    	width: 100%;
-	}
-	
+	    width: 100%;
+	}	
 	
 	.footer-menu{
-	    	float: left;
-	    	padding-left: 10px;
-	    	padding-right: 16px;
-	    	border-bottom: 1px solid #1990ff;
+	    float: left;
+	    padding-left: 10px;
+	    padding-right: 16px;
+	    border-bottom: 1px solid #1990ff;
 	}
 	.footer-menu a {
-	    	font-family: "SegoeUIRegular", Arial, sans-serif;
-	    	font-size: 13px;
+	    font-family: "SegoeUIRegular", Arial, sans-serif;
+	    font-size: 13px;
 	}
 	.footer-logo,
 	.footer-logo span{
@@ -739,6 +745,22 @@
 	div.banner-text {
     	margin-top: 10px;
     }
+    .banner-text ul{
+    	padding: 0;
+    	border: 0;
+    	background-color: transparent;
+    }
+    .banner-text li{
+    	width: 138px;
+    	border: 1px solid #0080ff;
+    	border-radius: 30px;
+    	padding: 8px 0;
+    	background-color: #fff;
+    }
+	.banner-text li:first-child {
+		margin-right: 20px;
+		border-right-color: #0080ff;
+	}
 	.banner-text li:last-child {
     	display: none;
 	}
@@ -746,24 +768,51 @@
     	margin-top: 10px;
     	padding: 0;
     	border: 0;
+    	background: transparent;
 	}
 	.buttons-blue li{
-		padding: 0;
+		padding: 14px 0;
+		background: #0070d9;
+		margin-bottom: 10px;
+		border-top: 1px solid #003973;
+		border-bottom: 1px solid #003973;
 	}
 	.buttons-blue li a {
     	padding: 0px 6px !important;
     	width: 160px !important;
-    	line-height: 48px !important;
+    	line-height: 20px !important;
 	}
-	a#button-howto {
-    	border-right-color: transparent;
+	#button-off-repres a{
+		width: 218px !important;
+		border-right-color: transparent;
 	}
-
+	#button-pro-acc a{
+		width: 100px !important;
+	}
+	#button-search a{
+		width: 130px !important;
+	}
+	#button-howto a{
+		width: 188px !important;
+		border-right-color: transparent; 	
+	}
+	#button-off-repres{
+		border-right: 1px solid #003973;
+	}
+	#button-pro-acc{
+		border-left: 1px solid #003973;
+	}
+	#button-search{
+		border-left: 1px solid #003973;	
+	}
+	#button-howto{
+		border-right: 1px solid #003973;
+	}
 	.buy-sell nav li:first-child {
-    	padding: 0 12px 0 21px;
+    	padding: 0 12px 0 18px;
 	}
 	.buy-sell nav li:nth-child(2) {
-    	padding: 0 19px 0 21px;
+    	padding: 0 18px;
     	border-left-color: #0080ff;
     	border-right-color: #0080ff;
 	}
@@ -771,6 +820,9 @@
     	padding: 0 20px;
     	border-bottom-right-radius: 30px;
     	border-top-right-radius: 30px;
+	}
+	.buy-sell nav li a{
+		font-size: 13px;
 	}
 	
 	div.ads-slider{
@@ -785,28 +837,38 @@
     	border-left: 0;
     	border-right: 0;
     	text-align: left;
+    	border-radius: 0;
 	}
 	div.ads-slider-item-image {
     	display: inline-block;
     	height: 100px;
     	width: 100px;
+    	border: 1px solid #dae0e6;
 	}
 	.ads-slider-item-image img {
     	transform: translate(-50%, -50%) scale(0.5);
 	}
 	.ads-slider figcaption {
+		margin-left: 10px;
     	height: 81px;
     	width: 190px;
     	display: inline-block;
+    	border: 0;
 	}
 	.ads-slider h4 {
     	position: absolute;
-    	top: 0;
-    	left: 120px;
+    	top: 10px;
+    	left: 111px;
     	line-height: 14px;
     	display: inline-block;
 		font-family: "SegoeUIRegular", Arial, sans-serif;
     	font-size: 14px;
+	}
+	p.ads-slider-price {
+		bottom: 0;
+	}
+	.ads-slider figure{
+		padding-top: 10px;
 	}
 	div.ads-slider-popup{
 		display: none;
@@ -832,8 +894,47 @@
 	.new-image {
     	height: 170px;
 	}
+	div.categories-wrapper{
+		padding: 10px 0 30px;
+	}
+	.categories form{
+		display: block;
+		position: relative;
+		margin-bottom: 10px;
+	}
+	input#cat-search{
+    	width: 100%;
+    	border-radius: 30px;
+    	line-height: 37px;
+    	height: 37px;
+    	border: 1px solid #c2c7cc;
+    	text-align: center;
+    	color: #616466;
+    	font-family: "SegoeUIRegular", Arial, sans-serif;
+    	font-size: 14px;
+	}
+	.categories form input[type="submit"]{
+    	position: absolute;
+    	top: 50%;
+    	right: 20px;
+    	width: 17px;
+    	height: 18px;
+    	background: url(../img/sprite.png) -332px 0px;
+    	border: 0;
+    	-webkit-transform: translateY(-50%);
+    	-ms-transform: translateY(-50%);
+    	-o-transform: translateY(-50%);
+    	transform: translateY(-50%);
+	}
+	#categories-menu:hover div#categories-container {
+    	height: 100%;
+    	background: transparent;
+    	border-bottom: 0;
+	}
 	#categories-menu:hover ul#categories-mon-reanim {
-    	height: 356px;
+    	height: 276px;
+    	background: #fff;
+    	border-bottom: 1px solid #008cff;
     	overflow: hidden;
     }
 	.categories li {

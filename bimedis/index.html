@@ -108,15 +108,21 @@
 						<input type="text" name="find" id="find">
 						<div id="search-categories">
 							<span>В категории</span>
-							<ul>
-								<li><a href="#">Анестезиология/Пульмонология</a></li
-								><li><a href="#">Больничная мебель</a></li
-								><li><a href="#">Ветеринария</a></li
-								><li><a href="#">Внутренняя медицина</a></li
-								><li><a href="#">Диагностика/Визуализация</a></li
-								><li><a href="#">Косметология/Дерматология</a></li
-								><li class="menu__long-text"><a href="#">Лабораторное, стерилизационное и фармакологическое оборудование</a></li>
-							</ul>
+							<div id="search-container">
+								<ul>
+									<li><a href="#">Анестезиология/Пульмонология</a></li
+									><li><a href="#">Больничная мебель</a></li
+									><li><a href="#">Ветеринария</a></li
+									><li><a href="#">Внутренняя медицина</a></li
+									><li><a href="#">Диагностика/Визуализация</a></li
+									><li><a href="#">Косметология/Дерматология</a></li
+									><li class="menu__long-text"><a href="#">Лабораторное, стерилизационное и фармакологическое оборудование</a></li
+									><li><a href="#">Ветеринария</a></li
+									><li><a href="#">Внутренняя медицина</a></li
+									><li><a href="#">Диагностика/Визуализация</a></li
+									><li><a href="#">Косметология/Дерматология</a></li
+								</ul>
+							</div>
 						</div>
 						<input type="submit" value="">
 					</form>
@@ -134,10 +140,10 @@
 			</div>
 			<div class="buttons-blue">
 				<ul>
-					<li><a href="#" id="button-search">Поиск модели</a></li
-					><li><a href="#" id="button-howto">Как купить/продать ?</a></li
-					><li><a href="#" id="button-pro-acc">Про аккаунт</a></li
-					><li><a href="#" id="button-off-repres">Официальные представители</a></li>
+					<li id="button-search"><a href="#">Поиск модели</a></li
+					><li id="button-howto"><a href="#">Как купить/продать ?</a></li
+					><li id="button-pro-acc"><a href="#">Про аккаунт</a></li
+					><li id="button-off-repres"><a href="#" id="button-off-repres">Официальные представители</a></li>
 				</ul>
 			</div>
 		</div>
@@ -694,6 +700,10 @@
 	<section class="categories">
 		<h2>КАТЕГОРИИ ТОВАРОВ</h2>
 		<div class="categories-wrapper">
+			<form action="#">
+				<input type="text" name="cat-search" id="cat-search" placeholder="поиск в категориях">
+				<input type="submit" value="">
+			</form>
 			<ul>
 				<li><a href="#">Анестезиология/Пульмонология</a></li
 				><li><a href="#">ЛОР</a></li
@@ -703,16 +713,19 @@
 				><li><a href="#">Стоматологическое оборудование</a></li
 				><li><a href="#">Ветеринария</a></li
 				><li id="categories-menu"><span><a href="#">Мониторы/Реанимация</a></span>
-					<div class="categories-container">
-					<ul id="categories-mon-reanim">
+					<div id="categories-container">
 						<h4>МОНИТОРЫ/РЕАНИМАЦИЯ</h4>
-						<li><a href="#">Дефибрилляторы</a></li>
-						<li><a href="#">Записывающие устройства</a></li>
-						<li><a href="#">Модули, стойки</a></li>
-						<li><a href="#">Мониторы</a></li>
-						<li><a href="#">Мониторы АД</a></li>
-						<li><a href="#">Мониторы апноэ</a></li>
-					</ul>
+						<ul id="categories-mon-reanim">
+							<li><a href="#">Дефибрилляторы</a></li>
+							<li><a href="#">Записывающие устройства</a></li>
+							<li><a href="#">Модули, стойки</a></li>
+							<li><a href="#">Мониторы</a></li>
+							<li><a href="#">Мониторы АД</a></li>
+							<li><a href="#">Мониторы апноэ</a></li>
+							<li><a href="#">Мониторы неонатальные</a></li>
+							<li><a href="#">Мониторы реанимационные</a></li>
+							<li><a href="#">Мониторы СО2</a></li>
+						</ul>
 					</div>
 				</li
 				><li><a href="#">Физиотерапия</a></li
