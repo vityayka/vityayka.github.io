@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="151.5" height="30" viewBox="0 0 151.5 30">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        font-size: 14.3824px;
+      }
+
+      .cls-2 {
+        fill: #0063bf;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        text-anchor: middle;
+        font-family: "Copperplate Gothic Bold";
+        text-transform: uppercase;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: #0a5bad;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+        filter: url(#color-overlay-1);
+      }
+
+      .cls-5 {
+        fill: #064a8f;
+      }
+    </style>
+
+    <filter id="color-overlay-1" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="solidFill"/>
+    </filter>
+  </defs>
+  <g>
+    <text transform="translate(111.5 25.5) scale(2.05 1.98)" class="cls-1"><tspan class="cls-2">edis</tspan></text>
+    <text transform="translate(55.5 25.5) scale(2.42 2.36)" class="cls-1"><tspan class="cls-2">m</tspan></text>
+    <text transform="translate(34.5 25.5) scale(2.05 1.98)" class="cls-1"><tspan class="cls-3">i</tspan></text>
+    <g style="fill: ; filter: url(#color-overlay-1)">
+      <text transform="translate(15.5 25.5) scale(2.42 2.36)" id="text-1" style="stroke: inherit; filter: none; fill: inherit" class="cls-4"/>    </g>
+    <use xlink:href="#text-1" style="stroke: #0a5bad; filter: none; fill: none"/>
+<tspan class="cls-5">B</tspan>  </g>
+</svg>

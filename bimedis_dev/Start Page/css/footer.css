@@ -1,0 +1,106 @@
+footer{
+	background: #0069cc;
+}
+div.footer-wrapper{
+	width: 1180px;
+	margin: 0 auto;
+}
+.footer-menu{
+	float: left;
+}
+.footer-menu li{
+	display: inline-block;
+	margin-right: 35px;
+}
+.footer-menu li:last-child{
+	margin-right: 0;
+}
+.footer-menu a{
+	position: relative;
+	display: block;
+	padding-left: 39px;
+	line-height: 70px;
+	color: #fff;
+	font-family: "SegoeUISemiBold", Arial, sans-serif;
+	font-size: 14px;
+}
+.footer-menu a:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	background: url(../img/sprite.png) no-repeat;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+a.footer-pro-acc:before{
+	background-position: -180px 0;
+}
+a.footer-terms:before{
+	background-position: -210px 0;
+}
+a.footer-faq:before{
+	width: 31px;
+	background-position: -241px 0;
+}
+a.footer-sitemap:before{
+	background-position: -272px 0;
+}
+a.footer-contacts:before{
+	background-position: -302px 0;
+}
+.footer-socials{
+	float: right;
+}
+.footer-socials li{
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+	width: 30px;
+	height: 70px;
+}
+.footer-socials li:last-child{
+	margin-right: 0;
+}
+.footer-socials a{
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../img/sprite.png);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+a#social-gplus{
+	background-position: 0 -30px;
+}
+a#social-facebook{
+	background-position: -30px -30px;
+}
+a#social-twitter{
+	background-position: -60px -30px;
+}
+a#social-linkedin{
+	background-position: -90px -30px;
+}
+a#social-vk{
+	background-position: -120px -29px;
+}
+a#social-insta{
+	background-position: -150px -29px;
+}
+p.footer-logo{
+	float: right;
+	margin-left: 15px;
+	line-height: 70px;
+	color: #fff;
+	font-family: "SegoeUIRegular", Arial, sans-serif;
+	font-size: 14px;
+}

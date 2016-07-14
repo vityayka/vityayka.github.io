@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="335" height="105" viewBox="0 0 167.5 52.5">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #0063bf;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #0063bf;
+      }
+
+      .cls-2, .cls-6 {
+        stroke-width: 1px;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        font-size: 14.3824px;
+      }
+
+      .cls-4, .cls-5, .cls-7 {
+        text-anchor: middle;
+        font-family: "Copperplate Gothic Bold";
+        text-transform: uppercase;
+      }
+
+      .cls-6 {
+        stroke: #0a5bad;
+        stroke-linejoin: round;
+        filter: url(#color-overlay-1);
+      }
+
+      .cls-7 {
+        fill: #064a8f;
+      }
+    </style>
+
+    <filter id="color-overlay-1" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="solidFill"/>
+    </filter>
+  </defs>
+  <g>
+    <path d="M33.365,0.009 C45.327,0.009 55.024,9.818 55.024,21.917 C55.024,34.016 45.327,43.824 33.365,43.824 C21.404,43.824 11.707,34.016 11.707,21.917 C11.707,9.818 21.404,0.009 33.365,0.009 Z" class="cls-1"/>
+    <path d="M14.287,24.631 C21.894,24.631 28.060,30.869 28.060,38.565 C28.060,46.260 21.894,52.498 14.287,52.498 C6.680,52.498 0.513,46.260 0.513,38.565 C0.513,30.869 6.680,24.631 14.287,24.631 Z" class="cls-2"/>
+    <g>
+      <text transform="translate(127.5 32) scale(2.05 1.98)" class="cls-3"><tspan class="cls-4">edis</tspan></text>
+      <text transform="translate(71.5 32) scale(2.42 2.36)" class="cls-3"><tspan class="cls-4">m</tspan></text>
+      <text transform="translate(50.5 32) scale(2.05 1.98)" class="cls-3"><tspan class="cls-5">i</tspan></text>
+      <g style="fill: ; filter: url(#color-overlay-1)">
+        <text transform="translate(31.5 32) scale(2.42 2.36)" id="text-1" style="stroke: inherit; filter: none; fill: inherit" class="cls-6"/>      </g>
+      <use xlink:href="#text-1" style="stroke: #0a5bad; filter: none; fill: none"/>
+<tspan class="cls-7">B</tspan>    </g>
+  </g>
+</svg>
