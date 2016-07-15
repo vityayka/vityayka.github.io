@@ -952,6 +952,10 @@ a{
 		font-size: 48px;
 	}
 
+	.sticky-menu__link{
+		line-height: 28px;
+	}
+	
 	.services-icons{
 		text-align: center;
 	}
@@ -966,9 +970,6 @@ a{
 @media screen and (max-width: 480px){
 	.crooked--visa{
 		width: 100%;
-	}
-	.sticky-menu__link{
-		line-height: 28px;
 	}
 	.book-btn{
 		padding: 0;
