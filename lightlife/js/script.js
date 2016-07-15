@@ -11,7 +11,7 @@
     $(function() {
         // Setup the carousels. Adjust the options for both carousels here.
         var carouselStage      = $('.gallery').jcarousel({
-                                    wrap: 'circular',
+                                    wrap: 'first',
                                     transitions: {
                                       transforms: true,
                                       easing: 'ease-in-out'
@@ -20,13 +20,24 @@
                                       duration: 1000
                                     }
         });
+        //RESPONSIVE CAROUSEL
+        carouselStage.on('jcarousel:reload jcarousel:create', function () {
+        var carousel = $(this),
+          width = window.innerWidth;
+
+            if (width < 480) {
+                // width = width / 3;
+                carousel.jcarousel('items').css('width', Math.ceil(width - 17) + 'px');
+            }
+            });
         var carouselNavigation = $('.gallery-nav').jcarousel();
 
-        // $('.gallery').jcarouselAutoscroll({
-          // interval: 5000,
-          // target: '+=1',
-          // autostart: true
-        // }); 
+        //AUTOSCROLL
+        $('.gallery').jcarouselAutoscroll({
+          interval: 5000,
+          target: '+=1',
+          autostart: true
+        }); 
 
         // We loop through the items of the navigation carousel and set it up
         // as a control for an item from the stage carousel.
@@ -97,16 +108,30 @@
             });
 
     //Setup reviews slider
-    $('.reviews-slider').jcarousel({
-        wrap: 'circular',
-        transitions: {
-          transforms: true,
-          easing: 'ease-in-out'
-        },
-        animation: {
-          duration: 1000
-        }
-    });
+    var reviewsSlider = $('.reviews-slider');
+
+    reviewsSlider
+      // .on('jcarousel:reload jcarousel:create', function () {
+      //   var carousel = $(this),
+      //     width = carousel.innerWidth();
+
+      //       if (width < 970) {
+      //           // width = width / 3;
+      //           carousel.jcarousel('items').css('width', Math.ceil(width - 40) + 'px');
+      //       }
+      //       })
+
+      .jcarousel({
+          wrap: 'circular',
+          transitions: {
+            transforms: true,
+            easing: 'ease-in-out'
+          },
+          animation: {
+            duration: 1000
+          },
+          canter: true
+      });
     // $('.reviews-slider').jcarouselAutoscroll({
     //       interval: 5000,
     //       target: '+=1',
@@ -130,6 +155,16 @@
           $('.sticky-header').removeClass('sticky-header--fixed');
         }
     });
+
+    //Gallery setup
+    $('.gallery__item').magnificPopup({
+       delegate: 'a',
+      type: 'image',
+      gallery:{
+        enabled: true
+      }
+    });
+
 });
 
 })(jQuery);
