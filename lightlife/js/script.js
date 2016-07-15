@@ -148,7 +148,7 @@
 
     //Sticky header setup
     $(window).scroll(function(){
-      if($(window).scrollTop() > 70) {
+      if($(window).scrollTop() > 70 && window.innerWidth > 768) {
         $('.sticky-header').addClass('sticky-header--fixed');
       } 
         else {
