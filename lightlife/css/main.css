@@ -918,8 +918,22 @@ a{
    	.main-descr__btn {
     	float: none;
     	margin: 20px auto;
+    	max-width: 450px;
     	text-align: center;
 	}
+	.sticky-tel{
+		width: 50%;
+	}
+	.sticky-callback{
+		padding: 9px 28px;
+	}
+	.sticky-callback:after{
+		bottom: 8px;
+	}
+	.sticky-menu__link{
+		line-height: 28px;
+	}
+
 	.crooked{
 		display: block !important;
 		margin: 0 auto !important;
@@ -952,10 +966,6 @@ a{
 		font-size: 48px;
 	}
 
-	.sticky-menu__link{
-		line-height: 28px;
-	}
-	
 	.services-icons{
 		text-align: center;
 	}
