@@ -805,22 +805,14 @@ a{
 .request__phone{
 	background: #fff url(../img/request-phone.png) 15px 50% no-repeat;
 }
-.request__name::-webkit-input-placeholder {
+.request__input::-webkit-input-placeholder {
    color: #787878; }
-.request__name:-moz-placeholder { /* Firefox 18- */
+.request__input:-moz-placeholder { /* Firefox 18- */
    color: #787878; }
-.request__name::-moz-placeholder {  /* Firefox 19+ */
+.request__input::-moz-placeholder {  /* Firefox 19+ */
    color: #787878; }
-.request__name:-ms-input-placeholder {  
+.request__input:-ms-input-placeholder {  
    color: #787878; }
-.request__phone::-webkit-input-placeholder {
-   color: #535353; }
-.request__phone:-moz-placeholder { /* Firefox 18- */
-   color: #535353; }
-.request__phone::-moz-placeholder {  /* Firefox 19+ */
-   color: #535353; }
-.request__phone:-ms-input-placeholder {  
-   color: #535353;  }
 .request__submit{
 	margin: 22px auto 0;
 	width: 95%;
