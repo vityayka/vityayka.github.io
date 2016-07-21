@@ -1,0 +1,185 @@
+.form-wrapper {
+  position: relative;
+  margin: 50px auto;
+  max-width: 840px;
+  background: #fff;
+  border-top: 2px solid #e62b1e;
+  box-shadow: 0px 2px 1.8px 0.2px rgba(0, 0, 0, 0.25); }
+
+.header {
+  text-align: center; }
+
+.close-btn {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  font-size: 36px;
+  color: #cacaca;
+  cursor: pointer; }
+  .close-btn:hover {
+    color: #000; }
+
+.content {
+  padding: 24px 0;
+  background: #f3f3f3; }
+  @media screen and (min-width: 840px) {
+    .content {
+      width: auto;
+      margin: 0;
+      padding: 40px 0; } }
+
+.buttons {
+  width: 300px;
+  margin: 0 auto; }
+  @media screen and (min-width: 840px) {
+    .buttons {
+      float: left;
+      width: auto;
+      padding: 0 60px;
+      margin: 0; } }
+  .buttons__facebook {
+    margin-bottom: 20px; }
+
+.facebook-btn {
+  position: relative;
+  background: #3e5b96;
+  border-radius: 3px; }
+  .facebook-btn__link {
+    display: inline-block;
+    padding: 0 75px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px; }
+  .facebook-btn__icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%); }
+  .facebook-btn:hover {
+    background: #385388; }
+
+.facebook-btn {
+  position: relative;
+  background: #3e5b96;
+  border-radius: 3px; }
+  .facebook-btn__link {
+    display: inline-block;
+    padding: 0 75px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px; }
+  .facebook-btn__icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%); }
+  .facebook-btn:hover {
+    background: #385388; }
+
+.gplus-btn {
+  position: relative;
+  background: #dd5342;
+  border-radius: 3px; }
+  .gplus-btn__link {
+    display: inline-block;
+    padding: 0 78px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px; }
+  .gplus-btn__icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%); }
+  .gplus-btn:hover {
+    background: #cd4c3c; }
+
+.form-header {
+  text-align: center;
+  color: #333;
+  font-size: 31px;
+  line-height: 84px;
+  font-weight: bold; }
+
+.login {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #b9b9b9; }
+  @media screen and (min-width: 840px) {
+    .login {
+      float: right;
+      width: auto;
+      margin: 0;
+      padding: 0 60px;
+      border-left: 1px solid #cfcfcf;
+      border-bottom: none; } }
+  .login__login {
+    font-size: 14px;
+    font-weight: bold; }
+  .login__password {
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: bold; }
+  .login input {
+    margin-bottom: 24px; }
+    .login input[type="text"] {
+      width: 300px;
+      height: 40px;
+      margin-top: 7px;
+      display: block;
+      border: 1px solid #dddddd;
+      border-radius: 3px; }
+  .login__remember {
+    margin: 0 7px 0 0; }
+  .login label {
+    vertical-align: top; }
+  .login__help {
+    float: right;
+    color: #252525;
+    margin-top: 12px;
+    border-bottom: 2px solid #000; }
+    .login__help:hover {
+      color: #666; }
+
+.login-btn {
+  padding: 14px 31px;
+  background: #252525;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold; }
+  .login-btn:hover {
+    background: #666666; }
+
+.footer {
+  font-size: 18px;
+  text-align: center; }
+  .footer__text {
+    color: #666;
+    line-height: 87px; }
+  .footer__link {
+    font-weight: bold;
+    color: #000;
+    border-bottom: 2px solid #000; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #e8e8e8;
+  font-family: Arial; }
+
+a {
+  text-decoration: none; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
