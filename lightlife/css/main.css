@@ -29,6 +29,7 @@ a{
 	position: relative;
 	margin: 0 auto;
 	max-width: 1170px;
+	overflow: hidden;
 }
 .header{
 	margin: 0 auto;
@@ -585,7 +586,7 @@ a{
 .reviews-item{
 	float: left;
 	margin-right: 25px;
-	width: 470px;
+	width: 465px;
 }
 .reviews__face{
 	display: table;
@@ -651,7 +652,7 @@ a{
 
 .contacts{
 	float: left;
-	width: 470px;
+	width: 465px;
 	padding: 26px 32px 57px;
 	background: #fff;
 	text-align: center;
@@ -850,10 +851,11 @@ a{
 		float: none;
 		display: inline-block;
 		margin-left: 0;
-		vertical-align: top;
+		vertical-align: middle;
 	}
 	.conditions{
 		margin-left: 0;
+		float: none;
 	}
 	.condition{
 		margin-right: 30px;
@@ -875,7 +877,7 @@ a{
 	}
 
 	.reviews-slider{
-		width: 470px;
+		width: 465px;
 	}
 
 	.request{
@@ -965,7 +967,10 @@ a{
 	.main-header{
 		font-size: 48px;
 	}
-
+	
+	.services-item{
+		margin-right: 0;
+	}
 	.services-icons{
 		text-align: center;
 	}
@@ -978,24 +983,17 @@ a{
 	}
 }
 @media screen and (max-width: 480px){
-	.crooked--visa{
-		width: 100%;
-	}
 	.book-btn{
 		padding: 0;
 	}
 	.tabs-content{
 		max-width: 320px;
 	}
-	
-	.gallery{
-		width: 100%;
-	}
 
 	.reviews-slider{
 		width: 100%;
 	}
-	.reviews-slider__item{
+	.reviews-item{
 		width: 320px;
 	}
 

@@ -28,6 +28,8 @@
             if (width < 480) {
                 // width = width / 3;
                 carousel.jcarousel('items').css('width', Math.ceil(width - 17) + 'px');
+            } else{
+                carousel.jcarousel('items').removeAttr('style');
             }
             });
         var carouselNavigation = $('.gallery-nav').jcarousel();
@@ -110,18 +112,7 @@
     //Setup reviews slider
     var reviewsSlider = $('.reviews-slider');
 
-    reviewsSlider
-      // .on('jcarousel:reload jcarousel:create', function () {
-      //   var carousel = $(this),
-      //     width = carousel.innerWidth();
-
-      //       if (width < 970) {
-      //           // width = width / 3;
-      //           carousel.jcarousel('items').css('width', Math.ceil(width - 40) + 'px');
-      //       }
-      //       })
-
-      .jcarousel({
+    reviewsSlider.jcarousel({
           wrap: 'circular',
           transitions: {
             transforms: true,
@@ -129,14 +120,13 @@
           },
           animation: {
             duration: 1000
-          },
-          canter: true
+          }
       });
-    // $('.reviews-slider').jcarouselAutoscroll({
-    //       interval: 5000,
-    //       target: '+=1',
-    //       autostart: true
-    //     }); 
+    $('.reviews-slider').jcarouselAutoscroll({
+          interval: 5000,
+          target: '+=1',
+          autostart: true
+        }); 
 
     $('.reviews-prev-btn').jcarouselControl({
         target: '-=1'
